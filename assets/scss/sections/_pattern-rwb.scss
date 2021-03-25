@@ -1,0 +1,31 @@
+.pattern-rwb {
+  position: relative;
+  height: 6.5rem;
+  background-color: white;
+  background-image: url('~/assets/images/edge-blue-top.png'), url('~/assets/images/pattern-rwb.jpg') ;
+  background-size: map-get($background-edge-size, 'small'), map-get($background-pattern-size, 'small');
+  background-repeat: repeat-x, repeat;
+  background-position: right top, center top;
+  background-attachment: local, fixed;
+
+  @include breakpoint(medium) {
+    height: 17.5vw;
+    background-size: map-get($background-edge-size, 'medium'), map-get($background-pattern-size, 'medium');
+  }
+
+  @include breakpoint(large) {
+    height: 12.5vw;
+    background-size: map-get($background-edge-size, 'large'), map-get($background-pattern-size, 'large');
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: -1px;
+    left: 0;
+    height: 3px;
+    background-color: $blue;
+  }
+}

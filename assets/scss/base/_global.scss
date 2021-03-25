@@ -1,0 +1,103 @@
+$global-button-cursor: pointer;
+$global-font-size: (
+  small: 18px,
+  medium: 19px,
+  large: 20px,
+);
+$global-line-height: 1.25em;
+$global-radius: 0;
+$global-weight-normal: 300;
+$global-weight-bold: 500;
+
+$body-background: $white;
+$body-font-family: 'Nitti Eindhoven', sans-serif;
+$body-font-color: $blue;
+
+:root {
+  --vh: 100vh;
+  --vw: 100vw;
+}
+
+html {
+  box-sizing: border-box;
+
+  @include -zf-breakpoint-value('auto', $global-font-size) {
+    font-size: $-zf-bp-value;
+  }
+
+  @include breakpoint(hd) {
+    font-size: 1vw;
+  }
+}
+
+// Set box-sizing globally to handle padding and border widths
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// Default body styles
+body {
+  margin: 0;
+  padding: 0;
+  color: $body-font-color;
+  font-weight: $global-weight-normal;
+
+  font-family: $body-font-family;
+  line-height: $global-line-height;
+  background: $body-background;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+}
+
+textarea {
+  height: auto;
+  min-height: 5em;
+  border-radius: $global-radius;
+}
+
+select {
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: $global-radius;
+}
+
+// Reset <button> styles created by most browsers
+button {
+  @include disable-mouse-outline;
+  padding: 0;
+  line-height: 1;
+  background: transparent;
+  border: 0;
+  border-radius: $global-radius;
+  cursor: $global-button-cursor;
+  appearance: none;
+}
+
+// Prevent text overflow on pre
+pre {
+  overflow: auto;
+}
+
+// Make reset inherit font-family instead of settings sans-serif
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+}
+
+[v-cloak] {
+  visibility: hidden;
+}

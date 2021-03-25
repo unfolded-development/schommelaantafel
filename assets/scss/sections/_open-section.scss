@@ -1,0 +1,14 @@
+$open-section-padding: (
+  small: 1rem,
+  medium: 3rem,
+);
+
+.open-section {
+  width: 100%;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  @include -zf-breakpoint-value(auto, $open-section-padding) {
+    padding-right: $-zf-bp-value;
+    padding-left: $-zf-bp-value;
+  }
+}

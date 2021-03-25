@@ -1,0 +1,91 @@
+$paragraph-margin-bottom: $global-line-height !default;
+$paragraph-line-height: $global-line-height !default;
+
+$header-font-weight: 400 !default;
+$header-font-family: 'Eindhoven Type', sans-serrif !default;
+$header-font-style: normal !default;
+$header-lineheight: 1em !default;
+
+$anchor-color: inherit !default;
+$anchor-color-hover: inherit !default;
+$anchor-text-decoration: underline !default;
+
+$small-font-size: .8em !default;
+
+// Paragraphs
+p {
+  margin-bottom: $paragraph-margin-bottom;
+  line-height: $global-line-height;
+}
+
+// Emphasized text
+em,
+i {
+  font-style: italic;
+  line-height: inherit;
+}
+
+// Strong text
+strong,
+b {
+  font-weight: $global-weight-bold;
+  line-height: inherit;
+}
+
+// Small text
+small, .small {
+  font-size: $small-font-size;
+  line-height: inherit;
+}
+
+// Headings
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6 {
+  font-weight: $header-font-weight;
+  font-family: $header-font-family;
+  font-style: $header-font-style;
+  line-height: $header-lineheight;
+}
+
+a {
+  color: $anchor-color;
+  line-height: inherit;
+  text-decoration: $anchor-text-decoration;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $anchor-color-hover;
+  }
+
+  img {
+    border: 0;
+  }
+}
+
+.title {
+  font-family: $header-font-family;
+  line-height: 1em;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+
+  @include breakpoint('medium') {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.sub-title {
+  font-family: $header-font-family;
+  line-height: 1em;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+
+  @include breakpoint('medium') {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.text-center {
+  text-align: center;
+}

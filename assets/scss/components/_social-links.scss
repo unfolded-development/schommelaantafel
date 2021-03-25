@@ -1,0 +1,25 @@
+.social-links {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &--centered {
+    justify-content: center;
+  }
+
+  &__item {
+    margin-right: 1.6rem;
+    transition: transform .3s;
+    transform-origin: center center;
+    transform: translateZ(0);
+
+    &:hover {
+      transform: scale(1.2) translateZ(0);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

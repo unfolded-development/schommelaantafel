@@ -1,0 +1,36 @@
+{
+  "name": "kd21-placeholder",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "api-media": "node api/media/index.js --test",
+    "video-upload": "node tools/video-upload/index.js",
+    "build": "nuxt generate",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "devDependencies": {
+    "@nuxtjs/axios": "^5.13.1",
+    "@nuxtjs/gtm": "^2.4.0",
+    "@nuxtjs/moment": "^1.6.1",
+    "@nuxtjs/pwa": "^3.3.5",
+    "@nuxtjs/svg-sprite": "^0.5.2",
+    "core-js": "^3.8.3",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "fibers": "^5.0.0",
+    "foundation-sites": "^6.6.3",
+    "isomorphic-dompurify": "^0.12.0",
+    "lodash": "^4.17.21",
+    "lottie-player-vue": "^0.0.16",
+    "normalize.css": "^8.0.1",
+    "nuxt": "^2.14.12",
+    "nuxt-fontagon": "^1.0.3",
+    "prettier": "^2.2.1",
+    "sass": "^1.32.8",
+    "sass-loader": "^10.1.1",
+    "vue-cookie-accept-decline": "^5.4.0",
+    "vue-flickity": "^1.2.1"
+  }
+}

@@ -1,0 +1,66 @@
+$fontagon-codes: () !default;
+
+@mixin icon($name: null) {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  font-family: 'icons';
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
+  vertical-align: middle;
+  word-wrap: normal;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+
+  @if $name != null {
+    &:before {
+      @include fontagon-contents(map-get($fontagon-codes, $name));
+    }
+  }
+}
+
+@font-face {
+  font-family: 'icons';
+  src: url('~assets/icons/generated/Icons.woff2') format('woff2'),
+    url('~assets/icons/generated/Icons.woff') format('woff');
+}
+
+.icon,
+.icon--icons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.icon--icons {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+.icon {
+  @include icon();
+}
+
+@each $name, $value in $fontagon-codes {
+  .icon--#{$name}:before {
+    content: $value;
+  }
+}

@@ -1,0 +1,11 @@
+.dropdown-group {
+  margin-bottom: 3rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  > .dropdown:first-child .dropdown__title {
+    padding-top: 0;
+  }
+}

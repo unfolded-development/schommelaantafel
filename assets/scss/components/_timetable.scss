@@ -1,0 +1,24 @@
+.timetable {
+  display: block;
+  width: 100%;
+  overflow-x: scroll;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.timetable table {
+  border: 0;
+  border-spacing: 0;
+}
+
+.timetable td,
+.timetable th {
+  padding: .25rem .5rem
+}
+
+.timetable tr:nth-child(odd) th,
+.timetable tr:nth-child(odd) td {
+  background-color: #efefef;
+}

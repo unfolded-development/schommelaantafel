@@ -1,0 +1,39 @@
+.dropdown {
+  position: relative;
+  border-bottom: solid 1px $blue;
+
+  &__title {
+    position: relative;
+    font-family: $body-font-family;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1em;
+    cursor: pointer;
+    margin: 0;
+    padding-top: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+
+    .arrow {
+      position: absolute;
+      right: 0;
+      transition: transform .3s;
+
+      .dropdown--active & {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+      padding-bottom: 3rem;
+    }
+  }
+}

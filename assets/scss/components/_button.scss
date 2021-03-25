@@ -1,0 +1,24 @@
+.button {
+  display: inline-block;
+  background-color: $white;
+  color: $black;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: .33em .8em;
+  margin: .5rem 0;
+
+  .arrow {
+    display: inline-block;
+    margin-left: .5rem;
+    transition: transform .3s;
+  }
+
+  &:hover {
+    color: $black;
+
+    .arrow {
+      transform: translateX(.2em);
+    }
+  }
+}

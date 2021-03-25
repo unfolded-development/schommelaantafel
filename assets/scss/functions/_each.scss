@@ -1,0 +1,24 @@
+$i-name: null;
+$i-value: null;
+
+@mixin each($map) {
+  @each $name, $value in $map {
+    $old-name: null;
+    $old-value: null;
+
+    @if global-variable-exists(i-name) {
+      $old-name: $i-name;
+    }
+    @if global-variable-exists(i-value) {
+      $old-value: $i-value;
+    }
+
+    $i-name: $name !global;
+    $i-value: $value !global;
+
+    @content;
+
+    $i-name: $old-name !global;
+    $i-value: $old-value !global;
+  }
+}

@@ -1,0 +1,43 @@
+.timeline {
+  position: relative;
+  width: 100%;
+  color: $white;
+  overflow: hidden;
+}
+
+.timeline__track {
+  display: flex;
+  background-color: rgba($white, .2);
+  height: 5rem;
+  margin-bottom: .5rem;
+  overflow-x: scroll;
+}
+
+.timeline__track-title {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 1.25rem;
+  width: 15rem;
+  padding: 2rem 1rem;
+  background-color: $white;
+  color: $blue;
+}
+
+.timeline__track-content {
+  position: relative;
+}
+
+.timeline__item {
+  position: absolute;
+  background-color: $blue;
+  padding: .5rem;
+  width: 20rem;
+  height: 5rem;
+  font-size: .8rem;
+  font-weight: 400;
+  overflow: hidden;
+  border-left: solid 1px $orange;
+  border-right: solid 1px $orange;
+  text-decoration: none;
+}

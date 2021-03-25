@@ -1,0 +1,43 @@
+
+.background--orange {
+  position: relative;
+  background-color: $orange-light;
+  background-image: url('~/assets/images/pattern-orange.svg'), linear-gradient(to bottom, $orange-light, $orange);
+  background-position: center -3rem, center top;
+  transition: background-position 1.5s ease-in-out;
+
+  @include -zf-breakpoint-value(auto, $background-pattern-size) {
+    background-size: $-zf-bp-value, 100% 100%;
+  }
+
+  .container--intro-finished & {
+    background-position: center -50vh, center top;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 6.5rem;
+    background-image: url('@/assets/images/edge-blue-bottom.png');
+    background-position: left bottom;
+    background-repeat: repeat-x;
+
+    @include -zf-breakpoint-value(auto, $background-edge-size) {
+      background-size: $-zf-bp-value;
+    }
+  }
+}
+
+.background--blue {
+  background-color: $blue-light;
+  background-image: url('~/assets/images/pattern-blue.svg'), linear-gradient(to bottom, $blue, $blue-light, $blue);
+  background-position: center top, center top;
+
+  @include -zf-breakpoint-value(auto, $background-pattern-size) {
+    background-size: $-zf-bp-value, 100% 100%;
+  }
+}

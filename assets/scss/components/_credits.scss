@@ -1,0 +1,52 @@
+.credits {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(medium) {
+    flex-direction: row;
+  }
+
+  &__item {
+    margin-bottom: 2rem;
+    @include breakpoint(medium) {
+      margin-bottom: 0;
+      margin-right: 5rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      @include breakpoint(medium) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__title {
+    font-family: $body-font-family;
+    font-weight: 300;
+    fonts-size: .6rem;
+    opacity: .3;
+    margin-top: 0;
+    margin-bottom: .1rem;
+
+    @include breakpoint(medium) {
+      margin-bottom: .2rem;
+      fonts-size: .8rem;
+    }
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: transform .2s;
+
+    @include breakpoint(medium) {
+      font-size: 1.6rem;
+    }
+
+    &:hover {
+      transform: translateX(.5rem);
+    }
+  }
+}

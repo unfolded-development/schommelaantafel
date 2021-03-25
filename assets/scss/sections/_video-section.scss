@@ -1,0 +1,12 @@
+.videos-section {
+  //@include grid-container();
+
+  padding-top: 3rem;
+  padding-bottom: 6.5rem;
+  color: $white;
+
+  @include breakpoint(medium) {
+    padding-top: 6.5rem;
+    padding-bottom: 13rem;
+  }
+}
