@@ -24,10 +24,21 @@
 		<div class="newsletter"></div>
 		<div class="full-image"></div>
 		<div class="slider-cards"></div><!-- Slider -->
-		<div class="slider-referrals"></div><!-- Slider -->
-		<div class="contact-form"></div>
+		
+		<section class="section-referrals">
+			<div class="text-center">
+				<div>
+					<i class="icon icon--star"></i>
+					<i class="icon icon--star"></i>
+					<i class="icon icon--star"></i>
+					<i class="icon icon--star"></i>
+					<i class="icon icon--star"></i>
+				</div>
+				<h5>“Bij ons is deze tafel altijd als eerste volgeboekt”</h5>
+			</div>
+		</section>
 
-		<div class="contact">
+		<section class="contact">
 			<div class='content-section'>
 				<div class='content-section__content'>
 					<h2>Interesse of een bezichtiging inplannen?</h2>
@@ -40,7 +51,7 @@
 					</form>
 				</div>
 			</div>
-		</div>
+		</section>
 
 
 		<section class="section-socials">

@@ -40,7 +40,7 @@ small, .small {
 }
 
 // Headings
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6 {
+h1, .h1, h2, .h2, h3, .h3 {
   font-weight: $header-font-weight;
   font-family: $header-font-family;
   font-style: $header-font-style;
@@ -48,6 +48,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6 {
 	letter-spacing: $header-letter-spacing;
 	margin-top: 0;
 }
+
+// h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+// 	margin-top: 0;
+// }
 
 h1, .h1 {
 	font-size: 2.222rem;
@@ -70,6 +74,21 @@ h3, .h3 {
 
 h4, .h4 {
 	font-size: 1.111rem;
+}
+
+h5, .h5 {
+	font-family: $body-font-family;
+  line-height: 1.15;
+	color: $body-font-color;
+  font-weight: $global-weight-normal;
+	letter-spacing: $body-letter-spacing;
+	font-size: 1.75rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	@include breakpoint(medium) {
+		font-size: 1.944rem;
+		margin-bottom: 3rem;
+	}
 }
 
 a {
