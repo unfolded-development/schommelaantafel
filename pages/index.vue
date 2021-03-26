@@ -26,6 +26,26 @@
 		<div class="slider-cards"></div><!-- Slider -->
 		<div class="slider-referrals"></div><!-- Slider -->
 		<div class="contact-form"></div>
+
+		<section class="section-socials">
+			<ul class="socials-list --white">
+				<li class="socials-list__item">
+					<a href="#">
+						<i class="icon icon--instagram"></i>
+					</a>
+				</li>
+				<li class="socials-list__item">
+					<a href="#">
+						<i class="icon icon--facebook"></i>
+					</a>
+				</li>
+				<li class="socials-list__item">
+					<a href="#">
+						<i class="icon icon--linkedin"></i>
+					</a>
+				</li>
+			</ul>
+		</section>
 		
 		<footer class="site-footer">
 			<ul class="contact-list">
