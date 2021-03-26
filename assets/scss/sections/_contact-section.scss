@@ -1,0 +1,12 @@
+.contact {
+	color: $white;
+	background-color: $black;
+
+	.content-section__content {
+		grid-column: 1 / -1;
+		padding: 4.5rem 0 4rem;
+		@include breakpoint(medium) {
+			grid-column: 4 / -4;
+		}
+	}
+}

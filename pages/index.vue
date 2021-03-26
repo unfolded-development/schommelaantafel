@@ -27,6 +27,22 @@
 		<div class="slider-referrals"></div><!-- Slider -->
 		<div class="contact-form"></div>
 
+		<div class="contact">
+			<div class='content-section'>
+				<div class='content-section__content'>
+					<h2>Interesse of een bezichtiging inplannen?</h2>
+					<p>Laat uw gegevens achter en wij nemen zo spoedig mogelijk contact met u op.</p>
+					<form class="contact-form" action="post">
+						<input type="text" placeholder="Naam*">
+						<input type="email" placeholder="Emailadres*">
+						<input type="tel" placeholder="Telefoonnummer*">
+						<input type="text" placeholder="Opmerking">
+					</form>
+				</div>
+			</div>
+		</div>
+
+
 		<section class="section-socials">
 			<ul class="socials-list --white">
 				<li class="socials-list__item">

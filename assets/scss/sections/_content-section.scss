@@ -25,7 +25,7 @@
     position: relative;
     grid-column: 1 / -1;
     // grid-column: 1 / span 12;
-    background-color: $white;
+    // background-color: $white;
 
     @include breakpoint(xlarge) {
       @include grid(10);
@@ -60,7 +60,7 @@
 
   &__content {
     grid-column: 2 / span 10;
-    background-color: $white;
+    // background-color: $white;
     padding-top: 10%;
     padding-bottom: calc(10% + 1.5rem);
 
