@@ -26,7 +26,18 @@
 		<div class="slider-cards"></div><!-- Slider -->
 		<div class="slider-referrals"></div><!-- Slider -->
 		<div class="contact-form"></div>
-		<footer class="page-footer"></footer>
+		
+		<footer class="site-footer">
+			<ul class="contact-list">
+				<li class="contact-list__item">
+					<a href="tel:+310620239611">+31(0)6 20 23 96 11</a>
+				</li>
+				<li class="contact-list__item">
+					<a href="mailto:info@schommelaantafel.nl">info@schommelaantafel.nl</a>
+				</li>
+			</ul>
+			<a class="text-grey" href="fffunction.studio">design by fffunction.studio</a>
+		</footer>
 	</div>
   <!-- <div class='page page--home' :class='{"container--intro-finished": introFinished, "document--scrolled": scrolled }'>
     <header class='site-header'>
