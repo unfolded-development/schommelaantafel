@@ -32,9 +32,9 @@
     <div class='background--blue'>
       <section class='videos-section'>
         <h2 class='title text-center'>Beleef Koningsdag thuis</h2>
-        <client-only>
+        <!-- <client-only>
           <VideoSlider></VideoSlider>
-        </client-only>
+        </client-only> -->
       </section>
       <section class='content-section'>
         <div class='content-section__container'>

@@ -63,8 +63,8 @@ export default {
 			},
 		],
 		script: [{
-			src: process.env.JWPLAYER_PLAYER_LIBRARY_URL ||
-				'https://cdn.jwplayer.com/libraries/0XbBf8Uu.js',
+			// src: process.env.JWPLAYER_PLAYER_LIBRARY_URL ||
+			// 	'https://cdn.jwplayer.com/libraries/0XbBf8Uu.js',
 		}, ],
 	},
 
