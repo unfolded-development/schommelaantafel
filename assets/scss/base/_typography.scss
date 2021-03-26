@@ -1,10 +1,11 @@
 $paragraph-margin-bottom: $global-line-height !default;
 $paragraph-line-height: $global-line-height !default;
 
-$header-font-weight: 400 !default;
-$header-font-family: 'Eindhoven Type', sans-serrif !default;
+$header-font-weight: 500 !default;
+$header-font-family: 'Platform', sans-serrif !default;
 $header-font-style: normal !default;
-$header-lineheight: 1em !default;
+$header-lineheight: 1 !default;
+$header-letter-spacing: .129px;
 
 $anchor-color: inherit !default;
 $anchor-color-hover: inherit !default;
@@ -44,6 +45,30 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6 {
   font-family: $header-font-family;
   font-style: $header-font-style;
   line-height: $header-lineheight;
+	letter-spacing: $header-letter-spacing;
+}
+
+h1, .h1 {
+	font-size: 2.222rem;
+
+	@include breakpoint(xlarge) {
+		font-size: 3.333rem;
+	}
+}
+
+h2, .h2 {
+	font-size: 1.777rem;
+	@include breakpoint(xlarge) {
+		font-size: 2.777rem;
+	}
+}
+
+h3, .h3 {
+	font-size: 1.333rem;
+}
+
+h4, .h4 {
+	font-size: 1.111rem;
 }
 
 a {
@@ -88,4 +113,12 @@ a {
 
 .text-center {
   text-align: center;
+}
+
+.text-grey {
+  color: $grey;
+}
+
+.label {
+	font-size: 1.1rem;
 }

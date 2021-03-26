@@ -2,14 +2,14 @@
   @include grid-container();
   @include grid();
   position: relative;
-  margin-top: -2rem;
-  transform: translateY(2rem);
+  // margin-top: -2rem;
+  // transform: translateY(2rem);
   transition: transform .5s 2.5s;
 
-  @include breakpoint(medium) {
-    margin-top: -3rem;
-    transform: translateY(3rem);
-  }
+  // @include breakpoint(medium) {
+  //   margin-top: -3rem;
+  //   transform: translateY(3rem);
+  // }
 
   .container--intro-finished &,
   .document--scrolled & {
@@ -23,7 +23,8 @@
   &__container {
     @include grid(12);
     position: relative;
-    grid-column: 1 / span 12;
+    grid-column: 1 / -1;
+    // grid-column: 1 / span 12;
     background-color: $white;
 
     @include breakpoint(xlarge) {

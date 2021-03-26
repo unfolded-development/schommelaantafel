@@ -1,9 +1,6 @@
 <template>
 
   <section class='intro-section'>
-    <!-- <client-only> -->
-    <!-- <lottie-player class='intro__logo' src='/animations/animationLogo.json' :options='animationOptions' ref='animation'></lottie-player> -->
-    <!-- </client-only> -->
 
     <div class='intro' v-cloak>
 

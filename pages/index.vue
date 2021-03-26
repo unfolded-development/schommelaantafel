@@ -1,10 +1,32 @@
 <template>
-  <div class='page page--home' :class='{"container--intro-finished": introFinished, "document--scrolled": scrolled }'>
+	<div>
+		<div class="site-header"></div>
+		<div class="slider-text-center"></div><!-- Slider -->
+		
+		<section class='content-section'>
+			<div class='content-section__container'>
+				<div class='content-section__content'>
+					<div class="quote text-center">
+						<span class="label text-grey">Schommel aan Tafel</span>
+						<p class="h1">Met Schommel aan Tafel trek je de aandacht en creéer je een Plek waar mensen samen komen.</p>
+						<a class="button" href="#">Vraag informatie aan</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<div class="slider-selector"></div><!-- Slider -->
+		<div class="cta"></div>
+		<div class="newsletter"></div>
+		<div class="full-image"></div>
+		<div class="slider-cards"></div><!-- Slider -->
+		<div class="slider-referrals"></div><!-- Slider -->
+		<div class="contact-form"></div>
+		<footer class="page-footer"></footer>
+	</div>
+  <!-- <div class='page page--home' :class='{"container--intro-finished": introFinished, "document--scrolled": scrolled }'>
     <header class='site-header'>
       <div class='site-header__container'>
-        <!--        <div class='site-header__logo'>-->
-        <!--          <img src='~/assets/images/logo.svg' alt='Koningsdag in Eindhoven'>-->
-        <!--        </div>-->
         <div class='site-header__right'>
           <SocialLinks class='social-links--centered'></SocialLinks>
         </div>
@@ -32,9 +54,6 @@
     <div class='background--blue'>
       <section class='videos-section'>
         <h2 class='title text-center'>Beleef Koningsdag thuis</h2>
-        <!-- <client-only>
-          <VideoSlider></VideoSlider>
-        </client-only> -->
       </section>
       <section class='content-section'>
         <div class='content-section__container'>
@@ -251,7 +270,7 @@
       </footer>
     </div>
     <div class='pattern-rwb'></div>
-  </div>
+  </div> -->
 </template>
 
 <script>

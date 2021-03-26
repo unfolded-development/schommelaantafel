@@ -1,39 +1,53 @@
 @font-face {
-  font-family: 'Eindhoven Type Inline';
-  src: url('~/static/fonts/EindhovenType/EindhovenType-Inline.woff2') format('woff2'),
-  url('~/static/fonts/EindhovenType/EindhovenType-Inline.woff') format('woff'),
-  url('~/static/fonts/EindhovenType/EindhovenType-Inline.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+	font-family: 'TT Firs Neue';
+	src: url('~/static/fonts/firs-neue/tt-firs-neue-regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: 'Eindhoven Type';
-  src: url('~/static/fonts/EindhovenType/EindhovenType-Light.woff2') format('woff2'),
-  url('~/static/fonts/EindhovenType/EindhovenType-Light.woff') format('woff'),
-  url('~/static/fonts/EindhovenType/EindhovenType-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
+	font-family: 'TT Firs Neue';
+	src: url('~/static/fonts/firs-neue/tt-firs-neue-medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: 'Nitti Eindhoven';
-  src: url('~/static/fonts/NittiEindhoven/NittiEindhoven-SemiLight.woff2') format('woff2'),
-  url('~/static/fonts/NittiEindhoven/NittiEindhoven-SemiLight.woff') format('woff'),
-  url('~/static/fonts/NittiEindhoven/NittiEindhoven-SemiLight.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
+	font-family: 'Platform';
+	src: url('~/static/fonts/platform/platform-medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
 }
 
-@font-face {
-  font-family: 'Nitti Eindhoven';
-  src: url('~/static/fonts/NittiEindhoven/NittiEindhoven-Medium.woff2') format('woff2'),
-  url('~/static/fonts/NittiEindhoven/NittiEindhoven-Medium.woff') format('woff'),
-  url('~/static/fonts/NittiEindhoven/NittiEindhoven-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
+// @font-face {
+//   font-family: 'Eindhoven Type';
+//   src: url('~/static/fonts/EindhovenType/EindhovenType-Light.woff2') format('woff2'),
+//   url('~/static/fonts/EindhovenType/EindhovenType-Light.woff') format('woff'),
+//   url('~/static/fonts/EindhovenType/EindhovenType-Light.ttf') format('truetype');
+//   font-weight: 300;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'Nitti Eindhoven';
+//   src: url('~/static/fonts/NittiEindhoven/NittiEindhoven-SemiLight.woff2') format('woff2'),
+//   url('~/static/fonts/NittiEindhoven/NittiEindhoven-SemiLight.woff') format('woff'),
+//   url('~/static/fonts/NittiEindhoven/NittiEindhoven-SemiLight.ttf') format('truetype');
+//   font-weight: 300;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'Nitti Eindhoven';
+//   src: url('~/static/fonts/NittiEindhoven/NittiEindhoven-Medium.woff2') format('woff2'),
+//   url('~/static/fonts/NittiEindhoven/NittiEindhoven-Medium.woff') format('woff'),
+//   url('~/static/fonts/NittiEindhoven/NittiEindhoven-Medium.ttf') format('truetype');
+//   font-weight: 500;
+//   font-style: normal;
+//   font-display: swap;
+// }

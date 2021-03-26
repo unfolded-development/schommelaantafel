@@ -1,8 +1,8 @@
 
 .background--orange {
   position: relative;
-  background-color: $orange-light;
-  background-image: url('~/assets/images/pattern-orange.svg'), linear-gradient(to bottom, $orange-light, $orange);
+  // background-color: $orange-light;
+  // background-image: url('~/assets/images/pattern-orange.svg'), linear-gradient(to bottom, $orange-light, $orange);
   background-position: center -3rem, center top;
   transition: background-position 1.5s ease-in-out;
 

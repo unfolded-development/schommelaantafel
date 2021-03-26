@@ -33,38 +33,39 @@ export default {
 				content: '#ffffff'
 			},
 		],
-		link: [{
-				rel: 'icon',
-				type: 'image/x-icon',
-				href: '/favicon.ico'
-			},
-			{
-				rel: 'apple-touch-icon',
-				size: '180x180',
-				href: '/favicons/apple-touch-icon.png',
-			},
-			{
-				rel: 'icon',
-				type: 'image/png',
-				size: '32x32',
-				href: '/favicons/favicon-32x32.png',
-			},
-			{
-				rel: 'icon',
-				type: 'image/png',
-				size: '16x16',
-				href: '/favicons/favicon-16x16.png',
-			},
-			{
-				rel: 'mask-icon',
-				type: 'image/png',
-				color: '#ff6e00',
-				href: '/favicons/safari-pinned-tab.svg',
-			},
+		link: [
+			// {
+			// 	rel: 'icon',
+			// 	type: 'image/x-icon',
+			// 	href: '/favicon.ico'
+			// },
+			// {
+			// 	rel: 'apple-touch-icon',
+			// 	size: '180x180',
+			// 	href: '/favicons/apple-touch-icon.png',
+			// },
+			// {
+			// 	rel: 'icon',
+			// 	type: 'image/png',
+			// 	size: '32x32',
+			// 	href: '/favicons/favicon-32x32.png',
+			// },
+			// {
+			// 	rel: 'icon',
+			// 	type: 'image/png',
+			// 	size: '16x16',
+			// 	href: '/favicons/favicon-16x16.png',
+			// },
+			// {
+			// 	rel: 'mask-icon',
+			// 	type: 'image/png',
+			// 	color: '#ff6e00',
+			// 	href: '/favicons/safari-pinned-tab.svg',
+			// },
 		],
 		script: [{
-			// src: process.env.JWPLAYER_PLAYER_LIBRARY_URL ||
-			// 	'https://cdn.jwplayer.com/libraries/0XbBf8Uu.js',
+			src: process.env.JWPLAYER_PLAYER_LIBRARY_URL ||
+				'https://cdn.jwplayer.com/libraries/0XbBf8Uu.js',
 		}, ],
 	},
 
