@@ -14,6 +14,10 @@
 				</div>
 			</div>
 		</section>
+
+		<section class="image-full-size">
+			<img src="~/static/images/full-size-image.png" alt="">
+		</section>
 		
 		<div class="slider-selector"></div><!-- Slider -->
 		<div class="cta"></div>
