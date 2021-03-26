@@ -1,6 +1,6 @@
-<template comments>
+<template>
   <div>
-    <vue-cookie
+    <!-- <vue-cookie
       :disableDecline="true"
       type="bar"
       transitionName="slideFromTop"
@@ -13,7 +13,7 @@
         <a class="btn btn-link" href="/privacy" target="_blank">Meer info</a>
       </template>
       <div slot="acceptContent">Ok</div>
-    </vue-cookie>
+    </vue-cookie> -->
     <Nuxt />
     <!-- For license information please see https://koningsdageindhoven.nl/LICENSES -->
   </div>
@@ -21,11 +21,11 @@
 
 <script>
 export default {
-  mounted() {
-    this.$services.interval.start('program/fetch', this.$config.media.refreshRate)
-  },
-  beforeDestroy() {
-    this.$services.interval.stop('program/fetch')
-  },
+  // mounted() {
+  //   this.$services.interval.start('program/fetch', this.$config.media.refreshRate)
+  // },
+  // beforeDestroy() {
+  //   this.$services.interval.stop('program/fetch')
+  // },
 }
 </script>
