@@ -1,7 +1,9 @@
 <template>
 	<div>
 		<div class="site-header"></div>
+		
 		<div class="slider-text-center"></div><!-- Slider -->
+		
 		
 		<section class='content-section'>
 			<div class='content-section__container'>

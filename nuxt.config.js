@@ -82,10 +82,10 @@ export default {
 		// 	src: '~/plugins/ServiceContainer.js',
 		// 	ssr: true
 		// },
-		// {
-		// 	src: '~/plugins/VueFlickity.js',
-		// 	ssr: false
-		// },
+		{
+			src: '~/plugins/VueFlickity.js',
+			ssr: false
+		},
 		// {
 		// 	src: '~/plugins/VuePlyr.js',
 		// 	ssr: false
