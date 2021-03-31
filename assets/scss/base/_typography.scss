@@ -135,8 +135,8 @@ a {
   text-align: center;
 }
 
-.text-grey {
-  color: $grey;
+.text-dimmed {
+  color: lighten($body-font-color, 65%);
 }
 
 .label {

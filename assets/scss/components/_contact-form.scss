@@ -3,26 +3,14 @@
 	flex-direction: column;
 	margin: -.5rem;
 
-	input {
-		height: 3rem;
+	&__action {
+		display: flex;
+		justify-content: flex-end;
 		margin: .5rem;
-		padding: 0 1rem;
+	}
 
-		&::placeholder {
-			color: rgba($body-font-color, 1);
-			transition: all ease-in-out .1s;
-		}
-
-		&:focus {
-			border: none;
-			box-shadow: none;
-			outline: none;
-
-			&::placeholder {
-				color: rgba($body-font-color, .25);
-				transition: all ease-in-out .1s;
-			}
-		}
+	input {
+		margin: .5rem;
 	}
 
 }

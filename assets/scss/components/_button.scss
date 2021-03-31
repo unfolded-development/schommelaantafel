@@ -1,13 +1,29 @@
-.button {
+.btn {
   display: inline-block;
-  background-color: $black;
-  color: $white;
+	font-size: 100%;
+	font-size: 1rem;
+	font-family: inherit;
+	border: 0;
   text-decoration: none;
-  padding: .6em 1.2em .7em;
-  // margin: .5rem 0;
+  color: $white;
+	height: 3rem;
+	line-height: 3rem;
+	padding-left: 1.2rem;
+	padding-right: 1.2rem;
+  // padding: .6em 1.2em .625em;
+  background-color: $black;
 
   &:hover {
     background-color: $black;
   	color: $white;
   }
+}
+
+.btn-orange {
+	background-color: $orange;
+}
+
+.btn-white {
+	color: $body-font-color;
+	background-color: $white;
 }

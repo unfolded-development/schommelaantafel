@@ -9,9 +9,38 @@
 			<div class='content-section__container'>
 				<div class='content-section__content'>
 					<div class="quote text-center">
-						<span class="label text-grey">Schommel aan Tafel</span>
+						<span class="label text-dimmed">Schommel aan Tafel</span>
 						<p class="h1">Met Schommel aan Tafel trek je de aandacht en creéer je een Plek waar mensen samen komen.</p>
-						<a class="button" href="#">Vraag informatie aan</a>
+						<a class="btn" href="#section-contact">Vraag informatie aan</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="cta">
+			<div class='content-section'>
+				<div class="cta__content">
+					<h2>Kopen of huren? Het kan allebei</h2>
+					<a href="#" class="btn btn-white">Neem contact op</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="newsletter">
+			<div class='content-section'>
+				<div class='content-section__content'>
+					<div class="newsletter__image">
+						<img src="~/static/images/newsletter.png" alt="">
+					</div>
+					<div class="newsletter__content">
+						<h2>Interesse om te schommelen? Download de gratis brochure</h2>
+						<form class="newsletter__form" action="">
+							<input class="input-field" type="text" placeholder="Email adres">
+							<button type="submit" class="btn btn-orange">Download</button>
+						</form>
+						<div class="newsletter__disclaimer">
+							<p>*Vul een geldig emailadres in (pas zichtbaar wanneer foutief)</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -24,7 +53,6 @@
 		<div class="slider-selector"></div><!-- Slider -->
 		<div class="cta"></div>
 		<div class="newsletter"></div>
-		<div class="full-image"></div>
 		<div class="slider-cards"></div><!-- Slider -->
 		
 		<section class="section-referrals">
@@ -40,16 +68,19 @@
 			</div>
 		</section>
 
-		<section class="contact">
+		<section class="contact" id="section-contact">
 			<div class='content-section'>
 				<div class='content-section__content'>
 					<h2>Interesse of een bezichtiging inplannen?</h2>
 					<p>Laat uw gegevens achter en wij nemen zo spoedig mogelijk contact met u op.</p>
 					<form class="contact-form" action="post">
-						<input type="text" placeholder="Naam*">
-						<input type="email" placeholder="Emailadres*">
-						<input type="tel" placeholder="Telefoonnummer*">
-						<input type="text" placeholder="Opmerking">
+						<input class="input-field" type="text" placeholder="Naam*">
+						<input class="input-field" type="email" placeholder="Emailadres*">
+						<input class="input-field" type="tel" placeholder="Telefoonnummer*">
+						<input class="input-field" type="text" placeholder="Opmerking">
+						<div class="contact-form__action">
+							<button type="submit" class="btn btn-orange">Versturen</button>
+						</div>
 					</form>
 				</div>
 			</div>
@@ -85,10 +116,11 @@
 					<a href="mailto:info@schommelaantafel.nl">info@schommelaantafel.nl</a>
 				</li>
 			</ul>
-			<a class="text-grey" href="fffunction.studio">design by fffunction.studio</a>
+			<a class="text-dimmed" href="fffunction.studio">design by fffunction.studio</a>
 		</footer>
 	</div>
-  <!-- <div class='page page--home' :class='{"container--intro-finished": introFinished, "document--scrolled": scrolled }'>
+  
+	<!-- <div class='page page--home' :class='{"container--intro-finished": introFinished, "document--scrolled": scrolled }'>
     <header class='site-header'>
       <div class='site-header__container'>
         <div class='site-header__right'>
