@@ -2,8 +2,14 @@
 	
 	.content-section__content {
 		grid-column: 1 / -1;
-		padding: 4.5rem 0 4rem;
+		padding-top: 1rem;
+		padding-bottom: 4.5rem;
 		align-items: center;
+		
+		@include breakpoint(medium) {
+			grid-column: 2 / -2;
+			padding: 4.5rem 0 4rem;
+		}
 		
 		@include breakpoint(large) {
 			@include grid(10);
@@ -35,16 +41,39 @@
 	}
 
 	&__content {
-		padding: 2rem 0;
+		margin-top: 1rem;
+		@include breakpoint(xlarge) {
+			margin-top: 0;
+			padding: 2rem 0;
+		}
+	}
+
+	&__title {
+		margin-bottom: 1.8rem;
+		@include breakpoint(medium) {
+			margin-bottom: 2.5rem;
+		}
+		@include breakpoint(xlarge) {
+			margin-bottom: 4rem;
+		}
 	}
 	
 	&__form {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: baseline;
+		justify-content: center;
 		margin: -.5rem;
+		
+		@include breakpoint(large) {
+			justify-content: flex-start;
+		}
 
 		& > * {
 			margin: .5rem;
+			// &:last-child {
+			// 	margin-bottom: 0;
+			// }
 		}
 
 		input {
@@ -53,6 +82,18 @@
 	}
 
 	&__disclaimer {
-		max-width: 60%;
+		display: none;
+		
+		@include breakpoint(medium) {
+			display: block;
+		}
+		
+		@include breakpoint(xlarge) {
+			max-width: 60%;
+		}
+		
+		p:last-child {
+			margin-bottom: 0;
+		}
 	}
 }

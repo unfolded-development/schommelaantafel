@@ -40,8 +40,21 @@ small, .small {
 }
 
 // Headings
-h1, .h1, h2, .h2, h3, .h3 {
-  font-weight: $header-font-weight;
+// h1, .h1, h2, .h2, h3, .h3 {
+//   font-weight: $header-font-weight;
+//   font-family: $header-font-family;
+//   font-style: $header-font-style;
+//   line-height: $header-lineheight;
+// 	letter-spacing: $header-letter-spacing;
+// 	margin-top: 0;
+// }
+
+// h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+// 	margin-top: 0;
+// }
+
+@mixin heading {
+	font-weight: $header-font-weight;
   font-family: $header-font-family;
   font-style: $header-font-style;
   line-height: $header-lineheight;
@@ -49,46 +62,77 @@ h1, .h1, h2, .h2, h3, .h3 {
 	margin-top: 0;
 }
 
-// h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-// 	margin-top: 0;
-// }
+@mixin h1 {
+	@include heading();
+	font-size: 3rem;
+	@include breakpoint(medium) {
+		font-size: 4rem;
+	}
+	@include breakpoint(xlarge) {
+		font-size: 5rem;
+	}
+}
 
-h1, .h1 {
+@mixin h2 {
+	@include heading();
 	font-size: 2.222rem;
-
+	@include breakpoint(medium) {
+		font-size: 2.777rem;
+	}
 	@include breakpoint(xlarge) {
 		font-size: 3.333rem;
 	}
 }
 
-h2, .h2 {
-	font-size: 1.777rem;
+@mixin h3 {
+	@include heading();
+	font-size: 1.6rem;
+	@include breakpoint(medium) {
+		font-size: 2.222rem;
+	}
 	@include breakpoint(xlarge) {
 		font-size: 2.777rem;
 	}
 }
 
-h3, .h3 {
-	font-size: 1.333rem;
+@mixin h4 {
+	@include heading();
+	font-size: 1.5rem;
+	@include breakpoint(medium) {
+		font-size: 1.8rem;
+	}
 }
 
-h4, .h4 {
-	font-size: 1.111rem;
-}
-
-h5, .h5 {
+@mixin h5 {
+	@include heading();
 	font-family: $body-font-family;
   line-height: 1.15;
 	color: $body-font-color;
   font-weight: $global-weight-normal;
 	letter-spacing: $body-letter-spacing;
-	font-size: 1.75rem;
+	font-size: 1.3rem;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
-	@include breakpoint(medium) {
-		font-size: 1.944rem;
-		margin-bottom: 3rem;
-	}
+}
+
+h1, .h1 {
+	@include h1();
+}
+
+h2, .h2 {
+	@include h2();
+}
+
+h3, .h3 {
+	@include h3();
+}
+
+h4, .h4 {
+	@include h4();
+}
+
+h5, .h5 {
+	@include h5();
 }
 
 a {
@@ -113,7 +157,7 @@ a {
   font-size: 2rem;
   margin-bottom: 2rem;
 
-  @include breakpoint('medium') {
+  @include breakpoint(medium) {
     font-size: 3rem;
     margin-bottom: 3rem;
   }

@@ -10,7 +10,7 @@ $global-weight-normal: 400;
 $global-weight-medium: 500;
 $global-weight-bold: 700;
 
-$body-background: $white;
+$body-background: $grey;
 $body-font-family: 'TT Firs Neue', sans-serif;
 $body-font-color: $black;
 $body-letter-spacing: .08px;
@@ -28,7 +28,7 @@ html {
   }
 
   @include breakpoint(hd) {
-    font-size: 1vw;
+    font-size: 1.2vw;
   }
 }
 

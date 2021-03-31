@@ -1,7 +1,10 @@
 .cta {
-	padding: .5rem 0;
+	padding: 4rem 0;
 	color: $white;
 	background-color: $black;
+	@include breakpoint(medium) {
+		padding: 1.2rem 0;
+	}
 
 	&__content {
 		grid-column: 1 / -1;
@@ -9,9 +12,35 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
-	
-		& > * {
-			margin: 1rem;
+		text-align: center;
+
+		@include breakpoint(large) {
+			text-align: initial;
+		}
+
+		.btn {
+			@include breakpoint(medium) {
+				margin-left: 1.3rem;
+			}
+			@include breakpoint(large) {
+				margin-left: 2.4rem;
+			}
+		}
+
+	}
+
+	&__title {
+		display: inline-block;
+		@include h2();
+		margin-bottom: 3.333rem;
+		@include breakpoint(medium) {
+			@include h4();
+			margin-bottom: 0;
+		}
+		@include breakpoint(large) {
+			@include h3();
+			margin-bottom: 0;
 		}
 	}
+
 }

@@ -1,6 +1,23 @@
 .quote {
-	.h1 {
-		margin-top: .75rem;
-		margin-bottom: 2.2777rem;
+
+	.label {
+		display: none;
+		@include breakpoint(medium) {
+			display: inline-block;
+			margin-bottom: .75rem;
+		}
+		@include breakpoint(xxlarge) {
+			margin-bottom: 1rem;
+		}
+	}
+
+	.quote__title {
+		margin-bottom: 3.333rem;
+		@include breakpoint(medium) {
+			margin-bottom: 3rem;
+		}
+		@include breakpoint(xxlarge) {
+			margin-bottom: 2.8rem;
+		}
 	}
 }
