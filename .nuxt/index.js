@@ -65,7 +65,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"Koningsdag Eindhoven","htmlAttrs":{"lang":"en"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"msapplication-TileColor","content":"#ffa803"},{"name":"msapplication-config","content":"\u002Ffavicons\u002Fbrowserconfig.xml"},{"name":"theme-color","content":"#ffffff"}],"link":[],"script":[{"src":"https:\u002F\u002Fcdn.jwplayer.com\u002Flibraries\u002F0XbBf8Uu.js"}],"style":[]},
+    head: {"title":"Schommel aan Tafel","htmlAttrs":{"lang":"en"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"msapplication-TileColor","content":"#ffa803"},{"name":"msapplication-config","content":"\u002Ffavicons\u002Fbrowserconfig.xml"},{"name":"theme-color","content":"#ffffff"}],"link":[],"script":[{"src":"https:\u002F\u002Fcdn.jwplayer.com\u002Flibraries\u002F0XbBf8Uu.js"}],"style":[]},
 
     router,
     nuxt: {

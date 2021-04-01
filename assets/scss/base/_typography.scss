@@ -5,7 +5,7 @@ $header-font-weight: 500 !default;
 $header-font-family: 'Platform', sans-serrif !default;
 $header-font-style: normal !default;
 $header-lineheight: 1 !default;
-$header-letter-spacing: .129px;
+// $header-letter-spacing: .02em;
 
 $anchor-color: inherit !default;
 $anchor-color-hover: inherit !default;
@@ -58,13 +58,16 @@ small, .small {
   font-family: $header-font-family;
   font-style: $header-font-style;
   line-height: $header-lineheight;
-	letter-spacing: $header-letter-spacing;
+	// letter-spacing: calc(#{$header-letter-spacing} * 1.1);
 	margin-top: 0;
 }
 
 @mixin h1 {
 	@include heading();
+	@include letter-spacing(23.83);
 	font-size: 3rem;
+	color: $white;
+	text-shadow: 0 2px 20px rgba($black, .5);
 	@include breakpoint(medium) {
 		font-size: 4rem;
 	}
@@ -75,41 +78,50 @@ small, .small {
 
 @mixin h2 {
 	@include heading();
+	@include letter-spacing(12.5);
 	font-size: 2.222rem;
 	@include breakpoint(medium) {
+		@include letter-spacing(20);
 		font-size: 2.777rem;
 	}
 	@include breakpoint(xlarge) {
+		@include letter-spacing(21.43);
 		font-size: 3.333rem;
 	}
 }
 
 @mixin h3 {
 	@include heading();
+	@include letter-spacing(21.43);
 	font-size: 1.6rem;
 	@include breakpoint(medium) {
+		@include letter-spacing(25);
 		font-size: 2.222rem;
 	}
 	@include breakpoint(xlarge) {
+		@include letter-spacing(21.43);
 		font-size: 2.777rem;
 	}
 }
 
 @mixin h4 {
 	@include heading();
+	@include letter-spacing(3.64);
 	font-size: 1.5rem;
 	@include breakpoint(medium) {
+		@include letter-spacing(8.82);
 		font-size: 1.8rem;
 	}
 }
 
 @mixin h5 {
 	@include heading();
+	@include letter-spacing(4.17);
 	font-family: $body-font-family;
   line-height: 1.15;
 	color: $body-font-color;
   font-weight: $global-weight-normal;
-	letter-spacing: $body-letter-spacing;
+	// letter-spacing: $body-letter-spacing;
 	font-size: 1.3rem;
 	margin-top: 1rem;
 	margin-bottom: 1rem;

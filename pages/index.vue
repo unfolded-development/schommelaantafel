@@ -1,7 +1,14 @@
 <template>
 	<div>
-		<!-- <div class="site-header"></div> -->
-		<!-- <div class="slider-text-center"></div> -->
+
+		<section class="intro">
+			<div class='content-section'>
+				<div class="intro__content">
+					<h1>It’s better when you move.</h1>
+				</div>
+			</div>
+			<img src="~/static/images/intro.png" alt="">
+		</section>
 		
 		<section class='content-section bg-white'>
 			<div class='content-section__container'>
@@ -47,10 +54,6 @@
 		<section class="image-full-size">
 			<img src="~/static/images/full-size-image.png" alt="">
 		</section>
-		
-		<!-- <div class="slider-selector"></div>
-		<div class="newsletter"></div>
-		<div class="slider-cards"></div> -->
 		
 		<section class="section-referrals bg-white">
 			<div class="text-center">

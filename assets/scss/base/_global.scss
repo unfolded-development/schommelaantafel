@@ -13,7 +13,7 @@ $global-weight-bold: 700;
 $body-background: $grey;
 $body-font-family: 'TT Firs Neue', sans-serif;
 $body-font-color: $black;
-$body-letter-spacing: .08px;
+// $body-letter-spacing: .08px;
 
 :root {
   --vh: 100vh;
@@ -41,11 +41,12 @@ html {
 
 // Default body styles
 body {
+	@include letter-spacing(4.17);
   margin: 0;
   padding: 0;
   color: $body-font-color;
   font-weight: $global-weight-normal;
-	letter-spacing: $body-letter-spacing;
+	// letter-spacing: $body-letter-spacing;
 
   font-family: $body-font-family;
   line-height: $global-line-height;

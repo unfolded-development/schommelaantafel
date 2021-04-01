@@ -1,5 +1,5 @@
 {
-  "title": "Koningsdag Eindhoven",
+  "title": "Schommel aan Tafel",
   "meta": [
     {
       "hid": "charset",
@@ -18,17 +18,17 @@
     {
       "hid": "apple-mobile-web-app-title",
       "name": "apple-mobile-web-app-title",
-      "content": "Koningsdag Eindhoven"
+      "content": "Schommel aan Tafel"
     },
     {
       "hid": "author",
       "name": "author",
-      "content": "Gemeente Eindhoven"
+      "content": "Unfolded"
     },
     {
       "hid": "description",
       "name": "description",
-      "content": "De Koning komt KennisMaken met Eindhoven. Doe dat ook! Eindhoven, stad van Kennis, stad van het Maken."
+      "content": "Met Schommel aan Tafel trek je de aandacht en creéer je een Plek waar mensen samen komen."
     },
     {
       "hid": "theme-color",
@@ -45,19 +45,19 @@
       "hid": "og:title",
       "name": "og:title",
       "property": "og:title",
-      "content": "Koningsdag Eindhoven"
+      "content": "Schommel aan Tafel"
     },
     {
       "hid": "og:site_name",
       "name": "og:site_name",
       "property": "og:site_name",
-      "content": "Koningsdag Eindhoven"
+      "content": "Schommel aan Tafel"
     },
     {
       "hid": "og:description",
       "name": "og:description",
       "property": "og:description",
-      "content": "De Koning komt KennisMaken met Eindhoven. Doe dat ook! Eindhoven, stad van Kennis, stad van het Maken."
+      "content": "Met Schommel aan Tafel trek je de aandacht en creéer je een Plek waar mensen samen komen."
     },
     {
       "hid": "og:url",
