@@ -2,28 +2,24 @@
   {
     "name": "icons-list",
     "path": "/_icons",
-    "component": "C:\\xampp\\htdocs\\unfolded\\schommelaantafel\\node_modules\\@nuxtjs\\svg-sprite\\lib\\pages\\icons-list.vue",
-    "_name": "_abaadbca"
+    "component": "C:\\xampp\\htdocs\\unfolded\\schommelaantafel\\node_modules\\@nuxtjs\\svg-sprite\\lib\\pages\\icons-list.vue"
   },
   {
     "name": "privacy",
     "path": "/privacy",
     "component": "C:\\\\xampp\\\\htdocs\\\\unfolded\\\\schommelaantafel\\\\pages\\\\privacy.vue",
-    "chunkName": "pages/privacy",
-    "_name": "_4a954e63"
+    "chunkName": "pages/privacy"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\xampp\\\\htdocs\\\\unfolded\\\\schommelaantafel\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_9a805926"
+    "chunkName": "pages/index"
   },
   {
     "name": "all",
     "path": "/*",
     "component": "C:\\\\xampp\\\\htdocs\\\\unfolded\\\\schommelaantafel\\\\pages\\\\_.vue",
-    "chunkName": "pages/_",
-    "_name": "_8419d40c"
+    "chunkName": "pages/_"
   }
 ]

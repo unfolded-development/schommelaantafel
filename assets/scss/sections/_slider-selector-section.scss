@@ -1,0 +1,187 @@
+.slider-selector {
+	padding-top: 3rem;
+	padding-bottom: 4rem;
+	z-index: 0;
+	@include breakpoint(medium) {
+		padding-top: 6.5rem;
+		padding-bottom: 5.5rem;
+	}
+	@include breakpoint(large) {
+		@include grid();
+		@include grid-container();
+		padding-top: 4.5rem;
+		padding-bottom: 8rem;
+	}
+
+	&__main {
+		@include breakpoint(medium) {
+			@include grid(8);
+			padding: 0 #{map-get($grid-container-padding, medium)};
+			grid-column: span 8 / -1;
+		}
+		@include breakpoint(large) {
+			padding: 0;
+		}
+	}
+
+	&__content {
+		position: relative;
+		padding: 1.5rem #{map-get($grid-container-padding, small)} 2rem;
+		@include breakpoint(medium) {
+			grid-column: span 8;
+			padding: 1.5rem 2rem 2rem;
+			margin: calc(-1.8rem * 1) 1.2rem 0;
+			background-color: $white;
+		}
+		@include breakpoint(large) {
+			grid-column: span 7;
+			width: calc(100% + #{map-get($grid-container-padding, large)});
+			margin: calc(-1.8rem * 4) 1.2rem 0;
+		}
+	}
+
+	&__controls {
+		position: absolute;
+		top: calc(((1.1rem + .5rem * 2) / 2) * -1);
+		right: calc(100% / 12 * 1.15);
+		margin: 0 -.3rem;
+
+		@include breakpoint(medium) {
+			right: 4rem;
+		}
+
+		.icon {
+			font-size: 1.1rem;
+			margin: 0 .3rem;
+			padding: .5rem;
+			color: $white;
+			background-color: $orange;
+			cursor: pointer;
+		}
+	}
+
+	&__label {
+		display: inline-block;
+		font-size: 1.1rem;
+		color: $orange;
+		margin-bottom: .5rem;
+	}
+
+	&__text {
+		@include letter-spacing(8.82);
+		font-size: 1.8rem;
+		line-height: 1.17;
+		margin-top: 0;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__image {
+		position: relative;
+		height: 0;
+		min-height: 48vw;
+		max-height: calc(100vh - 4.5rem - 6.5rem);
+		z-index: -1;
+		// padding-bottom: 70%;
+		// padding-bottom: calc(100vh - 4.5rem * 2);
+		@include breakpoint(medium) {
+			grid-column: 1 / -1;
+		}
+		@include breakpoint(large) {
+			width: calc(100% + #{map-get($grid-container-padding, large)});
+		}
+		
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			z-index: -1;
+		}
+	}
+
+	&__navigation {
+		padding: 0 map-get($grid-container-padding, small);
+
+		@include breakpoint(large) {
+			grid-column: 2 / span 3;
+			display: inline-block;
+			margin-top: 9.45vw;
+			// margin-top: 7.333rem;
+			margin-left: -#{map-get($grid-column-gap, medium)};
+			padding: 0;
+		}
+
+		.label {
+			display: inline-block;
+			margin-bottom: 3rem;
+			@include breakpoint(medium) {
+				margin-bottom: 1rem;
+			}
+			@include breakpoint(large) {
+				margin-bottom: 3rem;
+			}
+		}
+		
+		ul {
+			display: flex;
+			justify-content: space-between;
+			list-style: none;
+			margin: 2.2rem 0 1.7rem;
+			padding: 0;
+
+			@include breakpoint(medium) {
+				justify-content: flex-start;
+				margin: 0 -1rem 2.6rem
+			}
+
+			@include breakpoint(large) {
+				flex-direction: column;
+				margin: -1rem 0
+			}
+
+			li {
+				@include heading();
+				font-size: 1rem;
+
+				@include breakpoint(medium) {
+					@include h4();
+					margin: 0 1.5rem
+				}
+
+				@include breakpoint(large) {
+					@include h3();
+					margin: 1rem 0;
+				}
+
+				span:hover {
+					color: $orange;
+					cursor: pointer;
+				}
+
+				&.active span {
+					position: relative;
+					color: $orange;
+					&:after {
+						position: absolute;
+						content: '';
+						display: inline-block;
+						width: 100%;
+						height: .1rem;
+						background-color: $orange;
+						bottom: -.25rem;
+						left: 0;
+						@include breakpoint(medium) {
+							height: .1666rem;
+						}
+					}
+				}
+			
+			}
+		}
+	}
+
+}

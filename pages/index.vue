@@ -22,6 +22,31 @@
 			</div>
 		</section>
 
+		<section class="slider-selector">
+			<nav class="slider-selector__navigation">
+				<span class="label">Schommel aan Tafel voor:</span>
+				<ul>
+					<li class="active"><span>Horeca</span></li>
+					<li><span>Events</span></li>
+					<li><span>Kantoren</span></li>
+					<li><span>Educatie</span></li>
+				</ul>
+			</nav>
+			<div class="slider-selector__main">
+				<div class="slider-selector__image">
+					<img src="~/static/images/eye-catcher.png" alt="">
+				</div>
+				<div class="slider-selector__content">
+					<div class="slider-selector__controls">
+						<i class="icon icon--arrow-left"></i>
+						<i class="icon icon--arrow-right"></i>
+					</div>
+					<span class="slider-selector__label">Eye-catcher</span>
+					<p class="slider-selector__text">Met schommel aan tafel maak je een statement op je terras.</p>
+				</div>
+			</div>
+		</section>
+
 		<section class="cta">
 			<div class='content-section'>
 				<div class="cta__content">
