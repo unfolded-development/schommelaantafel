@@ -5,13 +5,14 @@ $grid-columns: (
 
 $grid-column-gap: (
   small: 0.5rem,
-  medium: 2.4rem,
+  medium: 1.2rem,
+	large: 2.4rem,
 );
 
 $grid-container-padding: (
-  small: 1.1rem,
-  medium: 1.5rem,
-  large: 2.2rem,
+  small: 0.5rem,
+  medium: 1.1rem,
+  large: 1.1rem,
 );
 
 @mixin grid-container($grid-container-padding: $grid-container-padding) {

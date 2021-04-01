@@ -79,6 +79,46 @@
 		<section class="image-full-size">
 			<img src="~/static/images/full-size-image.png" alt="">
 		</section>
+
+		<section class="cards">
+			<div class='content-section'>
+				<div class="cards__header">
+					<h3>De voordelen van Schommel aan Tafel</h3>
+				</div>
+				<div class="cards__container">
+					<div class="card">
+						<div class="card__image">
+							<img src="~/static/images/card-1.png" alt="">
+						</div>
+						<div class="card__content">
+							<h5>Customisable</h5>
+							<p>Bepaal zelf de afwerking van het frame, de schommels en het tafelblad.</p>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card__image">
+							<img src="~/static/images/card-2.png" alt="">
+						</div>
+						<div class="card__content">
+							<h5>Customisable</h5>
+							<p>Bepaal zelf de afwerking van het frame, de schommels en het tafelblad.</p>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card__image">
+							<img src="~/static/images/card-3.png" alt="">
+						</div>
+						<div class="card__content">
+							<h5>Customisable</h5>
+							<p>Bepaal zelf de afwerking van het frame, de schommels en het tafelblad.</p>
+						</div>
+					</div>
+				</div>
+				<div class="cards__cta">
+					<a href="#" class="btn">Vraag naar de opties</a>
+				</div>
+			</div>
+		</section>
 		
 		<section class="section-referrals bg-white">
 			<div class="text-center">
