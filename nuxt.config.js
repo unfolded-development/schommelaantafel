@@ -4,7 +4,7 @@ export default {
 
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	head: {
-		title: 'Koningsdag Eindhoven',
+		title: 'Schommel aan Tafel',
 		htmlAttrs: {
 			lang: 'en',
 		},
