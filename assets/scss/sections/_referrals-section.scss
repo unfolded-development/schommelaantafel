@@ -1,3 +1,38 @@
-.section-referrals {
-	padding: 2rem;
+.referrals {
+	text-align: center;
+	padding: 2rem 0;
+
+	@include breakpoint(medium) {
+		padding: 5.6rem 0;
+	}
+
+	@include breakpoint(large) {
+		padding: 5.4rem 0;
+	}
+
+	&__stars {
+		margin-bottom: .8rem;
+		@include breakpoint(medium) {
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	&__title {
+		@include h4();
+		grid-column: 1 / -1;
+		padding: 0 1rem;
+		@include breakpoint(medium) {
+			grid-column: 3 / -3;
+			padding: 0;
+		}
+	}
+
+	&__logos {
+		width: 100%;
+		margin-top: 2.3rem;
+
+		@include breakpoint(large) {
+			margin-top: 4.6rem;
+		}
+	}
 }

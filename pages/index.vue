@@ -120,16 +120,22 @@
 			</div>
 		</section>
 		
-		<section class="section-referrals bg-white">
-			<div class="text-center">
-				<div>
-					<i class="icon icon--star"></i>
-					<i class="icon icon--star"></i>
-					<i class="icon icon--star"></i>
-					<i class="icon icon--star"></i>
-					<i class="icon icon--star"></i>
-				</div>
-				<h5>“Bij ons is deze tafel altijd als eerste volgeboekt”</h5>
+		<section class="referrals bg-white">
+			<div class="referrals__stars">
+				<i class="icon icon--star"></i>
+				<i class="icon icon--star"></i>
+				<i class="icon icon--star"></i>
+				<i class="icon icon--star"></i>
+				<i class="icon icon--star"></i>
+			</div>
+			<div class='content-section'>
+				<span class="referrals__title">“Bij ons is deze tafel altijd als eerste gereserveerd”</span>
+			</div>
+			<div class="referrals__logos">
+				<img src="~/static/images/referral-hutten.png" alt="">
+				<img src="~/static/images/referral-klm.png" alt="">
+				<img src="~/static/images/referral-manca.png" alt="">
+				<img src="~/static/images/referral-rtp.png" alt="">
 			</div>
 		</section>
 

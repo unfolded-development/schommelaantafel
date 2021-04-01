@@ -108,9 +108,11 @@ small, .small {
 }
 
 @mixin h4 {
-	@include heading();
+	// @include heading();
 	@include letter-spacing(3.64);
 	font-size: 1.5rem;
+	font-weight: 500;
+	line-height: 1.17;
 	@include breakpoint(medium) {
 		@include letter-spacing(8.82);
 		font-size: 1.8rem;
