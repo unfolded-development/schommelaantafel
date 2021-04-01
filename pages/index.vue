@@ -1,6 +1,20 @@
 <template>
 	<div>
 
+		<header class="site-header">
+			<div class='content-section'>
+				<nav class="site-header__nav">
+					<div class="site-header__logo">
+						<img src="~/static/images/logo.svg" alt="">
+					</div>
+					<div class="site-header__cta">
+						<a href="#">download brochure</a>
+						<a href="#" class="btn btn-orange">Contact</a>
+					</div>
+				</nav>
+			</div>
+		</header>
+
 		<section class="intro">
 			<div class='content-section'>
 				<div class="intro__content">
@@ -142,7 +156,7 @@
 		<section class="contact" id="section-contact">
 			<div class='content-section'>
 				<div class='content-section__content'>
-					<h3 class="text-center">Interesse of een bezichtiging inplannen?</h3>
+					<h3>Interesse of een bezichtiging inplannen?</h3>
 					<p>Laat uw gegevens achter en wij nemen zo spoedig mogelijk contact met u op.</p>
 					<form class="contact-form" action="post">
 						<input class="input-field" type="text" placeholder="Naam*">

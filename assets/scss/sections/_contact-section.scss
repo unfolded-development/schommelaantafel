@@ -4,6 +4,7 @@
 
 	.content-section__content {
 		grid-column: 1 / -1;
+		text-align: center;
 		padding: 4.5rem 0 4rem;
 		@include breakpoint(medium) {
 			grid-column: 2 / -2;
@@ -13,7 +14,6 @@
 		}
 
 		p {
-			text-align: center;
 			margin-bottom: 3.9rem;
 			@include breakpoint(medium) {
 				margin-bottom: 3.4rem;
