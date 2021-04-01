@@ -66,13 +66,16 @@ small, .small {
 	@include heading();
 	@include letter-spacing(23.83);
 	font-size: 3rem;
+	line-height: .78em;
 	color: $white;
 	text-shadow: 0 2px 20px rgba($black, .5);
 	@include breakpoint(medium) {
 		font-size: 4rem;
+		line-height: .83em;
 	}
 	@include breakpoint(xlarge) {
 		font-size: 5rem;
+		line-height: .8em;
 	}
 }
 
