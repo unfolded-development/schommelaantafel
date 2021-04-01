@@ -123,12 +123,12 @@
 export default {
   head() {
     return {
-      title: 'Koningsdag Eindhoven',
+      title: 'Schommel aan Tafel',
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'De Koning komt KennisMaken met Eindhoven. Doe dat ook! Eindhoven, stad van Kennis, stad van het Maken.'
+          content: 'Met Schommel aan Tafel trek je de aandacht en creéer je een Plek waar mensen samen komen.'
         }
       ]
     }

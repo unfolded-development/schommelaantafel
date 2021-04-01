@@ -133,9 +133,9 @@ export default {
 
 	pwa: {
 		meta: {
-			name: 'Koningsdag Eindhoven',
-			author: 'Gemeente Eindhoven',
-			description: 'De Koning komt KennisMaken met Eindhoven. Doe dat ook! Eindhoven, stad van Kennis, stad van het Maken.',
+			name: 'Schommel aan Tafel',
+			author: 'Unfolded',
+			description: 'Met Schommel aan Tafel trek je de aandacht en creéer je een Plek waar mensen samen komen.',
 			theme_color: '#FF6E00',
 			lang: 'nl',
 			ogHost: 'https://koningsdageindhoven.nl',
