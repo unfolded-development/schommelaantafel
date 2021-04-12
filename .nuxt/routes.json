@@ -2,24 +2,28 @@
   {
     "name": "icons-list",
     "path": "/_icons",
-    "component": "/Users/petertindemans/Documents/Localserver/schommelaantafel/node_modules/@nuxtjs/svg-sprite/lib/pages/icons-list.vue"
+    "component": "/Users/petertindemans/Documents/Localserver/schommelaantafel/node_modules/@nuxtjs/svg-sprite/lib/pages/icons-list.vue",
+    "_name": "_45831116"
   },
   {
     "name": "privacy",
     "path": "/privacy",
     "component": "/Users/petertindemans/Documents/Localserver/schommelaantafel/pages/privacy.vue",
-    "chunkName": "pages/privacy"
+    "chunkName": "pages/privacy",
+    "_name": "_7f0f0436"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/petertindemans/Documents/Localserver/schommelaantafel/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_1bc2e200"
   },
   {
     "name": "all",
     "path": "/*",
     "component": "/Users/petertindemans/Documents/Localserver/schommelaantafel/pages/_.vue",
-    "chunkName": "pages/_"
+    "chunkName": "pages/_",
+    "_name": "_33db33e6"
   }
 ]

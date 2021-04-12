@@ -36,30 +36,7 @@
 			</div>
 		</section>
 
-		<section class="slider-selector">
-			<nav class="slider-selector__navigation">
-				<span class="label">Schommel aan Tafel voor:</span>
-				<ul>
-					<li class="active"><span>Horeca</span></li>
-					<li><span>Events</span></li>
-					<li><span>Kantoren</span></li>
-					<li><span>Educatie</span></li>
-				</ul>
-			</nav>
-			<div class="slider-selector__main">
-				<div class="slider-selector__image">
-					<img src="~/static/images/eye-catcher.png" alt="">
-				</div>
-				<div class="slider-selector__content">
-					<div class="slider-selector__controls">
-						<i class="icon icon--arrow-left"></i>
-						<i class="icon icon--arrow-right"></i>
-					</div>
-					<span class="slider-selector__label">Eye-catcher</span>
-					<p class="slider-selector__text">Met schommel aan tafel maak je een statement op je terras.</p>
-				</div>
-			</div>
-		</section>
+		<Sliderselector />
 
 		<section class="cta">
 			<div class='content-section'>
@@ -70,25 +47,7 @@
 			</div>
 		</section>
 
-		<section class="newsletter">
-			<div class='content-section'>
-				<div class='content-section__content'>
-					<div class="newsletter__image">
-						<img src="~/static/images/newsletter.png" alt="">
-					</div>
-					<div class="newsletter__content">
-						<h3 class="newsletter__title">Interesse om te schommelen? Download de gratis brochure</h3>
-						<form class="newsletter__form" action="">
-							<input class="input-field" type="text" placeholder="Email adres">
-							<button type="submit" class="btn btn-orange">Download</button>
-						</form>
-						<div class="newsletter__disclaimer">
-							<p>*Vul een geldig emailadres in (pas zichtbaar wanneer foutief)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+		<Newsletter />
 
 		<section class="image-full-size">
 			<img src="~/static/images/full-size-image.png" alt="">
@@ -134,24 +93,7 @@
 			</div>
 		</section>
 		
-		<section class="referrals bg-white">
-			<div class="referrals__stars">
-				<i class="icon icon--star"></i>
-				<i class="icon icon--star"></i>
-				<i class="icon icon--star"></i>
-				<i class="icon icon--star"></i>
-				<i class="icon icon--star"></i>
-			</div>
-			<div class='content-section'>
-				<span class="referrals__title">“Bij ons is deze tafel altijd als eerste gereserveerd”</span>
-			</div>
-			<div class="referrals__logos">
-				<img src="~/static/images/referral-hutten.png" alt="">
-				<img src="~/static/images/referral-klm.png" alt="">
-				<img src="~/static/images/referral-manca.png" alt="">
-				<img src="~/static/images/referral-rtp.png" alt="">
-			</div>
-		</section>
+		<Referrals />
 
 		<section class="contact" id="section-contact">
 			<div class='content-section'>
