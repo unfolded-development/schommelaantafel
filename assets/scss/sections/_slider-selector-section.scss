@@ -225,6 +225,21 @@
 				&.active span {
 					position: relative;
 					color: $orange;
+
+					&:before {
+						position: absolute;
+						content: "";
+						display: inline-block;
+						height: 2.4rem;
+						width: 2.4rem;
+						top: 50%;
+						transform: translateY(-50%);
+						left: -3.5rem;
+						background-image: url("@/assets/icons/arrow.svg");
+						background-size: cover;
+						background-repeat: no-repeat;
+					}
+
 					&:after {
 						position: absolute;
 						content: '';

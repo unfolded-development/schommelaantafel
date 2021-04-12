@@ -2,6 +2,11 @@
 	text-align: center;
 	padding: 2rem 0;
 
+	.content-section {
+		display: initial;
+		word-spacing: normal;
+	}
+
 	@include breakpoint(medium) {
 		padding: 5.6rem 0;
 	}
@@ -21,6 +26,7 @@
 		@include h4();
 		grid-column: 1 / -1;
 		padding: 0 1rem;
+		display: block;
 		@include breakpoint(medium) {
 			grid-column: 3 / -3;
 			padding: 0;
@@ -45,6 +51,7 @@
 	&__logo-wrapper {
 		display: flex;
 		margin-right: 5rem;
+		height: 3rem;
 
 		&.is-selected {
 			.referrals__logo {
@@ -54,7 +61,7 @@
 	}
 
 	&__logo {
-		max-height: 3rem;
+		height: 100%;
 		opacity: .25;
 	}
 }
