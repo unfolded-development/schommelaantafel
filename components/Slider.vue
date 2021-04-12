@@ -55,7 +55,9 @@ export default {
       transferOptions: { ...this.options },
       isMoving: false,
       isDragable: false,
-      windowWidth: window.innerWidth
+      asNavFor: null,
+      wrapAround: false,
+      fade: false,
     }
   },
   methods: {

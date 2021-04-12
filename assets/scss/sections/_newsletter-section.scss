@@ -24,6 +24,26 @@
 		}
 	}
 
+	&__error {
+		background-color: #ff4747;
+		opacity: 0;
+		position: absolute;
+		pointer-events: none;
+		padding: 1rem;
+		margin-bottom: 1rem;
+
+		&-active {
+			position: static;
+			opacity: 1;
+			pointer-events: all;
+		}
+
+		p {
+			margin: 0;
+			color: $white;
+		}
+	}
+
 	&__image {
 		position: relative;
 		overflow: hidden;

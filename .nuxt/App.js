@@ -8,7 +8,7 @@ import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
 import '..\\assets\\scss\\styles.scss'
 
-import _1c3006c4 from './layouts.svg-sprite.cd8302da.vue'
+import _1c3006c4 from './layouts.svg-sprite.51def09c.vue'
 import _6f6c098b from '..\\layouts\\default.vue'
 
 const layouts = { "_svg-sprite": sanitizeComponent(_1c3006c4),"_default": sanitizeComponent(_6f6c098b) }

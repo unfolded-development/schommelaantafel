@@ -7,8 +7,12 @@ const components = {
   ExpandTransition: () => import('../..\\components\\ExpandTransition.vue' /* webpackChunkName: "components/expand-transition" */).then(c => wrapFunctional(c.default || c)),
   Intro: () => import('../..\\components\\Intro.vue' /* webpackChunkName: "components/intro" */).then(c => wrapFunctional(c.default || c)),
   Logo: () => import('../..\\components\\Logo.vue' /* webpackChunkName: "components/logo" */).then(c => wrapFunctional(c.default || c)),
+  Newsletter: () => import('../..\\components\\Newsletter.vue' /* webpackChunkName: "components/newsletter" */).then(c => wrapFunctional(c.default || c)),
+  Referrals: () => import('../..\\components\\Referrals.vue' /* webpackChunkName: "components/referrals" */).then(c => wrapFunctional(c.default || c)),
   Slider: () => import('../..\\components\\Slider.vue' /* webpackChunkName: "components/slider" */).then(c => wrapFunctional(c.default || c)),
+  Sliderselector: () => import('../..\\components\\Sliderselector.vue' /* webpackChunkName: "components/sliderselector" */).then(c => wrapFunctional(c.default || c)),
   SocialLinks: () => import('../..\\components\\SocialLinks.vue' /* webpackChunkName: "components/social-links" */).then(c => wrapFunctional(c.default || c)),
+  Subjectsliders: () => import('../..\\components\\Subjectsliders.vue' /* webpackChunkName: "components/subjectsliders" */).then(c => wrapFunctional(c.default || c)),
   Toggle: () => import('../..\\components\\Toggle.vue' /* webpackChunkName: "components/toggle" */).then(c => wrapFunctional(c.default || c)),
   VideoSlider: () => import('../..\\components\\VideoSlider.vue' /* webpackChunkName: "components/video-slider" */).then(c => wrapFunctional(c.default || c))
 }
