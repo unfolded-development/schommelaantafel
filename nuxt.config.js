@@ -63,10 +63,6 @@ export default {
 			// 	href: '/favicons/safari-pinned-tab.svg',
 			// },
 		],
-		script: [{
-			src: process.env.JWPLAYER_PLAYER_LIBRARY_URL ||
-				'https://cdn.jwplayer.com/libraries/0XbBf8Uu.js',
-		}, ],
 	},
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
@@ -115,9 +111,6 @@ export default {
 
 	// Modules: https://go.nuxtjs.dev/config-modules
     modules: [
-        'vue-scrollto/nuxt',
- 
-        // Or if you have custom options...
         ['vue-scrollto/nuxt', { duration: 300 }],
     ],
 
@@ -139,15 +132,15 @@ export default {
 	pwa: {
 		meta: {
 			name: 'Schommel aan Tafel',
-			author: 'Unfolded',
+			author: 'Schommel aan Tafel',
 			description: 'Met Schommel aan Tafel trek je de aandacht en creéer je een Plek waar mensen samen komen.',
 			theme_color: '#FF6E00',
 			lang: 'nl',
-			ogHost: 'https://koningsdageindhoven.nl',
+			// ogHost: 'https://koningsdageindhoven.nl',
 		},
 		manifest: {
-			name: 'Koningsdag Eindhoven',
-			short_name: 'Koningsdag Eindhoven',
+			name: 'Schommel aan Tafel',
+			short_name: 'Schommel aan Tafel',
 			icons: [{
 					src: '/favicons/android-chrome-192x192.png',
 					sizes: '192x192',
@@ -175,16 +168,10 @@ export default {
 	},
 
 	gtm: {
-		id: 'GTM-M78QBR3', // Live id
+		id: 'GTM-KCBFCXX', // Live id
 	},
 
-	publicRuntimeConfig: {
-		media: {
-			apiUri: process.env.MEDIA_API_URI || '/api/media',
-			refreshRate: process.env.MEDIA_REFRESH_RATE || 60000,
-		},
-		hash: 'ddfruvagyhjiux33oxmu',
-	},
+	publicRuntimeConfig: {},
 
 	axios: {
 		baseURL: '/',

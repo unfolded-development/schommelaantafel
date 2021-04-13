@@ -6,7 +6,6 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _79bc1b38 = () => interopDefault(import('..\\node_modules\\@nuxtjs\\svg-sprite\\lib\\pages\\icons-list.vue' /* webpackChunkName: "" */))
 const _eb3548ea = () => interopDefault(import('..\\pages\\home.vue' /* webpackChunkName: "pages/home" */))
-const _68e203e8 = () => interopDefault(import('..\\pages\\privacy.vue' /* webpackChunkName: "pages/privacy" */))
 const _16835956 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 const _ada00f3a = () => interopDefault(import('..\\pages\\_.vue' /* webpackChunkName: "pages/_" */))
 
@@ -29,10 +28,6 @@ export const routerOptions = {
     path: "/home",
     component: _eb3548ea,
     name: "home"
-  }, {
-    path: "/privacy",
-    component: _68e203e8,
-    name: "privacy"
   }, {
     path: "/",
     component: _16835956,
