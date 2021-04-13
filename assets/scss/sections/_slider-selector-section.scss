@@ -27,15 +27,28 @@
 	&__wrapper {
 		grid-column: span 8;
 		width: 100%;
-	}
+		// margin-top: -5rem;
 
-	&__content-slider {
 		@include breakpoint(medium) {
 			margin: calc(-1.8rem * 1) 1.2rem 0;
 		}
 
 		@include breakpoint(large) {
 			margin: calc(-1.8rem * 4) 1.2rem 0;
+		}
+	}
+
+	&__content-slider {
+		.flickity-slider > * {
+			width: 100%;
+			opacity: 0 !important;
+			position: absolute;
+			transition: opacity 1.5s ease-out .5s;
+			left: 0 im !important;
+		}
+
+		.is-selected {
+			opacity: 1 !important;
 		}
 	}
 
@@ -53,6 +66,8 @@
 		@include breakpoint(large) {
 			grid-column: span 7;
 			width: calc(100% + #{map-get($grid-container-padding, large)});
+			width: calc(100% - 6.6rem);
+    		margin-left: 2.2rem;
 			// margin: calc(-1.8rem * 4) 1.2rem 0;
 		}
 	}
@@ -77,8 +92,8 @@
 		border-radius: 0rem !important;
 		height: 2.2rem;
 		width: 2.2rem;
-		top: 0 !important;
-		right: 4.4rem !important;
+		top: -1.5rem !important;
+		right: 0rem !important;
 		display: block !important;
 
 		svg {
@@ -221,15 +236,15 @@
 					span {
 						color: $orange;
 						cursor: pointer;
+
+						@include breakpoint(large) {
+							margin-left: 3.6rem;
+						}
 					}
 
 					&:not(&.active) {
 						span:before {
 							opacity: 1;
-							height: 1.8rem;
-							width: 1.8rem;
-							left: -3rem;
-							opacity: .5;
 						}
 					}
 				}
@@ -237,7 +252,7 @@
 
 				span {
 					position: relative;
-					transition: margin-left .2s ease-in-out;
+					transition: margin-left .1s ease-in-out;
 
 					@include breakpoint (large) {
 						&:before {
@@ -248,12 +263,13 @@
 							width: 2.4rem;
 							top: 50%;
 							transform: translateY(-50%);
-							left: -3.5rem;
+							left: -3.475rem;
 							background-image: url("@/assets/icons/arrow.svg");
 							background-size: cover;
 							background-repeat: no-repeat;
 							opacity: 0;
 							transform: left .2s ease-in-out;
+							pointer-events: none;
 						}
 					}
 				}

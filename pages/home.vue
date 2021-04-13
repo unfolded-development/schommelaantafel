@@ -34,7 +34,7 @@
 			<div class='content-section'>
 				<div class="cta__content">
 					<div class="cta__title">Kopen of huren? Het kan allebei</div>
-					<a href="#" class="btn btn-white">Neem contact op</a>
+					<a v-scroll-to="'#section-contact'" class="btn btn-black">Neem contact op</a>
 				</div>
 			</div>
 		</section>
@@ -80,7 +80,7 @@
 					</div>
 				</div>
 				<div class="cards__cta">
-					<a href="#" class="btn">Vraag naar de opties</a>
+					<a v-scroll-to="'#section-contact'" class="btn">Vraag naar de opties</a>
 				</div>
 			</div>
 		</section>

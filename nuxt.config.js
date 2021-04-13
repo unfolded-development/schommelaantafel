@@ -111,7 +111,10 @@ export default {
 
 	// Modules: https://go.nuxtjs.dev/config-modules
     modules: [
-        ['vue-scrollto/nuxt', { duration: 300 }],
+        ['vue-scrollto/nuxt', { 
+			duration: 1000,
+			easing: "ease-in-out",
+		}],
     ],
 
 	iconFont: {

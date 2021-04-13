@@ -7,7 +7,7 @@
         </div>
         <div class="site-header__cta">
           <a v-if="this.$attrs.showBrochureBtn" href="#">download brochure</a>
-          <a v-if="this.$attrs.showContactBtn" href="#" class="btn btn-orange">Contact</a>
+          <a v-if="this.$attrs.showContactBtn" v-scroll-to="'#section-contact'" class="btn btn-orange">Contact</a>
         </div>
       </nav>
     </div>
