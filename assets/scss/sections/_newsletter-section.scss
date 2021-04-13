@@ -69,12 +69,13 @@
 	}
 
 	&__title {
-		margin-bottom: 1.8rem;
+		margin: 1.8rem 0 2.4rem;
+		text-align: center;
 		@include breakpoint(medium) {
-			margin-bottom: 2.5rem;
+			margin: 2.5rem 0 3.5rem;
 		}
 		@include breakpoint(xlarge) {
-			margin-bottom: 4rem;
+			margin: 0 0 4rem 0;
 		}
 	}
 	
@@ -91,9 +92,6 @@
 
 		& > * {
 			margin: .5rem;
-			// &:last-child {
-			// 	margin-bottom: 0;
-			// }
 		}
 
 		input {

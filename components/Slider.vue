@@ -58,6 +58,7 @@ export default {
       asNavFor: null,
       wrapAround: false,
       fade: false,
+      pageDots: false
     }
   },
   methods: {

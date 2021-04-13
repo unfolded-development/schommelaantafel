@@ -20,7 +20,7 @@ $footer-items-margin-bottom: 1rem;
 		display: flex;
 		flex-direction: column;
 		padding: 0;
-		margin: 0 0 $footer-items-margin-bottom;
+		margin: 0 0 calc(#{$footer-items-margin-bottom} * 3);
 		list-style: none;
 		@include breakpoint(large) {
 			flex-direction: row;
