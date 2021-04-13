@@ -84,7 +84,9 @@ export default {
   },
   mounted() {
     this.flickity = this.$refs.flickity
-    this.refresh()
+    setTimeout(() => {
+      this.refresh()
+    }, 200);
   }
 }
 </script>
