@@ -5,6 +5,7 @@ const components = {
   Dropdown: () => import('../..\\components\\Dropdown.vue' /* webpackChunkName: "components/dropdown" */).then(c => wrapFunctional(c.default || c)),
   DropdownGroup: () => import('../..\\components\\DropdownGroup.vue' /* webpackChunkName: "components/dropdown-group" */).then(c => wrapFunctional(c.default || c)),
   ExpandTransition: () => import('../..\\components\\ExpandTransition.vue' /* webpackChunkName: "components/expand-transition" */).then(c => wrapFunctional(c.default || c)),
+  Header: () => import('../..\\components\\Header.vue' /* webpackChunkName: "components/header" */).then(c => wrapFunctional(c.default || c)),
   Intro: () => import('../..\\components\\Intro.vue' /* webpackChunkName: "components/intro" */).then(c => wrapFunctional(c.default || c)),
   Logo: () => import('../..\\components\\Logo.vue' /* webpackChunkName: "components/logo" */).then(c => wrapFunctional(c.default || c)),
   Newsletter: () => import('../..\\components\\Newsletter.vue' /* webpackChunkName: "components/newsletter" */).then(c => wrapFunctional(c.default || c)),
