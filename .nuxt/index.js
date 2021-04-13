@@ -13,6 +13,7 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 /* Plugins */
 
 import nuxt_plugin_plugin_75dc6909 from 'nuxt_plugin_plugin_75dc6909' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_vuescrollto_23b089dd from 'nuxt_plugin_vuescrollto_23b089dd' // Source: .\\vue-scrollto.js (mode: 'client')
 import nuxt_plugin_nuxtsvgsprite_9914526c from 'nuxt_plugin_nuxtsvgsprite_9914526c' // Source: .\\nuxt-svg-sprite.js (mode: 'all')
 import nuxt_plugin_workbox_79acdcc8 from 'nuxt_plugin_workbox_79acdcc8' // Source: .\\workbox.js (mode: 'client')
 import nuxt_plugin_metaplugin_3f728948 from 'nuxt_plugin_metaplugin_3f728948' // Source: .\\pwa\\meta.plugin.js (mode: 'all')
@@ -181,6 +182,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_plugin_75dc6909 === 'function') {
     await nuxt_plugin_plugin_75dc6909(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_vuescrollto_23b089dd === 'function') {
+    await nuxt_plugin_vuescrollto_23b089dd(app.context, inject)
   }
 
   if (typeof nuxt_plugin_nuxtsvgsprite_9914526c === 'function') {

@@ -34,4 +34,17 @@
 		object-fit: cover;
 		z-index: -1;
 	}
+
+	&__btn-down {
+		cursor: pointer;
+		position: absolute;
+		bottom: 1.5rem;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 1.25rem;
+
+		.icon {
+			color: $white;
+		}
+	}
 }

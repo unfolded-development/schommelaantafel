@@ -35,6 +35,48 @@
 			margin-right: 1rem;
 		}
 	}
+
+	&__btn-up {
+		position: fixed;
+		z-index: 9999;
+		bottom: 1rem;
+		right: .5rem;
+		background-color: $white;
+		padding: .8rem;
+		cursor: pointer;
+		pointer-events: none;
+		opacity: 0;
+		transition: opacity .2s ease-in-out, background-color .2s ease-in-out, color .2s ease-in-out;
+
+		@include breakpoint (medium) {
+			bottom: 1.1rem;
+			right: 1.1rem;
+		}
+
+		@include breakpoint (large) {
+			bottom: 2.2rem;
+			right: 2.2rem;
+		}
+
+		&:hover {
+			background-color: $black;
+			color: $white;
+
+			.icon {
+				padding-bottom: .1rem;
+			}
+		}
+
+		&-active {
+			pointer-events: all;
+			opacity: 1;
+		}
+
+		.icon {
+			font-size: 1.4rem;
+			transition: padding .2s ease-in-out;
+		}
+	}
 }
 
 

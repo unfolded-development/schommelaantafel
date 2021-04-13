@@ -243,6 +243,7 @@
 
 				span {
 					position: relative;
+					transition: margin-left .2s ease-in-out;
 
 					@include breakpoint (large) {
 						&:before {
@@ -265,6 +266,10 @@
 
 				&.active span {
 					color: $orange;
+					
+					@include breakpoint(large) {
+						margin-left: 3.6rem;
+					}
 
 					&:after {
 						position: absolute;

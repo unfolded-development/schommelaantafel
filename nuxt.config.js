@@ -114,7 +114,12 @@ export default {
 	],
 
 	// Modules: https://go.nuxtjs.dev/config-modules
-	modules: [],
+    modules: [
+        'vue-scrollto/nuxt',
+ 
+        // Or if you have custom options...
+        ['vue-scrollto/nuxt', { duration: 300 }],
+    ],
 
 	iconFont: {
 		files: ['assets/icons/*.svg'],
