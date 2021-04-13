@@ -1,11 +1,11 @@
 <template>
   <div class='slider' :class="{'is-moving': isMoving}">
-    <flickity
-      :options='fullOptions'
-      ref='flickity'
-      class='slider'>
-      <slot></slot>
-    </flickity>
+      <flickity
+        :options='fullOptions'
+        ref='flickity'
+        class='slider'>
+        <slot></slot>
+      </flickity>
   </div>
 </template>
 

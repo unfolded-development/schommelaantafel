@@ -71,8 +71,10 @@
 	&__title {
 		margin: 1.8rem 0 2.4rem;
 		text-align: center;
+
 		@include breakpoint(medium) {
 			margin: 2.5rem 0 3.5rem;
+			text-align: initial;
 		}
 		@include breakpoint(xlarge) {
 			margin: 0 0 4rem 0;

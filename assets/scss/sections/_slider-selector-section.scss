@@ -217,27 +217,52 @@
 					}
 				}
 
-				span:hover {
-					color: $orange;
-					cursor: pointer;
+				&:hover {
+					span {
+						color: $orange;
+						cursor: pointer;
+					}
+
+					&:not(&.active) {
+						span:before {
+							opacity: 1;
+							height: 1.8rem;
+							width: 1.8rem;
+							left: -3rem;
+							opacity: .5;
+						}
+					}
+				}
+
+
+				span {
+					position: relative;
+					transition: margin-left .2s ease-in-out;
+
+					@include breakpoint (large) {
+						&:before {
+							position: absolute;
+							content: "";
+							display: inline-block;
+							height: 2.4rem;
+							width: 2.4rem;
+							top: 50%;
+							transform: translateY(-50%);
+							left: -3.5rem;
+							background-image: url("@/assets/icons/arrow.svg");
+							background-size: cover;
+							background-repeat: no-repeat;
+							opacity: 0;
+							transform: left .2s ease-in-out;
+						}
+					}
 				}
 
 				&.active span {
-					position: relative;
 					color: $orange;
-
-					&:before {
-						position: absolute;
-						content: "";
-						display: inline-block;
-						height: 2.4rem;
-						width: 2.4rem;
-						top: 50%;
-						transform: translateY(-50%);
-						left: -3.5rem;
-						background-image: url("@/assets/icons/arrow.svg");
-						background-size: cover;
-						background-repeat: no-repeat;
+					
+					@include breakpoint(large) {
+						margin-left: 3.6rem;
 					}
 
 					&:after {
@@ -249,9 +274,14 @@
 						background-color: $orange;
 						bottom: -.25rem;
 						left: 0;
+
 						@include breakpoint(medium) {
 							height: .1666rem;
 						}
+					}
+
+					&:before {
+						opacity: 1;
 					}
 				}
 			

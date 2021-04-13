@@ -6,13 +6,6 @@
     "_name": "_45831116"
   },
   {
-    "name": "privacy",
-    "path": "/privacy",
-    "component": "/Users/petertindemans/Documents/Localserver/schommelaantafel/pages/privacy.vue",
-    "chunkName": "pages/privacy",
-    "_name": "_7f0f0436"
-  },
-  {
     "name": "index",
     "path": "/",
     "component": "/Users/petertindemans/Documents/Localserver/schommelaantafel/pages/index.vue",

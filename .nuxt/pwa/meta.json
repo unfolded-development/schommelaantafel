@@ -23,7 +23,7 @@
     {
       "hid": "author",
       "name": "author",
-      "content": "Unfolded"
+      "content": "Schommel aan Tafel"
     },
     {
       "hid": "description",
@@ -58,36 +58,6 @@
       "name": "og:description",
       "property": "og:description",
       "content": "Met Schommel aan Tafel trek je de aandacht en creéer je een Plek waar mensen samen komen."
-    },
-    {
-      "hid": "og:url",
-      "name": "og:url",
-      "property": "og:url",
-      "content": "https://koningsdageindhoven.nl"
-    },
-    {
-      "hid": "og:image",
-      "name": "og:image",
-      "property": "og:image",
-      "content": "https://koningsdageindhoven.nl/favicons/android-chrome-512x512.png"
-    },
-    {
-      "hid": "og:image:width",
-      "name": "og:image:width",
-      "property": "og:image:width",
-      "content": 512
-    },
-    {
-      "hid": "og:image:height",
-      "name": "og:image:height",
-      "property": "og:image:height",
-      "content": 512
-    },
-    {
-      "hid": "og:image:type",
-      "name": "og:image:type",
-      "property": "og:image:type",
-      "content": "image/png"
     }
   ],
   "link": [
@@ -104,7 +74,7 @@
     },
     {
       "rel": "manifest",
-      "href": "/_nuxt/manifest.0942f00c.json",
+      "href": "/_nuxt/manifest.fe922689.json",
       "hid": "manifest"
     }
   ],

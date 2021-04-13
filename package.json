@@ -35,6 +35,7 @@
     "vue-flickity": "^1.2.1"
   },
   "dependencies": {
-    "flickity-fade": "^1.0.0"
+    "flickity-fade": "^1.0.0",
+    "vue-scrollto": "^2.20.0"
   }
 }

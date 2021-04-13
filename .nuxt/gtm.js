@@ -3,7 +3,7 @@
 import { log } from './gtm.utils'
 
 const _layer = 'dataLayer'
-const _id = 'GTM-M78QBR3'
+const _id = 'GTM-KCBFCXX'
 
 function startPageTracking (ctx) {
   ctx.app.router.afterEach((to) => {

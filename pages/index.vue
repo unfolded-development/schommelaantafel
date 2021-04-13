@@ -13,18 +13,26 @@
 					</div>
 				</nav>
 			</div>
+
+			<a v-scroll-to="'#site-intro'" class="site-header__btn-up" :class="{ 'site-header__btn-up-active': headerUpButton == true }">
+				<i class="icon icon--arrow-up"></i>
+			</a>
 		</header>
 
-		<section class="intro">
+		<section class="intro" id="site-intro">
 			<div class='content-section'>
 				<div class="intro__content">
 					<h1>It’s better when you move.</h1>
 				</div>
 			</div>
 			<img src="~/static/images/intro.png" alt="">
+
+			<a v-scroll-to="'#site-about'" class="intro__btn-down">
+				<i class="icon icon--arrow-down"></i>
+			</a>
 		</section>
 		
-		<section class='content-section bg-white'>
+		<section class='content-section bg-white' id="site-about">
 			<div class='content-section__container'>
 				<div class='content-section__content'>
 					<div class="quote text-center">
@@ -117,18 +125,18 @@
 		<section class="section-socials">
 			<ul class="socials-list --white">
 				<li class="socials-list__item">
-					<a href="#">
+					<a target="_blank" href="https://www.instagram.com/schommelaantafel/">
 						<i class="icon icon--instagram"></i>
 					</a>
 				</li>
 				<li class="socials-list__item">
-					<a href="#">
-						<i class="icon icon--facebook"></i>
+					<a target="_blank" href="https://www.linkedin.com/company/schommel-aan-tafel/">
+						<i class="icon icon--linkedin"></i>
 					</a>
 				</li>
 				<li class="socials-list__item">
-					<a href="#">
-						<i class="icon icon--linkedin"></i>
+					<a target="_blank" href="https://nl.pinterest.com/timchristophe/">
+						<i class="icon icon--pinterest"></i>
 					</a>
 				</li>
 			</ul>
@@ -166,18 +174,25 @@ export default {
   data() {
     return {
       introFinished: false,
-      scrolled: false
+      scrolled: false,
+	  headerUpButton: false,
     }
   },
   methods: {
     handleScroll() {
-      if (window.scrollY > 25)
-        this.scrolled = true
+		if (window.scrollY > 25)
+			this.scrolled = true
+
+		if (document.documentElement.scrollTop > 0) {
+			this.headerUpButton = true;
+		} else {
+			this.headerUpButton = false;
+		}
     }
   },
   mounted() {
-    window.addEventListener('scroll', this.handleScroll)
-    this.handleScroll()
+	window.addEventListener('scroll', this.handleScroll)
+	this.handleScroll()
   }
 }
 </script>

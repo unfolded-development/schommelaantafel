@@ -13,6 +13,7 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 /* Plugins */
 
 import nuxt_plugin_plugin_821faaf0 from 'nuxt_plugin_plugin_821faaf0' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_vuescrollto_74d492aa from 'nuxt_plugin_vuescrollto_74d492aa' // Source: ./vue-scrollto.js (mode: 'client')
 import nuxt_plugin_nuxtsvgsprite_c0626188 from 'nuxt_plugin_nuxtsvgsprite_c0626188' // Source: ./nuxt-svg-sprite.js (mode: 'all')
 import nuxt_plugin_workbox_d693318c from 'nuxt_plugin_workbox_d693318c' // Source: ./workbox.js (mode: 'client')
 import nuxt_plugin_metaplugin_6039d44d from 'nuxt_plugin_metaplugin_6039d44d' // Source: ./pwa/meta.plugin.js (mode: 'all')
@@ -65,7 +66,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"Schommel aan Tafel","htmlAttrs":{"lang":"en"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"msapplication-TileColor","content":"#ffa803"},{"name":"msapplication-config","content":"\u002Ffavicons\u002Fbrowserconfig.xml"},{"name":"theme-color","content":"#ffffff"}],"link":[],"script":[{"src":"https:\u002F\u002Fcdn.jwplayer.com\u002Flibraries\u002F0XbBf8Uu.js"}],"style":[]},
+    head: {"title":"Schommel aan Tafel","htmlAttrs":{"lang":"en"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"msapplication-TileColor","content":"#ffa803"},{"name":"msapplication-config","content":"\u002Ffavicons\u002Fbrowserconfig.xml"},{"name":"theme-color","content":"#ffffff"}],"link":[],"style":[],"script":[]},
 
     router,
     nuxt: {
@@ -181,6 +182,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_plugin_821faaf0 === 'function') {
     await nuxt_plugin_plugin_821faaf0(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_vuescrollto_74d492aa === 'function') {
+    await nuxt_plugin_vuescrollto_74d492aa(app.context, inject)
   }
 
   if (typeof nuxt_plugin_nuxtsvgsprite_c0626188 === 'function') {
