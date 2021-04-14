@@ -25,14 +25,16 @@
 
 .btn-orange {
 	background-color: $orange;
-
-	&:hover {
-		background-color: $white;
-		color: $black;
-	}
 }
 
 .btn-white {
 	color: $body-font-color;
 	background-color: $white;
+}
+
+.btn-orange-odd-hover {
+	&:hover {
+		background-color: $white;
+		color: $black;
+	}
 }

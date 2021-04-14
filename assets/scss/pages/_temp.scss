@@ -1,5 +1,4 @@
 .temporary {
-    padding: 17rem 0 0;
     height: 100vh;
     background-color: $white;
     
@@ -7,6 +6,12 @@
         grid-column: 1 / -1;
         text-align: center;
         word-break: break-all;
+        margin-top: 47.5vh;
+        transform: translateY(-50%);
+
+        @include breakpoint (medium) {
+            margin-top: 50vh;
+        }
     }
 
     &__heading {
