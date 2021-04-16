@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="paralex-wrapper">
 
 		<Header :showBrochureBtn="true" :showContactBtn="true" />
 
@@ -39,10 +39,14 @@
 			</div>
 		</section>
 
+
 		<Newsletter />
 
 		<section class="image-full-size">
-			<img src="~/static/images/full-size-image.png" alt="">
+			<div class="image-full-size__paralex">
+				<!-- <img class="image-full-size__image" src="~/static/images/full-size-image.png" alt=""> -->
+				<div class="image-full-size__image" style="background-image: url(/images/full-size-image.jpeg);"></div>
+			</div>
 		</section>
 
 		<section class="cards">
