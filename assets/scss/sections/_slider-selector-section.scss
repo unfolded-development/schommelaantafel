@@ -2,10 +2,16 @@
 	padding-top: 3rem;
 	padding-bottom: 4rem;
 	z-index: 0;
+	background-color: $white;
+
+
+
 	@include breakpoint(medium) {
 		padding-top: 6.5rem;
 		padding-bottom: 5.5rem;
+		background-color: transparent;
 	}
+
 	@include breakpoint(large) {
 		@include grid();
 		@include grid-container();
@@ -69,6 +75,12 @@
 			width: calc(100% - 6.6rem);
     		margin-left: 2.2rem;
 			// margin: calc(-1.8rem * 4) 1.2rem 0;
+
+			transform: rotate(1deg);
+
+			& > * {
+				transform: rotate(-1deg);
+			}
 		}
 	}
 
@@ -209,6 +221,7 @@
 			li {
 				@include heading();
 				font-size: 1rem;
+				transition: transform .2s ease-out;
 
 				@include breakpoint(medium) {
 					@include h4();
@@ -271,6 +284,18 @@
 							transform: left .2s ease-in-out;
 							pointer-events: none;
 						}
+					}
+				}
+
+				&.active {
+					transform: translateY(-0.35rem);
+
+					@include breakpoint(medium) {
+						transform: translateY(-0.5rem);
+					}
+
+					@include breakpoint(large) {
+						transform: translateY(0rem);
 					}
 				}
 

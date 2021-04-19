@@ -8,6 +8,9 @@
   "ExpandTransition": {
     "description": "Auto imported from components/ExpandTransition.vue"
   },
+  "FullImageSize": {
+    "description": "Auto imported from components/FullImageSize.vue"
+  },
   "Header": {
     "description": "Auto imported from components/Header.vue"
   },

@@ -1,22 +1,22 @@
 <template>
   <section class="referrals bg-white">
     <client-only>
-    <div class="referrals__wrapper">
-      <div class="referrals__stars">
-        <i v-for="rating in activeElement.rating" :key="rating" class="icon icon--star"></i>
-      </div>
-      <div class='content-section'>
-        <span class="referrals__title">{{ activeElement.quote }}</span>
+      <div class="referrals__wrapper">
+        <div class="referrals__stars">
+          <i v-for="rating in activeElement.rating" :key="rating" class="icon icon--star"></i>
+        </div>
+        <div class='content-section'>
+          <span class="referrals__title">"{{ activeElement.quote }}"</span>
 
-        <div class="referrals__logos">
-          <Slider :options="{ autoPlay: 2500, pageDots: false, prevNextButtons: false }">
-            <div class="referrals__logo-wrapper" v-for="referral in referrals" :key="referral.id" :id="referral.id">
-              <img class="referrals__logo" :src="referral.logoUrl">
-            </div>
-          </Slider>
+          <div class="referrals__logos">
+            <Slider :options="{ autoPlay: 2500, pageDots: false, prevNextButtons: false }">
+              <div class="referrals__logo-wrapper" v-for="referral in referrals" :key="referral.id" :id="referral.id">
+                <img class="referrals__logo" :src="referral.logoUrl">
+              </div>
+            </Slider>
+          </div>
         </div>
       </div>
-    </div>
     </client-only>
   </section>
 </template>

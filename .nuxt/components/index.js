@@ -1,6 +1,7 @@
 export { default as Dropdown } from '../..\\components\\Dropdown.vue'
 export { default as DropdownGroup } from '../..\\components\\DropdownGroup.vue'
 export { default as ExpandTransition } from '../..\\components\\ExpandTransition.vue'
+export { default as FullImageSize } from '../..\\components\\FullImageSize.vue'
 export { default as Header } from '../..\\components\\Header.vue'
 export { default as Intro } from '../..\\components\\Intro.vue'
 export { default as Logo } from '../..\\components\\Logo.vue'
@@ -16,6 +17,7 @@ export { default as VideoSlider } from '../..\\components\\VideoSlider.vue'
 export const LazyDropdown = import('../..\\components\\Dropdown.vue' /* webpackChunkName: "components/dropdown" */).then(c => wrapFunctional(c.default || c))
 export const LazyDropdownGroup = import('../..\\components\\DropdownGroup.vue' /* webpackChunkName: "components/dropdown-group" */).then(c => wrapFunctional(c.default || c))
 export const LazyExpandTransition = import('../..\\components\\ExpandTransition.vue' /* webpackChunkName: "components/expand-transition" */).then(c => wrapFunctional(c.default || c))
+export const LazyFullImageSize = import('../..\\components\\FullImageSize.vue' /* webpackChunkName: "components/full-image-size" */).then(c => wrapFunctional(c.default || c))
 export const LazyHeader = import('../..\\components\\Header.vue' /* webpackChunkName: "components/header" */).then(c => wrapFunctional(c.default || c))
 export const LazyIntro = import('../..\\components\\Intro.vue' /* webpackChunkName: "components/intro" */).then(c => wrapFunctional(c.default || c))
 export const LazyLogo = import('../..\\components\\Logo.vue' /* webpackChunkName: "components/logo" */).then(c => wrapFunctional(c.default || c))

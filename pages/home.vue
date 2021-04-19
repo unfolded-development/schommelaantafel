@@ -42,12 +42,7 @@
 
 		<Newsletter />
 
-		<section class="image-full-size">
-			<div class="image-full-size__paralex">
-				<!-- <img class="image-full-size__image" src="~/static/images/full-size-image.png" alt=""> -->
-				<div class="image-full-size__image" style="background-image: url(/images/full-size-image.jpeg);"></div>
-			</div>
-		</section>
+		<FullImageSize />
 
 		<section class="cards">
 			<div class='content-section'>

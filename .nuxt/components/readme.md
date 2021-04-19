@@ -9,6 +9,7 @@ You can directly use them in pages and other components without the need to impo
 - `<Dropdown>` | `<dropdown>` (components/Dropdown.vue)
 - `<DropdownGroup>` | `<dropdown-group>` (components/DropdownGroup.vue)
 - `<ExpandTransition>` | `<expand-transition>` (components/ExpandTransition.vue)
+- `<FullImageSize>` | `<full-image-size>` (components/FullImageSize.vue)
 - `<Header>` | `<header>` (components/Header.vue)
 - `<Intro>` | `<intro>` (components/Intro.vue)
 - `<Logo>` | `<logo>` (components/Logo.vue)
