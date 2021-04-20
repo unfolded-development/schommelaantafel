@@ -46,6 +46,7 @@ body {
   padding: 0;
   color: $body-font-color;
   font-weight: $global-weight-normal;
+  overflow-x: hidden;
 	// letter-spacing: $body-letter-spacing;
 
   font-family: $body-font-family;

@@ -12,14 +12,12 @@
             }
         },
         mounted() {
-            document.getElementsByClassName("paralex-wrapper")[0].onscroll = this.scrollHandle;
+            document.getElementsByTagName("body")[0].onscroll = this.scrollHandle;
         },
         methods: {
             scrollHandle: function (scrollEvent) {
-
-                var userTopOffset   = scrollEvent.target.scrollTop;
-        	    var screenHeight    = scrollEvent.target.offsetHeight;
-                var imageHeight     = (this.$refs.paralexImage.offsetHeight);
+                var userTopOffset   = scrollEvent.path[1].scrollY;
+        	    var screenHeight    = scrollEvent.path[1].innerHeight;
 
                 if (userTopOffset + screenHeight > this.$refs.imageFullSize.offsetTop &&  userTopOffset < (this.$refs.imageFullSize.offsetTop + this.$refs.imageFullSize.clientHeight))  {
                     var pixelTop = userTopOffset - this.$refs.imageFullSize.offsetTop;

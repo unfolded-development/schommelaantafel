@@ -1,6 +1,6 @@
 .referrals {
 	text-align: center;
-	padding: 2rem 0;
+	padding: 4rem 0;
 
 	.content-section {
 		display: initial;
@@ -11,14 +11,27 @@
 		padding: 5.6rem 0;
 	}
 
+	@include breakpoint(large) {
+		padding: 6rem 0;
+	}
+
+	.icon--star {
+		font-size: 0.9rem;
+
+		&:not(:last-child) {
+			margin-right: .2rem
+		}
+	}
+
 	&__title {
 		@include h4();
 		display: block;
-		margin: 0 2.5rem;
+		margin: -.5rem 2.5rem 2rem;
 
 		@include breakpoint(medium) {
 			grid-column: 3 / -3;
 			padding: 0;
+			margin-bottom: 3rem;
 		}
 	}
 

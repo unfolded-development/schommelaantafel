@@ -1,6 +1,5 @@
 <template>
-	<div class="paralex-wrapper">
-
+	<div>
 		<Header :showBrochureBtn="true" :showContactBtn="true" />
 
 		<section class="intro" id="site-intro">
@@ -22,7 +21,7 @@
 					<div class="quote text-center">
 						<span class="label text-dimmed">Schommel aan Tafel</span>
 						<h2 class="quote__title">Met Schommel aan Tafel trek je de aandacht en creéer je een Plek waar mensen samen komen.</h2>
-						<a class="btn" href="#section-contact">Vraag informatie aan</a>
+						<a class="btn" v-scroll-to="'#section-contact'">Vraag informatie aan</a>
 					</div>
 				</div>
 			</div>
@@ -64,8 +63,8 @@
 							<img src="~/static/images/card-2.png" alt="">
 						</div>
 						<div class="card__content">
-							<h5>Customisable</h5>
-							<p>Bepaal zelf de afwerking van het frame, de schommels en het tafelblad.</p>
+							<h5>Eenvoudig te monteren</h5>
+							<p>De tafels bestaan uit verschillende delen waardoor deze eentvoudig te demonteren is.</p>
 						</div>
 					</div>
 					<div class="card">
@@ -73,8 +72,8 @@
 							<img src="~/static/images/card-3.png" alt="">
 						</div>
 						<div class="card__content">
-							<h5>Customisable</h5>
-							<p>Bepaal zelf de afwerking van het frame, de schommels en het tafelblad.</p>
+							<h5>Zowel binnen als buiten</h5>
+							<p>Schommel aan Tafel kan geleverd worden met speciale weerbestendige afwerking.</p>
 						</div>
 					</div>
 				</div>
@@ -150,7 +149,6 @@
 		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- End Google Tag Manager (noscript) -->
 	</div>
-  
 </template>
 
 <script>

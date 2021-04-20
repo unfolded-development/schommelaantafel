@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { wrapFunctional } from './index'
+import { wrapFunctional } from './utils'
 
 const components = {
   Dropdown: () => import('../..\\components\\Dropdown.vue' /* webpackChunkName: "components/dropdown" */).then(c => wrapFunctional(c.default || c)),

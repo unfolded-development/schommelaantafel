@@ -1,6 +1,6 @@
 <template>
     <div class="slider-selector__main">
-        <Slider ref="mainslider" class="slider-selector__image-slider" :options="{ prevNextButtons: false, pageDots: false  }" style="grid-column: span 8;">
+        <Slider ref="mainslider" class="slider-selector__image-slider" :options="{ prevNextButtons: false, pageDots: false, wrapAround: true }" style="grid-column: span 8;">
             <div class="slider__slide slider-selector__wrapper" v-for="imageVarient in setSubject" :key="imageVarient.name">
                 <div class="slider-selector__image">
                     <img :src="imageVarient.image" :alt="imageVarient.title + '-image'">
@@ -17,8 +17,8 @@
                     <i class="icon icon--arrow-right"></i> -->
                 </div>
 
-                <Slider ref="contentSlider" class="slider-selector__content-slider" :options="{ prevNextButtons: true, pageDots: false, sync:'.slider-selector__image-slider .slider'  }">
-                    <div class="slider-selector__content" v-for="contentVarient in setSubject" :key="contentVarient.name">
+                <Slider ref="contentSlider" class="slider-selector__content-slider" :options="{ prevNextButtons: true, pageDots: false, sync:'.slider-selector__image-slider .slider', wrapAround: true }">
+                    <div v-for="contentVarient in setSubject" :key="contentVarient.name">
                         <span class="slider-selector__label">{{ contentVarient.title }}</span>
                         <p class="slider-selector__text">{{ contentVarient.desc }}</p>
                     </div>

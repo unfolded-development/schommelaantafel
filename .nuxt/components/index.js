@@ -1,3 +1,5 @@
+import { wrapFunctional } from './utils'
+
 export { default as Dropdown } from '../..\\components\\Dropdown.vue'
 export { default as DropdownGroup } from '../..\\components\\DropdownGroup.vue'
 export { default as ExpandTransition } from '../..\\components\\ExpandTransition.vue'
@@ -29,34 +31,3 @@ export const LazySocialLinks = import('../..\\components\\SocialLinks.vue' /* we
 export const LazySubjectsliders = import('../..\\components\\Subjectsliders.vue' /* webpackChunkName: "components/subjectsliders" */).then(c => wrapFunctional(c.default || c))
 export const LazyToggle = import('../..\\components\\Toggle.vue' /* webpackChunkName: "components/toggle" */).then(c => wrapFunctional(c.default || c))
 export const LazyVideoSlider = import('../..\\components\\VideoSlider.vue' /* webpackChunkName: "components/video-slider" */).then(c => wrapFunctional(c.default || c))
-
-// nuxt/nuxt.js#8607
-export function wrapFunctional(options) {
-  if (!options || !options.functional) {
-    return options
-  }
-
-  const propKeys = Array.isArray(options.props) ? options.props : Object.keys(options.props || {})
-
-  return {
-    render(h) {
-      const attrs = {}
-      const props = {}
-
-      for (const key in this.$attrs) {
-        if (propKeys.includes(key)) {
-          props[key] = this.$attrs[key]
-        } else {
-          attrs[key] = this.$attrs[key]
-        }
-      }
-
-      return h(options, {
-        on: this.$listeners,
-        attrs,
-        props,
-        scopedSlots: this.$scopedSlots,
-      }, this.$slots.default)
-    }
-  }
-}
