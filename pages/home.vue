@@ -2,18 +2,7 @@
 	<div>
 		<Header :showBrochureBtn="true" :showContactBtn="true" />
 
-		<section class="intro" id="site-intro">
-			<div class='content-section'>
-				<div class="intro__content">
-					<h1>It’s better when you move.</h1>
-				</div>
-			</div>
-			<img src="~/static/images/intro.png" alt="">
-
-			<a v-scroll-to="'#site-about'" class="intro__btn-down">
-				<i class="icon icon--arrow-down"></i>
-			</a>
-		</section>
+		<Introduction />
 		
 		<section class='content-section bg-white' id="site-about">
 			<div class='content-section__container'>
@@ -133,7 +122,10 @@
 					<a href="mailto:info@schommelaantafel.nl">info@schommelaantafel.nl</a>
 				</li>
 			</ul>
-			<a class="text-dimmed" href="fffunction.studio">design by fffunction.studio</a>
+			<div class="site-footer__wrap">
+				<a class="text-dimmed" href="fffunction.studio">design by fffunction.studio</a>
+				<a class="text-dimmed" href="./privacy-statement.pdf" target="_blank">Privacy statement</a>
+			</div>
 		</footer>
 
 		<!-- Google Tag Manager -->

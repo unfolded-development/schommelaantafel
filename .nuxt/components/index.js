@@ -6,6 +6,7 @@ export { default as ExpandTransition } from '../..\\components\\ExpandTransition
 export { default as FullImageSize } from '../..\\components\\FullImageSize.vue'
 export { default as Header } from '../..\\components\\Header.vue'
 export { default as Intro } from '../..\\components\\Intro.vue'
+export { default as Introduction } from '../..\\components\\Introduction.vue'
 export { default as Logo } from '../..\\components\\Logo.vue'
 export { default as Newsletter } from '../..\\components\\Newsletter.vue'
 export { default as Referrals } from '../..\\components\\Referrals.vue'
@@ -22,6 +23,7 @@ export const LazyExpandTransition = import('../..\\components\\ExpandTransition.
 export const LazyFullImageSize = import('../..\\components\\FullImageSize.vue' /* webpackChunkName: "components/full-image-size" */).then(c => wrapFunctional(c.default || c))
 export const LazyHeader = import('../..\\components\\Header.vue' /* webpackChunkName: "components/header" */).then(c => wrapFunctional(c.default || c))
 export const LazyIntro = import('../..\\components\\Intro.vue' /* webpackChunkName: "components/intro" */).then(c => wrapFunctional(c.default || c))
+export const LazyIntroduction = import('../..\\components\\Introduction.vue' /* webpackChunkName: "components/introduction" */).then(c => wrapFunctional(c.default || c))
 export const LazyLogo = import('../..\\components\\Logo.vue' /* webpackChunkName: "components/logo" */).then(c => wrapFunctional(c.default || c))
 export const LazyNewsletter = import('../..\\components\\Newsletter.vue' /* webpackChunkName: "components/newsletter" */).then(c => wrapFunctional(c.default || c))
 export const LazyReferrals = import('../..\\components\\Referrals.vue' /* webpackChunkName: "components/referrals" */).then(c => wrapFunctional(c.default || c))

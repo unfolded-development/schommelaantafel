@@ -12,6 +12,7 @@ You can directly use them in pages and other components without the need to impo
 - `<FullImageSize>` | `<full-image-size>` (components/FullImageSize.vue)
 - `<Header>` | `<header>` (components/Header.vue)
 - `<Intro>` | `<intro>` (components/Intro.vue)
+- `<Introduction>` | `<introduction>` (components/Introduction.vue)
 - `<Logo>` | `<logo>` (components/Logo.vue)
 - `<Newsletter>` | `<newsletter>` (components/Newsletter.vue)
 - `<Referrals>` | `<referrals>` (components/Referrals.vue)

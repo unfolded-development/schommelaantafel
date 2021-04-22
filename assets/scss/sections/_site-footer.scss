@@ -9,6 +9,29 @@ $footer-items-margin-bottom: 1rem;
   color: $white;
 	background-color: $black;
 
+	&__wrap {
+		display: flex;
+		flex-direction: column-reverse;
+
+		a {
+			display: block;
+
+			&:last-child {
+				margin-bottom: 1rem;
+			}
+		}
+
+		@include breakpoint (large) {
+			flex-direction: row-reverse;
+
+			a {
+				&:last-child {
+					margin: 0 2.666rem;
+				}
+			}
+		} 
+	}
+
   @include breakpoint(large) {
 		display: flex;
 		align-items: baseline;

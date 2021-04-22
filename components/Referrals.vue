@@ -101,7 +101,7 @@ export default {
         event = event.path[0];
       }
 
-      if (event.innerWidth >= 1024) {
+      if (event.innerWidth >= 1320) {
         this.slider = false;
       } else {
         this.slider = true;

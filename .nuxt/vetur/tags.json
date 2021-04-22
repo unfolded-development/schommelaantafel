@@ -17,6 +17,9 @@
   "Intro": {
     "description": "Auto imported from components/Intro.vue"
   },
+  "Introduction": {
+    "description": "Auto imported from components/Introduction.vue"
+  },
   "Logo": {
     "description": "Auto imported from components/Logo.vue"
   },
