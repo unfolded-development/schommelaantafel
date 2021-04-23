@@ -23,6 +23,8 @@
 </template>
 
 <script>
+let prevScrollpos = null;
+
 export default {
   props: {
     default: () => {
@@ -44,11 +46,23 @@ export default {
       } else {
         this.headerUpButton = false;
       }
+
+      var currentScrollPos = window.pageYOffset;
+
+      // if (prevScrollpos > currentScrollPos) {
+      //   document.getElementsByClassName("site-header")[0].style.top = "0rem";
+      // } else {
+      //   document.getElementsByClassName("site-header")[0].style.top = "-5rem";
+      // }
+
+      prevScrollpos = currentScrollPos;
     },
   },
   mounted() {
     window.addEventListener("scroll", this.handleScroll);
     this.handleScroll()
+
+    prevScrollpos = window.pageYOffset;
   }
 };
 </script>

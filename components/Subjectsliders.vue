@@ -9,7 +9,7 @@
         </Slider>
 
         
-        <div class="slider__slide slider-selector__wrapper">
+        <div class="slider__slide slider-selector__wrapper content-wrap">
             
             <div class="slider-selector__content">
                 <div class="slider-selector__controls">

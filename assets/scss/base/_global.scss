@@ -78,8 +78,7 @@ select {
 }
 
 // Reset <button> styles created by most browsers
-button {
-  @include disable-mouse-outline;
+button , .cookie__bar__buttons__button{
   padding: 0;
   line-height: 1;
   background: transparent;

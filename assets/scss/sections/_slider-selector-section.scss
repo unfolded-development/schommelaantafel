@@ -31,14 +31,21 @@
 	&__wrapper {
 		grid-column: span 8;
 		width: 100%;
-		// margin-top: -5rem;
+		position: relative;
 
 		@include breakpoint(medium) {
 			margin: calc(-1.8rem * 1) 1.2rem 0;
 		}
 
-		@include breakpoint(large) {
-			margin: calc(-1.8rem * 4) 1.2rem 0;
+		&.content-wrap {
+			width: calc(100% - 2.2rem);
+			margin-left: 1.1rem;
+			margin-right: 1.1rem;
+
+			
+			@include breakpoint(large) {
+				margin-top: calc(-1.8rem * 3);
+			}
 		}
 	}
 
@@ -65,6 +72,12 @@
 			padding: 1.5rem 2rem 2rem;
 			// margin: calc(-1.8rem * 1) 1.2rem 0;
 			background-color: $white;
+
+			transform: rotate(.75deg);
+
+			& > * {
+				transform: rotate(-.75deg);
+			}
 		}
 
 		@include breakpoint(large) {
@@ -72,13 +85,6 @@
 			width: calc(100% + #{map-get($grid-container-padding, large)});
 			width: calc(100% - 6.6rem);
     		margin-left: 2.2rem;
-			// margin: calc(-1.8rem * 4) 1.2rem 0;
-
-			transform: rotate(1deg);
-
-			& > * {
-				transform: rotate(-1deg);
-			}
 		}
 	}
 
@@ -103,18 +109,38 @@
 		height: 2.2rem;
 		width: 2.2rem;
 		top: -1.5rem !important;
-		right: 0rem !important;
+		right: 3rem !important;
 		display: block !important;
 
+		@include breakpoint (large) {
+			right: .5rem !important;
+		}
+
 		svg {
-			height: 1rem !important;
-			width: 1rem !important;
-			position: static;
+			opacity: 0;
+		}
+
+		&::after {
+			content: "";
+			background-image: url("@/assets/icons/arrow-white.svg");
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			height: 1.2rem;
+			width: 1.2rem;
+			z-index: 1;
+			position: absolute;
+			top: .5rem !important;
+			right: .5rem !important;
 		}
 
 		&.previous {
 			left: initial;
 			margin-right: calc(2.2rem + .5rem);
+
+			&::after {
+				background-image: url("@/assets/icons/arrow-white-prev.svg");
+			}
 		}
 	}
 
@@ -132,6 +158,12 @@
 		margin-top: 0;
 		&:last-child {
 			margin-bottom: 0;
+		}
+	}
+
+	&__image-slider {
+		@include breakpoint(large) {
+			width: calc(100% + 2.2rem);
 		}
 	}
 

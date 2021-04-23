@@ -1,5 +1,4 @@
 .newsletter {
-	
 	.content-section__content {
 		grid-column: 1 / -1;
 		padding-top: 1rem;
@@ -14,6 +13,7 @@
 		@include breakpoint(large) {
 			@include grid(10);
 			grid-column: 2 / -2;
+			padding: 6.5rem 0;
 		}
 	}
 
@@ -95,7 +95,7 @@
 			margin: .5rem;
 		}
 
-		input {
+		input[type=email] {
 			flex: 1;
 			-webkit-appearance: none;
 			-webkit-border-radius: 0;

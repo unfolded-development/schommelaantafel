@@ -1,24 +1,15 @@
 {
-  "Dropdown": {
-    "description": "Auto imported from components/Dropdown.vue"
-  },
-  "DropdownGroup": {
-    "description": "Auto imported from components/DropdownGroup.vue"
-  },
-  "ExpandTransition": {
-    "description": "Auto imported from components/ExpandTransition.vue"
-  },
   "FullImageSize": {
     "description": "Auto imported from components/FullImageSize.vue"
   },
   "Header": {
     "description": "Auto imported from components/Header.vue"
   },
-  "Intro": {
-    "description": "Auto imported from components/Intro.vue"
-  },
   "Introduction": {
     "description": "Auto imported from components/Introduction.vue"
+  },
+  "IntroLoader": {
+    "description": "Auto imported from components/IntroLoader.vue"
   },
   "Logo": {
     "description": "Auto imported from components/Logo.vue"
@@ -40,11 +31,5 @@
   },
   "Subjectsliders": {
     "description": "Auto imported from components/Subjectsliders.vue"
-  },
-  "Toggle": {
-    "description": "Auto imported from components/Toggle.vue"
-  },
-  "VideoSlider": {
-    "description": "Auto imported from components/VideoSlider.vue"
   }
 }

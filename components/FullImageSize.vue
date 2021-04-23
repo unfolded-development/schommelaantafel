@@ -1,35 +1,53 @@
 <template>
-    <section class="image-full-size" ref="imageFullSize">
-        <img :style="{ top: imageAbsoluteOffset }" class="image-full-size__image" ref="paralexImage" src="/images/full-size-image.jpeg">
-    </section>
+    <section class="image-full-size" style="background-image: url('/images/full-size-image.jpeg');" :style="style"></section>
 </template>
 
 <script>
     export default {
+        props: {
+            speed: {
+                type: Number,
+                default: .05
+            }
+        },
         data() {
             return {
-                imageAbsoluteOffset: "50%"
+                position: 0
+            }
+        },
+        computed: {
+            style() {
+                return {
+                    'background-position-y': this.position + 'px'
+                }
             }
         },
         mounted() {
             document.getElementsByTagName("body")[0].onscroll = this.scrollHandle;
         },
         methods: {
-            scrollHandle: function (scrollEvent) {
-                var userTopOffset   = scrollEvent.path[1].scrollY;
-        	    var screenHeight    = scrollEvent.path[1].innerHeight;
+            scrollHandle: function () {
+                const screenHeight = window.innerHeight;
 
-                if (userTopOffset + screenHeight > this.$refs.imageFullSize.offsetTop &&  userTopOffset < (this.$refs.imageFullSize.offsetTop + this.$refs.imageFullSize.clientHeight))  {
-                    var pixelTop = userTopOffset - this.$refs.imageFullSize.offsetTop;
-                    
-                    if (this.$refs.paralexImage.offsetWidth > 2000) {
-                        var pixelPercentage = ((pixelTop / this.$refs.imageFullSize.clientHeight * 3 * 100) + 50) * (1.2 / 2);
-                    } else {
-                        var pixelPercentage = ((pixelTop / this.$refs.imageFullSize.clientHeight * 100) + 50) * (1.2 / 2);
+                const start = this.$el.offsetTop + (this.$el.clientHeight / 2) - screenHeight;
+                const end = this.$el.offsetTop + (this.$el.clientHeight / 2);
+                const height = end - start;
+
+                const relativePosition = ((window.scrollY - start) / height)
+
+                let speed  = 0;
+
+                if (window.innerWidth > 1024) {
+                    speed = this.speed * 2
+
+                    if (window.innerWidth > 1600) {
+                        speed = this.speed * 25
                     }
-                    
-                    this.imageAbsoluteOffset = pixelPercentage + "%";
+                } else {
+                    speed = this.speed
                 }
+
+                this.position = relativePosition * -(screenHeight * speed)
             }
         }
     }

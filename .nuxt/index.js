@@ -21,6 +21,7 @@ import nuxt_plugin_moment_b9e4f728 from 'nuxt_plugin_moment_b9e4f728' // Source:
 import nuxt_plugin_gtm_073be482 from 'nuxt_plugin_gtm_073be482' // Source: .\\gtm.js (mode: 'all')
 import nuxt_plugin_axios_ee2b3aa8 from 'nuxt_plugin_axios_ee2b3aa8' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_VueFlickity_0dd57bf8 from 'nuxt_plugin_VueFlickity_0dd57bf8' // Source: ..\\plugins\\VueFlickity.js (mode: 'client')
+import nuxt_plugin_VueCookie_2af6fe7a from 'nuxt_plugin_VueCookie_2af6fe7a' // Source: ..\\plugins\\VueCookie.js (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -70,7 +71,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"Schommel aan Tafel","htmlAttrs":{"lang":"en"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"msapplication-TileColor","content":"#ffa803"},{"name":"msapplication-config","content":"\u002Ffavicons\u002Fbrowserconfig.xml"},{"name":"theme-color","content":"#ffffff"}],"link":[],"style":[],"script":[]},
+    head: {"title":"Schommel aan Tafel","htmlAttrs":{"lang":"nl"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"msapplication-TileColor","content":"#ffa803"},{"name":"msapplication-config","content":"\u002Ffavicons\u002Fbrowserconfig.xml"},{"name":"theme-color","content":"#ffffff"},{"hid":"charset","charset":"utf-8"},{"hid":"mobile-web-app-capable","name":"mobile-web-app-capable","content":"yes"},{"hid":"apple-mobile-web-app-title","name":"apple-mobile-web-app-title","content":"Schommel aan Tafel"},{"hid":"author","name":"author","content":"Schommel aan Tafel"},{"hid":"og:type","name":"og:type","property":"og:type","content":"website"},{"hid":"og:title","name":"og:title","property":"og:title","content":"Schommel aan Tafel"},{"hid":"og:site_name","name":"og:site_name","property":"og:site_name","content":"Schommel aan Tafel"},{"hid":"og:description","name":"og:description","property":"og:description","content":"Met Schommel aan Tafel trek je de aandacht en creéer je een Plek waar mensen samen komen."}],"link":[{"hid":"shortcut-icon","rel":"shortcut icon","href":"\u002Ffavicons\u002Fandroid-chrome-192x192.png"},{"hid":"apple-touch-icon","rel":"apple-touch-icon","href":"\u002Ffavicons\u002Fandroid-chrome-512x512.png","sizes":"512x512"},{"rel":"manifest","href":"\u002F_nuxt\u002Fmanifest.5a97a32e.json","hid":"manifest"}],"style":[],"script":[]},
 
     router,
     nuxt: {
@@ -218,6 +219,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (process.client && typeof nuxt_plugin_VueFlickity_0dd57bf8 === 'function') {
     await nuxt_plugin_VueFlickity_0dd57bf8(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_VueCookie_2af6fe7a === 'function') {
+    await nuxt_plugin_VueCookie_2af6fe7a(app.context, inject)
   }
 
   // Lock enablePreview in context

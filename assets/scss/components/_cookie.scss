@@ -1,0 +1,26 @@
+@import 'vue-cookie-accept-decline/dist/vue-cookie-accept-decline.css';
+
+.cookie {
+    font-family: "TT Firs Neue", sans-serif;
+
+    &__bar {
+        background-color: $orange;
+        border: none;
+        font-site: 1rem !important;
+
+        &__content {
+            color: $white;
+        }
+
+        &__buttons__button {
+            width: 100%;
+
+            .btn {
+                width: 100%;
+                background-color: $white;
+                color: $black;
+                font-weight: bold;
+            }
+        }
+    }
+}
