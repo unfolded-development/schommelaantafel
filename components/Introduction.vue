@@ -239,9 +239,9 @@ export default {
         .classList.add("intro__animation-block-item--load");
 
       setTimeout(() => {
-        document.getElementById("site-intro").style.marginTop = "5.1rem";
-        document.getElementById("backgroundImageMaskOverlay").style.top = "4.8rem";
-        document.getElementsByClassName("site-header")[0].style.top = "0rem";
+        document.getElementsByClassName("site-header")[0].classList.add("apple-sticky-active");
+        document.getElementById("backgroundImageMaskOverlay").classList.add("loaded");
+
         document.body.style.overflowY = "auto";
         document.getElementById("site-about").style.marginTop = "-25vh";
         document.getElementById("cookieBar").classList.add("active");

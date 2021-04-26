@@ -41,29 +41,29 @@
                         {
                             image: "./images/slider-selector-images/horeca_1@2x.jpg",
                             title: "Instagrammable",
-                            desc: "De selfietafel op ieders instagram story #jouwhorecazaak"
+                            desc: "De selfietafel op ieders instagram story #jouwhorecazaak."
                         },
                         {
                             image: "./images/slider-selector-images/horeca_2@2x.jpg",
                             title: "Eyecatcher",
-                            desc: "Aandacht trekken op een speelse manier"
+                            desc: "Aandacht trekken op een speelse manier."
                         },
                         {
                             image: "./images/slider-selector-images/horeca_3@2x.jpg",
                             title: "Unieke beleving",
-                            desc: "Sfeer verhogend/maker; brengt bij iedereen het kind in je naar boven"
+                            desc: "Sfeer verhogend/maker; brengt bij iedereen het kind in je naar boven."
                         }
                     ],
                     events: [
                         {
                             image: "./images/slider-selector-images/events_1@2x.jpg",
                             title: "sfeerverhogend",
-                            desc: "Speels karakter op jouw event; geen handjes maar.....voetjes in de lucht"
+                            desc: "Speels karakter op jouw event; geen handjes maar.....voetjes in de lucht."
                         },
                         {
                             image: "./images/slider-selector-images/events_2@2x.jpg",
                             title: "Instagrammable",
-                            desc: "De ‘selfie-tafel’ in ieders instagram story #jouweven"
+                            desc: "De ‘selfie-tafel’ in ieders instagram story #jouweven."
                         },
                         {
                             image: "./images/slider-selector-images/events_3@2x.jpg",
@@ -80,7 +80,7 @@
                         {
                             image: "./images/slider-selector-images/kantoren_2@2x.jpg",
                             title: "Actieve meetings met FUN",
-                            desc: "Reserveer deze ruimte snel! ;)"
+                            desc: "Reserveer deze ruimte snel! ;)."
                         },
                         {
                             image: "./images/slider-selector-images/kantoren_3@2x.jpg",
@@ -92,12 +92,12 @@
                         {
                             image: "./images/slider-selector-images/educatie_1@2x.jpg",
                             title: "Cognitieve prestatie",
-                            desc: "Beter leren door bewegen"
+                            desc: "Beter leren door bewegen."
                         },
                         {
                             image: "./images/slider-selector-images/educatie_2@2x.jpg",
                             title: "Eye-catcher",
-                            desc: "Voor jong en oud"
+                            desc: "Voor jong en oud."
                         },
                         {
                             image: "./images/slider-selector-images/educatie_3@2x.jpg",

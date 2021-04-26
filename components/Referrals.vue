@@ -38,43 +38,43 @@ export default {
       referrals: [
         {
           id: 0,
-          rating: 4,
+          rating: 5,
           quote: "Een mooie toevoeging aan ons evenement.",
           logoUrl: "./images/referrals/logo_1.png",
           active: true
         },
         {
           id: 1,
-          rating: 4,
-          quote: "De tafels waren een hit, de volgende keer weer.",
+          rating: 5,
+          quote: "De tafels waren een hit!",
           logoUrl: "./images/referrals/logo_2.png",
           active: false
         },
         {
           id: 2,
-          rating: 4,
-          quote: "We zien dat mensen speciaal komen voor de schommeltafel.",
+          rating: 5,
+          quote: "Goede service en levering.",
           logoUrl: "./images/referrals/logo_3.png",
           active: false
         },
         {
           id: 3,
-          rating: 4,
-          quote: "Deze doet het goed in de zomer voor onze zaak!.",
+          rating: 5,
+          quote: "Deze doet het goed in de zomer voor onze zaak",
           logoUrl: "./images/referrals/logo_4.png",
           active: false
         },
         {
           id: 4,
-          rating: 4,
-          quote: "De tafels worden geplaatst en weer netjes opgehaald. top service",
+          rating: 5,
+          quote: "De speelse schommeltafels passen perfect bij ons evenement! ",
           logoUrl: "./images/referrals/logo_5.png",
           active: false
         },
       ],
       activeElement: {
         id: 0,
-        rating: 4,
+        rating: 5,
         quote: "Een mooie toevoeging aan ons evenement.",
         logoUrl: "./images/referrals/logo_1.png",
         active: true

@@ -1,12 +1,14 @@
 .intro {
 	width: 100%;
-	height: calc(125vh - 5.1rem);
+	height: calc(125vh - 5.2rem);
 	overflow: hidden;
 	z-index: 2;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	transition: margin-top .5s ease-out;
+	transition: margin-top .2s ease-out;
+	padding-top: 5.2rem;
+	box-sizing: content-box;
 
 	&::after {
 		content: "";
@@ -96,15 +98,18 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		bottom: 0;
 		z-index: -2;
-		transition: top .5s ease-out;
+		transition: top .3s ease-out;
 	
 		background-image: url("~/static/images/intro-2.jpg");
 		background-size: cover;
 		background-repeat: no-repeat;
 
 		opacity: 0;
+
+		&.loaded {
+			top: 4.6rem;
+		}
 	}
 	
 	&__animation-block-item {

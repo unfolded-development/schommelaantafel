@@ -1,14 +1,13 @@
 .cta {
-	padding: 4rem 0;
+	padding: 2rem 0;
 	color: $white;
 	background-color: $black;
-	transform: translateX(-100%);
-	opacity: 0;
-	transition: transform 1s ease-out, opacity .75s ease-out;
 
 	&--show {
-		transform: translateX(0%);
-		opacity: 1;
+		.cta__content {
+			transform: translateX(0%);
+			opacity: 1;
+		}
 	}
 
 	@include breakpoint(medium) {
@@ -22,6 +21,9 @@
 		justify-content: center;
 		align-items: center;
 		text-align: center;
+		transform: translateX(-100%);
+		opacity: 0;
+		transition: transform .2s ease-out, opacity .2s ease-out;
 
 		@include breakpoint(large) {
 			text-align: initial;
@@ -43,7 +45,10 @@
 
 	&__title {
 		display: inline-block;
+
 		@include h2();
+
+		font-size: 1.34rem;
 		
 		@include breakpoint(medium) {
 			@include h4();

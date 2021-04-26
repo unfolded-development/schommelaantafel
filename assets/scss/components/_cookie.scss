@@ -4,7 +4,7 @@
     @include breakpoint (large) {
         opacity: 0;
         transform: translateX(calc(2.2rem + 100%));
-        transition: opacity .5s ease-out, transform .5s ease-out;
+        transition: opacity .2s ease-out, transform .2s ease-out;
 
         &.active {
             opacity: 1;
@@ -22,6 +22,7 @@
         font-size: 1rem !important;
         padding: 1rem;
         bottom: 0;
+        z-index: 998;
         
         @include breakpoint (large) {
             position: absolute;

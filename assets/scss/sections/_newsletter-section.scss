@@ -1,4 +1,6 @@
 .newsletter {
+	background-color: #F8F8F8;
+
 	.content-section__content {
 		grid-column: 1 / -1;
 		padding-top: 1rem;
@@ -100,6 +102,13 @@
 			-webkit-appearance: none;
 			-webkit-border-radius: 0;
 			border-radius: 0;
+		}
+
+		input[type=submit], .btn {
+			-webkit-appearance: none;
+			-webkit-border-radius: 0;
+			border-radius: 0;
+			cursor: pointer;
 		}
 	}
 

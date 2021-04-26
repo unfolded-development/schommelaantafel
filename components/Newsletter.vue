@@ -3,11 +3,11 @@
     <div class="content-section">
       <div class="content-section__content">
         <div class="newsletter__image">
-          <img src="~/static/images/newsletter.png" alt="" />
+          <img src="~/static/images/brochure_mockup.png" alt="" />
         </div>
         <div class="newsletter__content">
           <h3 class="newsletter__title">
-            Interesse om te schommelen? Download de gratis brochure
+            Interesse om te schommelen? Download de brochure
           </h3>
 
           <div class="newsletter__error">
