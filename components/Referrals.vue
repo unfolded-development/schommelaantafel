@@ -9,7 +9,7 @@
         <span class="referrals__title">{{ activeElement.quote }}</span>
 
         <div class="referrals__logos">
-          <Slider :options="{ pageDots: false, prevNextButtons: false }">
+          <Slider :options="{ autoPlay: 2500, pageDots: false, prevNextButtons: false }">
             <div class="referrals__logo-wrapper" v-for="referral in referrals" :key="referral.id" :id="referral.id">
               <img class="referrals__logo" :src="referral.logoUrl">
             </div>

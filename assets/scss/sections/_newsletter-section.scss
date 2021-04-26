@@ -25,11 +25,11 @@
 	}
 
 	&__error {
-		background-color: #ff4747;
+		color: $orange;
 		opacity: 0;
 		position: absolute;
 		pointer-events: none;
-		padding: 1rem;
+		padding: 1rem 0;
 		margin-bottom: 1rem;
 
 		&-active {
@@ -40,7 +40,6 @@
 
 		p {
 			margin: 0;
-			color: $white;
 		}
 	}
 
@@ -98,6 +97,9 @@
 
 		input {
 			flex: 1;
+			-webkit-appearance: none;
+			-webkit-border-radius: 0;
+			border-radius: 0;
 		}
 	}
 

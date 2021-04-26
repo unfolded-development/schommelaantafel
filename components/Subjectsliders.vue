@@ -1,6 +1,6 @@
 <template>
     <div class="slider-selector__main">
-        <Slider ref="mainslider" class="slider-selector__image-slider" :options="{ prevNextButtons: false, asNavFor: '.slider-selector__content-slider .slider', pageDots: false }" style="grid-column: span 8;">
+        <Slider ref="mainslider" class="slider-selector__image-slider" :options="{ prevNextButtons: false, asNavFor: '.slider-selector__content-slider .slider', pageDots: false  }" style="grid-column: span 8;">
             <div class="slider__slide slider-selector__wrapper" v-for="imageVarient in setSubject" :key="imageVarient.name">
                 <div class="slider-selector__image">
                     <img :src="imageVarient.image" :alt="imageVarient.title + '-image'">
@@ -8,18 +8,24 @@
             </div>
         </Slider>
 
-        <Slider class="slider-selector__content-slider" :options="{ fade: true, pageDots: false , prevNextButtons: true }" style="grid-column: span 8;">
-            <div class="slider__slide slider-selector__wrapper" v-for="contentVarient in setSubject" :key="contentVarient.name">
-                <div class="slider-selector__content">
-                    <div class="slider-selector__controls">
-                        <!-- <i class="icon icon--arrow-left"></i>
-                        <i class="icon icon--arrow-right"></i> -->
-                    </div>
-                    <span class="slider-selector__label">{{ contentVarient.title }}</span>
-                    <p class="slider-selector__text">{{ contentVarient.desc }}</p>
+        
+        <div class="slider__slide slider-selector__wrapper">
+            
+            <div class="slider-selector__content">
+                <div class="slider-selector__controls">
+                    <!-- <i class="icon icon--arrow-left"></i>
+                    <i class="icon icon--arrow-right"></i> -->
                 </div>
+
+                <Slider ref="contentSlider" class="slider-selector__content-slider" :options="{ prevNextButtons: true, asNavFor: '.slider-selector__image-slider .slider', pageDots: false }">
+                    <div v-for="contentVarient in setSubject" :key="contentVarient.name">
+                        <span class="slider-selector__label">{{ contentVarient.title }}</span>
+                        <p class="slider-selector__text">{{ contentVarient.desc }}</p>
+                    </div>
+                </Slider>
             </div>
-        </Slider>
+            
+        </div>
     </div>
 </template>
 
@@ -126,6 +132,25 @@ export default {
             return this.subjectLoopItem
         }
     }
+    // mounted() {
+    //     var elems = document.getElementsByClassName("flickity-slider");
+
+    //     setInterval(() => {
+    //         for (let index = 0; index < elems.length; index++) {
+    //             if (elems[index].parentElement.parentElement.parentElement.classList.contains("slider-selector__content-slider")) {
+    //                 var children = elems[index].children;
+
+    //                 for (let index = 0; index < children.length; index++) {
+    //                     if (children[index].classList.contains("is-selected")) {
+    //                         children[index].style.display = "block";
+    //                     } else {
+    //                         children[index].style.display = "none";
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }, 20);
+    // }
 }
 
 </script>

@@ -43,9 +43,12 @@ export default {
       type: Object,
       default: () => {
         return {
-          prevNextButtons: true,
-          pageDots: true,
-          wrapAround: true
+          prevNextButtons: false,
+          pageDots: false,
+          wrapAround: true,
+          asNavFor: null,
+          wrapAround: false,
+          pageDots: false
         }
       }
     }
@@ -54,11 +57,7 @@ export default {
     return {
       transferOptions: { ...this.options },
       isMoving: false,
-      isDragable: false,
-      asNavFor: null,
-      wrapAround: false,
-      fade: false,
-      pageDots: false
+      isDragable: false
     }
   },
   methods: {
@@ -85,7 +84,9 @@ export default {
   },
   mounted() {
     this.flickity = this.$refs.flickity
-    this.refresh()
+    setTimeout(() => {
+      this.refresh()
+    }, 200);
   }
 }
 </script>
