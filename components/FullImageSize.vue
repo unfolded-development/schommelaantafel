@@ -47,7 +47,15 @@
                     speed = this.speed
                 }
 
-                this.position = relativePosition * -(screenHeight * speed)
+                if (window.innerWidth > 1024 && window.innerWidth < 1600) {
+                    this.position = relativePosition * -(screenHeight * speed) - 300
+                } else {
+                    this.position = relativePosition * -(screenHeight * speed)
+                }
+
+                if (window.scrollY + window.innerHeight > document.body.getElementsByClassName("cta")[0].offsetTop) {
+                    document.getElementsByClassName("cta")[0].classList.add("cta--show");
+                }
             }
         }
     }

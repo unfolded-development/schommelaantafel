@@ -49,13 +49,15 @@ export default {
 
       var currentScrollPos = window.pageYOffset;
 
-      // if (prevScrollpos > currentScrollPos) {
-      //   document.getElementsByClassName("site-header")[0].style.top = "0rem";
-      // } else {
-      //   document.getElementsByClassName("site-header")[0].style.top = "-5rem";
-      // }
+      if (window.scrollY > 50) {
+        if (prevScrollpos > currentScrollPos && window.scrollY) {
+          document.getElementsByClassName("site-header")[0].style.top = "0rem";
+        } else {
+          document.getElementsByClassName("site-header")[0].style.top = "-5.1rem";
+        }
 
-      prevScrollpos = currentScrollPos;
+        prevScrollpos = currentScrollPos;
+      }
     },
   },
   mounted() {

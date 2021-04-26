@@ -1,11 +1,12 @@
 .intro {
 	width: 100%;
-	min-height: 100vh;
+	height: calc(125vh - 5.1rem);
 	overflow: hidden;
 	z-index: 2;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	transition: margin-top .5s ease-out;
 
 	&::after {
 		content: "";
@@ -16,12 +17,16 @@
 		z-index: -5;
 		position: absolute;
 		background-color: $white;
+
+		@include breakpoint (xlarge) {
+            height: calc(100vh + 13.5rem);
+        }
 	}
 
 	&__content {
 		text-align: center;
 		grid-column: 1 / -1;
-		
+
 		@include breakpoint(medium) {
 			grid-column: 2 / -2;
 		}
@@ -38,10 +43,10 @@
 	&__btn-down {
 		cursor: pointer;
 		position: absolute;
-		bottom: 1.5rem;
+		bottom: 2.5rem;
 		left: 50%;
-		transform: translateX(-50%);
 		font-size: 1.25rem;
+		z-index: 20;
 
 		.icon {
 			color: $white;
@@ -57,7 +62,6 @@
 		x: 20% !important;
 		
 		opacity: 1;
-		transition: opacity .25s;
 
 		&.hide {
 			opacity: 0;
@@ -75,7 +79,8 @@
 
 	&__heading {
 		opacity: 1;
-		transition: opacity .25;
+		transition: opacity .5s ease-out;
+		transform: translateY(-100%);
 		
 		&.hide {
 			opacity: 0;
@@ -87,12 +92,13 @@
 	#backgroundImageMaskOverlay {
 		position: absolute;
 		width: 100%;
-		height: calc(100vh - 5rem);
-		top: 5rem;
+		height: 100vh;
+		top: 0;
 		left: 0;
 		right: 0;
 		bottom: 0;
 		z-index: -2;
+		transition: top .5s ease-out;
 	
 		background-image: url("~/static/images/intro-2.jpg");
 		background-size: cover;
@@ -102,7 +108,7 @@
 	}
 	
 	&__animation-block-item {
-		transform-origin: center -100vh;
+		transform-origin: center -250vw;
 	
 		&.--1 {
 			transform: rotate(90deg);

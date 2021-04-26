@@ -1,5 +1,6 @@
 import { wrapFunctional } from './utils'
 
+export { default as CtaSection } from '../..\\components\\CtaSection.vue'
 export { default as FullImageSize } from '../..\\components\\FullImageSize.vue'
 export { default as Header } from '../..\\components\\Header.vue'
 export { default as Introduction } from '../..\\components\\Introduction.vue'
@@ -12,6 +13,7 @@ export { default as Sliderselector } from '../..\\components\\Sliderselector.vue
 export { default as SocialLinks } from '../..\\components\\SocialLinks.vue'
 export { default as Subjectsliders } from '../..\\components\\Subjectsliders.vue'
 
+export const LazyCtaSection = import('../..\\components\\CtaSection.vue' /* webpackChunkName: "components/cta-section" */).then(c => wrapFunctional(c.default || c))
 export const LazyFullImageSize = import('../..\\components\\FullImageSize.vue' /* webpackChunkName: "components/full-image-size" */).then(c => wrapFunctional(c.default || c))
 export const LazyHeader = import('../..\\components\\Header.vue' /* webpackChunkName: "components/header" */).then(c => wrapFunctional(c.default || c))
 export const LazyIntroduction = import('../..\\components\\Introduction.vue' /* webpackChunkName: "components/introduction" */).then(c => wrapFunctional(c.default || c))

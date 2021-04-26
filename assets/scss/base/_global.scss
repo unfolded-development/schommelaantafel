@@ -47,7 +47,7 @@ body {
   color: $body-font-color;
   font-weight: $global-weight-normal;
   overflow-x: hidden;
-	// letter-spacing: $body-letter-spacing;
+  overflow-y: hidden;
 
   font-family: $body-font-family;
   line-height: $global-line-height;

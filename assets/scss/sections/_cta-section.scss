@@ -2,6 +2,15 @@
 	padding: 4rem 0;
 	color: $white;
 	background-color: $black;
+	transform: translateX(-100%);
+	opacity: 0;
+	transition: transform 1s ease-out, opacity .75s ease-out;
+
+	&--show {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+
 	@include breakpoint(medium) {
 		padding: 1.2rem 0;
 	}

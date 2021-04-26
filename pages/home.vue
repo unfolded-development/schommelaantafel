@@ -3,7 +3,23 @@
     <client-only>
       <Header :showBrochureBtn="true" :showContactBtn="true" />
       <Introduction />
-      <section class="content-section bg-white" id="site-about">
+      <vue-cookie-accept-decline
+        ref="cookieBar"
+        :elementId="'cookieBar'"
+        :debug="false"
+        :type="'bar'"
+        :disableDecline="true"
+        :transitionName="'slideFromBottom'"
+        :showPostponeButton="false"
+        @clicked-accept="cookieClickedAccept"
+      >
+        <div slot="message">
+          Deze website maakt gebruik van cookies om je ervaring te verbeteren.
+          Bekijk onze <a class="cookie__bar__underlined">Privacy voorwaarden.</a>
+        </div>
+        <div slot="acceptContent" class="btn">Akkoord</div>
+      </vue-cookie-accept-decline>
+      <section class="content-section bg-white" id="site-about" style="transition: margin-top .5s ease-out;">
         <div class="content-section__container">
           <div class="content-section__content">
             <div class="quote text-center">
@@ -20,16 +36,7 @@
         </div>
       </section>
       <Sliderselector />
-        <section class="cta">
-        <div class="content-section">
-          <div class="cta__content">
-            <div class="cta__title">Kopen of huren? Het kan allebei</div>
-            <a v-scroll-to="'#section-contact'" class="btn btn-white"
-              >Neem contact op</a
-            >
-          </div>
-        </div>
-      </section>
+      <CtaSection />
       <Newsletter />
       <FullImageSize />
       <section class="cards">
@@ -149,22 +156,6 @@
           >
         </div>
       </footer>
-      <vue-cookie-accept-decline
-        :ref="'myPanel1'"
-        :elementId="'myPanel1'"
-        :debug="false"
-        :position="'bottom'"
-        :type="'bar'"
-        :disableDecline="true"
-        :transitionName="'slideFromBottom'"
-        :showPostponeButton="false"
-      >
-        <div slot="message">
-          Deze website maakt gebruik van cookies om je ervaring te verbeteren.
-          Bekijk onze <a>Privacy voorwaarden.</a>
-        </div>
-        <div slot="acceptContent" class="btn">Akkoord</div>
-      </vue-cookie-accept-decline>
       <!-- Google Tag Manager -->
       <script>
         (function (w, d, s, l, i) {
@@ -211,20 +202,25 @@ export default {
     };
   },
   data() {
-    return {};
+    return {
+      cookiePos: ""
+    };
   },
   methods: {
     handleScroll() {
       if (window.scrollY > 25) this.scrolled = true;
     },
-    removeCookie() {
-      console.log("Cookie removed");
-      this.$refs.myPanel1.removeCookie();
-    },
+    cookieClickedAccept() {
+      document.getElementById("cookieBar").classList.remove("active");
+    }
   },
   mounted() {
     window.addEventListener("scroll", this.handleScroll);
-    this.handleScroll();
+    this.removeCookie;
+
+    setTimeout(() => {
+      this.$refs.cookieBar.removeCookie()
+    }, 50);
   },
 };
 </script>

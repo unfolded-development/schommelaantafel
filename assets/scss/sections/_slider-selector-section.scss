@@ -109,7 +109,7 @@
 		height: 2.2rem;
 		width: 2.2rem;
 		top: -1.5rem !important;
-		right: 3rem !important;
+		right: 0rem !important;
 		display: block !important;
 
 		@include breakpoint (large) {
@@ -281,7 +281,7 @@
 						cursor: pointer;
 
 						@include breakpoint(large) {
-							margin-left: 3.6rem;
+							margin-left: 3.2rem;
 						}
 					}
 
@@ -306,7 +306,7 @@
 							width: 1.9rem;
 							top: 50%;
 							transform: translateY(-52.5%);
-							left: -3.475rem;
+							left: -3.075rem;
 							background-image: url("@/assets/icons/arrow.svg");
 							background-size: cover;
 							background-repeat: no-repeat;
@@ -321,7 +321,7 @@
 					color: $orange;
 					
 					@include breakpoint(large) {
-						margin-left: 3.6rem;
+						margin-left: 3.2rem;
 					}
 
 					&:before {

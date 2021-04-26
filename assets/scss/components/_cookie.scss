@@ -1,15 +1,72 @@
 @import 'vue-cookie-accept-decline/dist/vue-cookie-accept-decline.css';
 
+#cookieBar {
+    @include breakpoint (large) {
+        opacity: 0;
+        transform: translateX(calc(2.2rem + 100%));
+        transition: opacity .5s ease-out, transform .5s ease-out;
+
+        &.active {
+            opacity: 1;
+            transform: translateX(0%);
+        }
+    }
+}
+
 .cookie {
     font-family: "TT Firs Neue", sans-serif;
 
     &__bar {
         background-color: $orange;
         border: none;
-        font-site: 1rem !important;
+        font-size: 1rem !important;
+        padding: 1rem;
+        bottom: 0;
+        
+        @include breakpoint (large) {
+            position: absolute;
+            top: 92vh;
+            width: 40%;
+            right: 2.2rem;
+            bottom: initial;
+        }
+
+        @include breakpoint (xlarge) {
+            top: 93vh;
+        }
+
+        @include breakpoint (1568) {
+            top: 94vh;
+        }
+
+        @include breakpoint(hd) {
+            font-size: 1.2vw;
+            top: 92vh;
+        }
 
         &__content {
             color: $white;
+            max-height: none;
+            overflow: visible;
+
+            @include breakpoint (large) {
+                margin-right: 2rem;
+            }
+        }
+
+        &__underlined {
+            position: relative;
+            
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -15%;
+                left: 0;
+                height: .1rem;
+                width: 100%;
+                background-color: $white;
+                pointer-events: none;
+            }
         }
 
         &__buttons__button {
@@ -19,7 +76,7 @@
                 width: 100%;
                 background-color: $white;
                 color: $black;
-                font-weight: bold;
+                font-weight: 500;
             }
         }
     }

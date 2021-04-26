@@ -2,6 +2,7 @@ import Vue from 'vue'
 import { wrapFunctional } from './utils'
 
 const components = {
+  CtaSection: () => import('../..\\components\\CtaSection.vue' /* webpackChunkName: "components/cta-section" */).then(c => wrapFunctional(c.default || c)),
   FullImageSize: () => import('../..\\components\\FullImageSize.vue' /* webpackChunkName: "components/full-image-size" */).then(c => wrapFunctional(c.default || c)),
   Header: () => import('../..\\components\\Header.vue' /* webpackChunkName: "components/header" */).then(c => wrapFunctional(c.default || c)),
   Introduction: () => import('../..\\components\\Introduction.vue' /* webpackChunkName: "components/introduction" */).then(c => wrapFunctional(c.default || c)),

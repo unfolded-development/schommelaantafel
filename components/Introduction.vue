@@ -11,7 +11,7 @@
     </div>
 
     <svg viewBox="0 0 100 100" id="backgroundImageMaskOverlay">
-      <g mask="url(#acutalMaskForIntro)">
+      <g mask="url(#acutalMaskForIntro)" width="100%" height="100%" x="0" y="0">
         <rect width="100%" height="100%" x="0" y="0" fill="white" />
         <svg
           class="intro__schommelLogo"
@@ -19,6 +19,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           :width="schommelLogo.width"
           :x="schommelLogo.x"
+          y="-2.5%"
           viewBox="0 0 145 50.001"
         >
           <defs>
@@ -165,18 +166,18 @@
         <rect width="100%" height="100%" x="0" y="0" fill="white" />
         <rect
           class="intro__animation-block-item --1"
-          width="97%"
+          width="97.5%"
           height="55%"
-          x="-.1%"
-          y="0%"
+          x="-3.25%"
+          y="1%"
           fill="black"
         />
         <rect
           class="intro__animation-block-item --2"
-          width="110%"
-          height="49%"
+          width="115%"
+          height="45%"
           x="0%"
-          y="50%"
+          y="45%"
           fill="black"
         />
       </mask>
@@ -195,34 +196,39 @@ export default {
       },
     };
   },
-  mounted() {
-    const offsetBlockWidth = String(
-      document.getElementById("backgroundImageMaskOverlay").clientWidth
-    );
-    const offsetBlockHeight = String(
-      document.getElementById("backgroundImageMaskOverlay").clientHeight
-    );
+  methods: {
+    svgIntroResize: function (e) {
+      let offsetBlockWidth = String(document.getElementById("backgroundImageMaskOverlay").clientWidth);
+      let offsetBlockHeight = String(document.getElementById("backgroundImageMaskOverlay").clientHeight);
 
-    window.scrollTo(0, 0);
-
-    if (window.innerWidth > 1024) {
-      this.schommelLogo.width = "30%";
-      this.schommelLogo.x = "35%";
-    }
-
-    setTimeout(() => {
       document
         .getElementById("backgroundImageMaskOverlay")
         .setAttribute(
           "viewBox",
           0 + " " + 0 + " " + offsetBlockWidth + " " + offsetBlockHeight
         );
+
       document.getElementById("backgroundImageMaskOverlay").style.opacity = 1;
-    }, 50);
+    }
+  },
+  mounted() {
+    window.scrollTo(0, 0);
+
+    this.svgIntroResize();
+
+    if (window.innerWidth > 1024) {
+      this.schommelLogo.width = "25%";
+      this.schommelLogo.x = "37.5%";
+    }
 
     setTimeout(() => {
       this.letterOTransform = "translate(51, 0)";
+      window.addEventListener("resize", this.svgIntroResize);
     }, 500);
+
+    setTimeout(() => {
+      document.getElementsByClassName("intro__schommelLogo")[0].classList.add("hide");
+    }, 1750);
 
     setTimeout(() => {
       document
@@ -233,14 +239,15 @@ export default {
         .classList.add("intro__animation-block-item--load");
 
       setTimeout(() => {
-        document
-          .getElementsByClassName("intro__heading")[0]
-          .classList.remove("hide");
-      }, 250);
+        document.getElementById("site-intro").style.marginTop = "5.1rem";
+        document.getElementById("backgroundImageMaskOverlay").style.top = "4.8rem";
+        document.getElementsByClassName("site-header")[0].style.top = "0rem";
+        document.body.style.overflowY = "auto";
+        document.getElementById("site-about").style.marginTop = "-25vh";
+        document.getElementById("cookieBar").classList.add("active");
 
-      setTimeout(() => {
-        document.getElementsByClassName("intro__btn-down")[0].click();
-      }, 1000);
+        document.getElementsByClassName("intro__heading")[0].classList.remove("hide");
+      }, 2500);
     }, 1250);
   },
 };
