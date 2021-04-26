@@ -82,6 +82,10 @@ export default {
 			src: '~/plugins/VueFlickity.js',
 			ssr: false
 		},
+		{
+			src: '~/plugins/VueCookie.js',
+			ssr: false
+		}
 		// {
 		// 	src: '~/plugins/VuePlyr.js',
 		// 	ssr: false

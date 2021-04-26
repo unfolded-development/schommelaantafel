@@ -2,7 +2,7 @@
   position: fixed;
   overflow: hidden;
   box-sizing: border-box;
-  z-index: 9999;
+  z-index: 9998;
   width: 100%;
   background: $white;
   padding: 1rem;
@@ -124,7 +124,7 @@
   position: fixed;
   overflow: hidden;
   box-sizing: border-box;
-  z-index: 9999;
+  z-index: 9998;
   width: 90%;
   background: #fafafa;
   display: flex;
@@ -291,7 +291,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 9998;
   background: $white;
   color: $blue;
 }

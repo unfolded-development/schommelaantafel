@@ -12,6 +12,14 @@
 		@include breakpoint(large) {
 			grid-column: 4 / -4;
 		}
+		
+		h3 {
+			font-size: 2.4rem;
+
+			@include breakpoint(large) {
+				ont-size: 2.75rem;
+			}
+		}
 
 		.btn {
 			width: 100%;
@@ -29,7 +37,7 @@
 				margin-bottom: 3.4rem;
 			}
 			@include breakpoint(large) {
-				text-align: left;
+				font-size: 1.4em;
 				padding: 0 2rem;
 				margin-bottom: 2.4rem;
 			}

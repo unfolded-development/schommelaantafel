@@ -1,17 +1,34 @@
 .intro {
-	position: relative;
+	width: 100%;
+	height: calc(125vh - 5.2rem);
+	overflow: hidden;
+	z-index: 2;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 100%;
-	min-height: 100vh;
-	overflow: hidden;
-	z-index: 0;
+	transition: margin-top .2s ease-out;
+	padding-top: 5.2rem;
+	box-sizing: content-box;
+
+	&::after {
+		content: "";
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -5;
+		position: absolute;
+		background-color: $white;
+
+		@include breakpoint (xlarge) {
+            height: calc(100vh + 13.5rem);
+        }
+	}
 
 	&__content {
 		text-align: center;
 		grid-column: 1 / -1;
-		
+
 		@include breakpoint(medium) {
 			grid-column: 2 / -2;
 		}
@@ -25,26 +42,98 @@
 		}
 	}
 
-	img {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		z-index: -1;
-	}
-
 	&__btn-down {
 		cursor: pointer;
 		position: absolute;
-		bottom: 1.5rem;
+		bottom: 2.5rem;
 		left: 50%;
-		transform: translateX(-50%);
 		font-size: 1.25rem;
+		z-index: 20;
 
 		.icon {
 			color: $white;
+		}
+	}
+
+	&__schommelLogo {
+        width: 25rem;
+        height: auto;
+        z-index: 15;
+
+		width: 60% !important;
+		x: 20% !important;
+		
+		opacity: 1;
+
+		&.hide {
+			opacity: 0;
+		}
+
+		@include breakpoint (large) {
+			width: 40% !important;
+			x: 30% !important;
+		}
+    
+        .animate-letter {
+            transition: transform .5s;
+        }
+    }
+
+	&__heading {
+		opacity: 1;
+		transition: opacity .5s ease-out;
+		transform: translateY(-100%);
+		
+		&.hide {
+			opacity: 0;
+			height: 0;
+			pointer-events: none;
+		}
+	}
+
+	#backgroundImageMaskOverlay {
+		position: absolute;
+		width: 100%;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: -2;
+		transition: top .3s ease-out;
+	
+		background-image: url("~/static/images/intro-2.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+
+		opacity: 0;
+
+		&.loaded {
+			top: 4.6rem;
+		}
+	}
+	
+	&__animation-block-item {
+		transform-origin: center -250vw;
+	
+		&.--1 {
+			transform: rotate(90deg);
+		}
+	
+		&.--2 {
+			transform: rotate(-90deg);
+		}
+	
+		&--load {
+			&.--1 {
+				animation: schommelFromLeft 2s; 
+				transform: rotate(-1deg);
+			}
+		
+			&.--2 {
+				animation: schommelFromRight 2s;
+				transform: rotate(1deg);
+			}
 		}
 	}
 }

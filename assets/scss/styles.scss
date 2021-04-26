@@ -8,6 +8,7 @@
 // HELPERS
 @import './helpers/background-color';
 @import './helpers/letter-spacing';
+@import './helpers/animation';
 
 // ICONS
 @import '~assets/icons/generated/Icons.scss';
@@ -24,7 +25,7 @@
 
 // COMPONENTS
 @import './components/button';
-// @import './components/slider';
+@import './components/cookie';
 @import './components/quote';
 @import './components/image-full-size';
 @import './components/socials';

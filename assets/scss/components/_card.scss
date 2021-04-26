@@ -6,6 +6,7 @@
 		text-align: center;
 		padding: 1.3rem 1.7rem 1.7rem;
 		background-color: $white;
+		height: 100%;
 
 		& > * {
 			margin-top: 0;
@@ -16,11 +17,15 @@
 		}
 	}
 
+	&__title {
+		font-size: 1.3rem;
+	}
+
 	&__image {
 		position: relative;
 		width: 100%;
 		height: 0;
-		padding-bottom: 61%;
+		padding-bottom: 80%;
 		z-index: 0;
 
 		img {

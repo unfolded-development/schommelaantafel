@@ -2,13 +2,42 @@
 	position: fixed;
 	width: 100%;
 	padding: 1rem 0 .8rem;
-	top: 0;
 	left: 0;
-	background-color: $white;
 	z-index: 9999;
+	height: 5.1rem;
+	transition: top .3s ease-out;
 	
-	&__logo,
-	&__logo img {
+	&::after {
+		content: "";
+		background-color: $white;
+		height: 5.1rem;
+		width: 100%;
+		top: 0;
+		z-index: -1;
+		position: absolute;
+		transform: translateY(-100%);
+		transition: transform .3s ease-out;
+		padding: 1rem 0 .8rem;
+		left: 0;
+		bottom: 0;
+	}
+
+	&.apple-sticky-active {
+		.site-header__logo, #brochure-btn-header {
+			transform: translateY(0%);
+		}
+
+		&::after {
+			transform: translateY(0%);
+		}
+	}
+
+	&__logo, #brochure-btn-header {
+		transform: translateY(calc(-2rem - 100%));
+		transition: transform .3s ease-out;
+	}
+	
+	&__logo, img {
 		height: 2rem;
 		@include breakpoint(medium) {
 			height: 100%;
@@ -26,8 +55,9 @@
 
 		& > *:not(.btn) {
 			display: none;
+
 			@include breakpoint(medium) {
-				display: initial;
+				display: inline-block;
 			}
 		}
 
@@ -46,7 +76,7 @@
 		cursor: pointer;
 		pointer-events: none;
 		opacity: 0;
-		transition: opacity .2s ease-in-out, background-color .2s ease-in-out, color .2s ease-in-out;
+		transition: opacity .4s ease-in-out, background-color .4s ease-in-out, color .4s ease-in-out;
 
 		@include breakpoint (medium) {
 			bottom: 1.1rem;
@@ -74,78 +104,7 @@
 
 		.icon {
 			font-size: 1.4rem;
-			transition: padding .2s ease-in-out;
+			transition: padding .4s ease-in-out;
 		}
 	}
 }
-
-
-// .site-header {
-//   position: absolute;
-//   top: 0;
-//   left: auto;
-//   right: auto;
-//   width: 100%;
-//   padding-top: 1.5rem;
-//   z-index: 1000;
-
-//   @include breakpoint(xlarge) {
-//     padding-top: 3rem;
-//   }
-
-//   &__container {
-//     @include grid-container();
-//   }
-
-//   &__logo {
-//     width: 100%;
-//     text-align: center;
-
-//     img {
-//       display: block;
-//       width: 4rem;
-//       margin: 0 auto;
-//     }
-//   }
-
-//   &__right {
-//     position: absolute;
-//     top: calc(100vh - 6rem);
-//     top: calc(var(--vh) - 4rem);
-//     width: 100%;
-//     left: 0;
-//     font-size: 1.6rem;
-//     color: $white;
-//     transform: translateY(-100%);
-//     transition: top .2s, opacity .3s;
-//     animation: fade-in .5s 5s;
-//     animation-fill-mode: both;
-//     opacity: 1;
-
-//     .cookie__bar + .container & {
-//       opacity: 0;
-//     }
-
-//     @include breakpoint(medium) {
-//       top: 2rem;
-//       left: auto;
-//       right: 3rem;
-//       width: auto;
-//       transform: none;
-//       animation: none;
-//     }
-
-//     @include breakpoint(large) {
-//       right: 6.5rem;
-//     }
-
-//     @include breakpoint(xlarge) {
-//       top: 3rem;
-//     }
-//   }
-// }
-
-// @keyframes fade-in {
-//   0% {opacity:0;}
-//   100% {opacity:1;}
-// }

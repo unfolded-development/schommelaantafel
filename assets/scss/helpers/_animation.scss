@@ -1,0 +1,29 @@
+@keyframes schommelFromLeft  {
+    0% {
+        transform: rotate(90deg);
+    }
+    40% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(-1deg);
+    }
+}
+
+@keyframes schommelFromRight  {
+    0% {
+        transform: rotate(-90deg);
+    }
+    40% {
+        transform: rotate(10deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(1deg);
+    }
+}

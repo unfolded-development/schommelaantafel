@@ -6,8 +6,8 @@
           <img src="~/static/images/logo.svg" alt="" />
         </div>
         <div class="site-header__cta">
-          <a v-if="this.$attrs.showBrochureBtn" href="#">download brochure</a>
-          <a v-if="this.$attrs.showContactBtn" v-scroll-to="'#section-contact'" class="btn btn-orange">Contact</a>
+          <a v-if="this.$attrs.showBrochureBtn" id="brochure-btn-header" href="#">download brochure</a>
+          <a v-scroll-to="'#section-contact'" v-if="this.$attrs.showContactBtn" class="btn btn-orange">Contact</a>
         </div>
       </nav>
     </div>
@@ -23,6 +23,8 @@
 </template>
 
 <script>
+let prevScrollpos = null;
+
 export default {
   props: {
     default: () => {
@@ -44,11 +46,27 @@ export default {
       } else {
         this.headerUpButton = false;
       }
+
+      var currentScrollPos = window.pageYOffset;
+
+      if (window.scrollY > 50) {
+        if (prevScrollpos > currentScrollPos && window.scrollY) {
+          // document.getElementsByClassName("site-header")[0].style.top = "0rem";
+          document.getElementsByClassName("site-header")[0].classList.add("apple-sticky-active");
+        } else {
+          // document.getElementsByClassName("site-header")[0].style.top = "-5.1rem";
+          document.getElementsByClassName("site-header")[0].classList.remove("apple-sticky-active");
+        }
+
+        prevScrollpos = currentScrollPos;
+      }
     },
   },
   mounted() {
     window.addEventListener("scroll", this.handleScroll);
     this.handleScroll()
+
+    prevScrollpos = window.pageYOffset;
   }
 };
 </script>
