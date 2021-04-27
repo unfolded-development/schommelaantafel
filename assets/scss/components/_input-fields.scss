@@ -1,0 +1,28 @@
+.input-field {
+	height: 3rem;
+	padding: 0 1rem;
+	border: 1px solid $black;
+	background-color: $grey;
+	transition: all ease-in-out .1s;
+
+	// &:hover::placeholder {
+	// 	transform: translateX(.5rem);
+	// }
+
+	&::placeholder {
+		color: rgba($body-font-color, 1);
+		transition: inherit;
+	}
+
+	&:focus {
+		box-shadow: none;
+		outline: none;
+		// background-color: $white;
+		transition: all ease-in-out .1s;
+
+		&::placeholder {
+			color: rgba($body-font-color, .25);
+			transition: inherit;
+		}
+	}
+}

@@ -1,14 +1,15 @@
 $paragraph-margin-bottom: $global-line-height !default;
 $paragraph-line-height: $global-line-height !default;
 
-$header-font-weight: 400 !default;
-$header-font-family: 'Eindhoven Type', sans-serrif !default;
+$header-font-weight: 500 !default;
+$header-font-family: 'Platform', sans-serrif !default;
 $header-font-style: normal !default;
-$header-lineheight: 1em !default;
+$header-lineheight: 1 !default;
+// $header-letter-spacing: .02em;
 
 $anchor-color: inherit !default;
 $anchor-color-hover: inherit !default;
-$anchor-text-decoration: underline !default;
+$anchor-text-decoration: none !default;
 
 $small-font-size: .8em !default;
 
@@ -39,11 +40,116 @@ small, .small {
 }
 
 // Headings
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6 {
-  font-weight: $header-font-weight;
+// h1, .h1, h2, .h2, h3, .h3 {
+//   font-weight: $header-font-weight;
+//   font-family: $header-font-family;
+//   font-style: $header-font-style;
+//   line-height: $header-lineheight;
+// 	letter-spacing: $header-letter-spacing;
+// 	margin-top: 0;
+// }
+
+// h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+// 	margin-top: 0;
+// }
+
+@mixin heading {
+	font-weight: $header-font-weight;
   font-family: $header-font-family;
   font-style: $header-font-style;
   line-height: $header-lineheight;
+	// letter-spacing: calc(#{$header-letter-spacing} * 1.1);
+	margin-top: 0;
+}
+
+@mixin h1 {
+	@include heading();
+	@include letter-spacing(23.83);
+	font-size: 3rem;
+	line-height: .78em;
+	color: $white;
+	text-shadow: 0 2px 20px rgba($black, .5);
+	@include breakpoint(medium) {
+		font-size: 4rem;
+		line-height: .83em;
+	}
+	@include breakpoint(xlarge) {
+		font-size: 5rem;
+		line-height: .8em;
+	}
+}
+
+@mixin h2 {
+	@include heading();
+	@include letter-spacing(12.5);
+	font-size: 2.222rem;
+	@include breakpoint(medium) {
+		@include letter-spacing(20);
+		font-size: 2.777rem;
+	}
+	@include breakpoint(xlarge) {
+		@include letter-spacing(21.43);
+		font-size: 3.333rem;
+	}
+}
+
+@mixin h3 {
+	@include heading();
+	@include letter-spacing(21.43);
+	font-size: 1.6rem;
+	@include breakpoint(medium) {
+		@include letter-spacing(25);
+		font-size: 2.222rem;
+	}
+	@include breakpoint(xlarge) {
+		@include letter-spacing(21.43);
+		font-size: 2.777rem;
+	}
+}
+
+@mixin h4 {
+	// @include heading();
+	@include letter-spacing(3.64);
+	font-size: 1.5rem;
+	font-weight: 500;
+	line-height: 1.17;
+	@include breakpoint(medium) {
+		@include letter-spacing(8.82);
+		font-size: 1.8rem;
+	}
+}
+
+@mixin h5 {
+	@include heading();
+	@include letter-spacing(4.17);
+	font-family: $body-font-family;
+  line-height: 1.15;
+	color: $body-font-color;
+  font-weight: $global-weight-normal;
+	// letter-spacing: $body-letter-spacing;
+	font-size: 1.3rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+h1, .h1 {
+	@include h1();
+}
+
+h2, .h2 {
+	@include h2();
+}
+
+h3, .h3 {
+	@include h3();
+}
+
+h4, .h4 {
+	@include h4();
+}
+
+h5, .h5 {
+	@include h5();
 }
 
 a {
@@ -68,7 +174,7 @@ a {
   font-size: 2rem;
   margin-bottom: 2rem;
 
-  @include breakpoint('medium') {
+  @include breakpoint(medium) {
     font-size: 3rem;
     margin-bottom: 3rem;
   }
@@ -88,4 +194,12 @@ a {
 
 .text-center {
   text-align: center;
+}
+
+.text-dimmed {
+  color: lighten($body-font-color, 25%);
+}
+
+.label {
+	font-size: 1.1rem;
 }

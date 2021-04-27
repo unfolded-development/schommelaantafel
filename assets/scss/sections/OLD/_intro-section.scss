@@ -1,0 +1,128 @@
+.intro-section {
+  @include grid-container();
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: calc(var(--vh));
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  color: $white;
+  top: 0;
+  transition: top .2s;
+
+  .cookie__bar + .container & {
+    top: 3rem;
+  }
+
+  @include breakpoint(medium) {
+    min-height: 100vh;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  line-height: 1em;
+  user-select: none;
+
+  @include breakpoint(medium) {
+    font-size: 3rem;
+  }
+
+  @include breakpoint(xlarge) {
+    font-size: 4rem;
+  }
+}
+
+
+
+.intro__logo {
+  --half: calc(var(--vh) * .5);
+
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  opacity: 1;
+  top: 1.5rem;
+  transform: translateY(calc(50vh - 50%)) scale(1);
+  transform: translateY(calc(var(--half) - 50%)) scale(1);
+  transform-origin: top center;
+  transition: transform 1.5s ease-in-out;
+  width: 270px;
+
+  @include breakpoint(medium) {
+    width: 475px;
+  }
+
+  @include breakpoint(large) {
+    width: 600px;
+    top: 1rem;
+  }
+
+  @include breakpoint(xlarge) {
+    top: 1.5rem;
+  }
+
+  @include breakpoint(hd) {
+    width: 30rem;
+    top: 1rem;
+  }
+
+  .container--intro-finished & {
+    transform: translateY(0) scale(.6);
+
+    @include breakpoint(medium) {
+      transform: translateY(0) scale(.4);
+    }
+
+    @include breakpoint(large) {
+      transform: translateY(0) scale(.325);
+    }
+
+    @include breakpoint(xlarge) {
+      transform: translateY(0) scale(.35);
+    }
+  }
+}
+
+.intro__counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(100vh);
+  transition: transform 1.4s .1s ease-in-out;
+
+  .container--intro-finished & {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.intro__counter-pre,
+.intro__counter-post {
+  font-family: 'Eindhoven Type', sand-serif;
+}
+
+.intro__counter-numbers {
+  font-family: 'Eindhoven Type Inline', sand-serif;
+  font-size: 10rem;
+  line-height: 1em;
+
+  @include breakpoint(medium) {
+    font-size: 15rem;
+  }
+
+  @include breakpoint(xlarge) {
+    font-size: 20rem;
+  }
+}

@@ -1,0 +1,47 @@
+.contact {
+	color: $white;
+	background-color: $black;
+
+	.content-section__content {
+		grid-column: 1 / -1;
+		text-align: center;
+		padding: 4.5rem 0 4rem;
+		@include breakpoint(medium) {
+			grid-column: 2 / -2;
+		}
+		@include breakpoint(large) {
+			grid-column: 4 / -4;
+		}
+		
+		h3 {
+			font-size: 2.4rem;
+
+			@include breakpoint(large) {
+				ont-size: 2.75rem;
+			}
+		}
+
+		.btn {
+			width: 100%;
+		}
+
+		@include breakpoint(medium) {
+			.btn {
+				width: initial;
+			}
+		}
+
+		p {
+			margin-bottom: 3.9rem;
+			@include breakpoint(medium) {
+				margin-bottom: 3.4rem;
+			}
+			@include breakpoint(large) {
+				font-size: 1.4em;
+				padding: 0 2rem;
+				margin-bottom: 2.4rem;
+			}
+		}
+
+	}
+}

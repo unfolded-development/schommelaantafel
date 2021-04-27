@@ -1,132 +1,139 @@
-.intro-section {
-  @include grid-container();
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  min-height: calc(var(--vh));
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  color: $white;
-  top: 0;
-  transition: top .2s;
-
-  .cookie__bar + .container & {
-    top: 3rem;
-  }
-
-  @include breakpoint(medium) {
-    min-height: 100vh;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-  }
-}
-
 .intro {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  line-height: 1em;
-  user-select: none;
+	width: 100%;
+	height: calc(125vh - 5.2rem);
+	overflow: hidden;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: margin-top .2s ease-out;
+	padding-top: 5.2rem;
+	box-sizing: content-box;
 
-  @include breakpoint(medium) {
-    font-size: 3rem;
-  }
+	&::after {
+		content: "";
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -5;
+		position: absolute;
+		background-color: $white;
 
-  @include breakpoint(xlarge) {
-    font-size: 4rem;
-  }
-}
+		@include breakpoint (xlarge) {
+            height: calc(100vh + 13.5rem);
+        }
+	}
 
+	&__content {
+		text-align: center;
+		grid-column: 1 / -1;
 
+		@include breakpoint(medium) {
+			grid-column: 2 / -2;
+		}
+		
+		@include breakpoint(xlarge) {
+			grid-column: 4 / -4;
+		}
 
-.intro__logo {
-  --half: calc(var(--vh) * .5);
+		& > *:last-child {
+			margin-bottom: 0;
+		}
+	}
 
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  opacity: 1;
-  top: 1.5rem;
-  transform: translateY(calc(50vh - 50%)) scale(1);
-  transform: translateY(calc(var(--half) - 50%)) scale(1);
-  transform-origin: top center;
-  transition: transform 1.5s ease-in-out;
-  width: 270px;
+	&__btn-down {
+		cursor: pointer;
+		position: absolute;
+		bottom: 2.5rem;
+		left: 50%;
+		font-size: 1.25rem;
+		z-index: 20;
 
-  @include breakpoint(medium) {
-    width: 475px;
-  }
+		.icon {
+			color: $white;
+		}
+	}
 
-  @include breakpoint(large) {
-    width: 600px;
-    top: 1rem;
-  }
+	&__schommelLogo {
+        width: 25rem;
+        height: auto;
+        z-index: 15;
 
-  @include breakpoint(xlarge) {
-    top: 1.5rem;
-  }
+		width: 60% !important;
+		x: 20% !important;
+		
+		opacity: 1;
 
-  @include breakpoint(hd) {
-    width: 30rem;
-    top: 1rem;
-  }
+		&.hide {
+			opacity: 0;
+		}
 
-  .container--intro-finished & {
-    transform: translateY(0) scale(.6);
-
-    @include breakpoint(medium) {
-      transform: translateY(0) scale(.4);
+		@include breakpoint (large) {
+			width: 40% !important;
+			x: 30% !important;
+		}
+    
+        .animate-letter {
+            transition: transform .5s;
+        }
     }
 
-    @include breakpoint(large) {
-      transform: translateY(0) scale(.325);
-    }
+	&__heading {
+		opacity: 1;
+		transition: opacity .5s ease-out;
+		transform: translateY(-100%);
+		
+		&.hide {
+			opacity: 0;
+			height: 0;
+			pointer-events: none;
+		}
+	}
 
-    @include breakpoint(xlarge) {
-      transform: translateY(0) scale(.35);
-    }
-  }
-}
+	#backgroundImageMaskOverlay {
+		position: absolute;
+		width: 100%;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: -2;
+		transition: top .3s ease-out;
+	
+		background-image: url("~/static/images/intro-2.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
 
-.intro__counter {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transform: translateY(100vh);
-  transition: transform 1.4s .1s ease-in-out;
+		opacity: 0;
 
-  .container--intro-finished & {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.intro__counter-pre,
-.intro__counter-post {
-  font-family: 'Eindhoven Type', sand-serif;
-}
-
-.intro__counter-numbers {
-  font-family: 'Eindhoven Type Inline', sand-serif;
-  font-size: 10rem;
-  line-height: 1em;
-
-  @include breakpoint(medium) {
-    font-size: 15rem;
-  }
-
-  @include breakpoint(xlarge) {
-    font-size: 20rem;
-  }
-}
-
-.container--intro-finished {
-
+		&.loaded {
+			top: 4.6rem;
+		}
+	}
+	
+	&__animation-block-item {
+		transform-origin: center -250vw;
+	
+		&.--1 {
+			transform: rotate(90deg);
+		}
+	
+		&.--2 {
+			transform: rotate(-90deg);
+		}
+	
+		&--load {
+			&.--1 {
+				animation: schommelFromLeft 2s; 
+				transform: rotate(-1deg);
+			}
+		
+			&.--2 {
+				animation: schommelFromRight 2s;
+				transform: rotate(1deg);
+			}
+		}
+	}
 }

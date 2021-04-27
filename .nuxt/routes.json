@@ -2,28 +2,28 @@
   {
     "name": "icons-list",
     "path": "/_icons",
-    "component": "C:\\xampp\\htdocs\\unfolded\\schommelaantafel\\node_modules\\@nuxtjs\\svg-sprite\\lib\\pages\\icons-list.vue",
-    "_name": "_abaadbca"
+    "component": "/Users/petertindemans/Documents/Localserver/schommelaantafel/node_modules/@nuxtjs/svg-sprite/lib/pages/icons-list.vue",
+    "_name": "_45831116"
   },
   {
-    "name": "privacy",
-    "path": "/privacy",
-    "component": "C:\\\\xampp\\\\htdocs\\\\unfolded\\\\schommelaantafel\\\\pages\\\\privacy.vue",
-    "chunkName": "pages/privacy",
-    "_name": "_4a954e63"
+    "name": "home",
+    "path": "/home",
+    "component": "/Users/petertindemans/Documents/Localserver/schommelaantafel/pages/home.vue",
+    "chunkName": "pages/home",
+    "_name": "_87c5d4be"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\xampp\\\\htdocs\\\\unfolded\\\\schommelaantafel\\\\pages\\\\index.vue",
+    "component": "/Users/petertindemans/Documents/Localserver/schommelaantafel/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_9a805926"
+    "_name": "_1bc2e200"
   },
   {
     "name": "all",
     "path": "/*",
-    "component": "C:\\\\xampp\\\\htdocs\\\\unfolded\\\\schommelaantafel\\\\pages\\\\_.vue",
+    "component": "/Users/petertindemans/Documents/Localserver/schommelaantafel/pages/_.vue",
     "chunkName": "pages/_",
-    "_name": "_8419d40c"
+    "_name": "_33db33e6"
   }
 ]

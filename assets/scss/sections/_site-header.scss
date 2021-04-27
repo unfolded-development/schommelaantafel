@@ -1,69 +1,110 @@
 .site-header {
-  position: absolute;
-  top: 0;
-  left: auto;
-  right: auto;
-  width: 100%;
-  padding-top: 1.5rem;
-  z-index: 1000;
+	position: fixed;
+	width: 100%;
+	padding: 1rem 0 .8rem;
+	left: 0;
+	z-index: 9999;
+	height: 5.1rem;
+	transition: top .3s ease-out;
+	
+	&::after {
+		content: "";
+		background-color: $white;
+		height: 5.1rem;
+		width: 100%;
+		top: 0;
+		z-index: -1;
+		position: absolute;
+		transform: translateY(-100%);
+		transition: transform .3s ease-out;
+		padding: 1rem 0 .8rem;
+		left: 0;
+		bottom: 0;
+	}
 
-  @include breakpoint(xlarge) {
-    padding-top: 3rem;
-  }
+	&.apple-sticky-active {
+		.site-header__logo, #brochure-btn-header {
+			transform: translateY(0%);
+		}
 
-  &__container {
-    @include grid-container();
-  }
+		&::after {
+			transform: translateY(0%);
+		}
+	}
 
-  &__logo {
-    width: 100%;
-    text-align: center;
+	&__logo, #brochure-btn-header {
+		transform: translateY(calc(-2rem - 100%));
+		transition: transform .3s ease-out;
+	}
+	
+	&__logo, img {
+		height: 2rem;
+		@include breakpoint(medium) {
+			height: 100%;
+		}
+	}
+	
+	&__nav {
+		grid-column: 1 / -1;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 
-    img {
-      display: block;
-      width: 4rem;
-      margin: 0 auto;
-    }
-  }
+	&__cta {
 
-  &__right {
-    position: absolute;
-    top: calc(100vh - 6rem);
-    top: calc(var(--vh) - 4rem);
-    width: 100%;
-    left: 0;
-    font-size: 1.6rem;
-    color: $white;
-    transform: translateY(-100%);
-    transition: top .2s, opacity .3s;
-    animation: fade-in .5s 5s;
-    animation-fill-mode: both;
-    opacity: 1;
+		& > *:not(.btn) {
+			display: none;
 
-    .cookie__bar + .container & {
-      opacity: 0;
-    }
+			@include breakpoint(medium) {
+				display: inline-block;
+			}
+		}
 
-    @include breakpoint(medium) {
-      top: 2rem;
-      left: auto;
-      right: 3rem;
-      width: auto;
-      transform: none;
-      animation: none;
-    }
+		& > *:not(:last-child) {
+			margin-right: 1rem;
+		}
+	}
 
-    @include breakpoint(large) {
-      right: 6.5rem;
-    }
+	&__btn-up {
+		position: fixed;
+		z-index: 9999;
+		bottom: 1rem;
+		right: .5rem;
+		background-color: $white;
+		padding: .8rem;
+		cursor: pointer;
+		pointer-events: none;
+		opacity: 0;
+		transition: opacity .4s ease-in-out, background-color .4s ease-in-out, color .4s ease-in-out;
 
-    @include breakpoint(xlarge) {
-      top: 3rem;
-    }
-  }
-}
+		@include breakpoint (medium) {
+			bottom: 1.1rem;
+			right: 1.1rem;
+		}
 
-@keyframes fade-in {
-  0% {opacity:0;}
-  100% {opacity:1;}
+		@include breakpoint (large) {
+			bottom: 2.2rem;
+			right: 2.2rem;
+		}
+
+		&:hover {
+			background-color: $black;
+			color: $white;
+
+			.icon {
+				padding-bottom: .1rem;
+			}
+		}
+
+		&-active {
+			pointer-events: all;
+			opacity: 1;
+		}
+
+		.icon {
+			font-size: 1.4rem;
+			transition: padding .4s ease-in-out;
+		}
+	}
 }

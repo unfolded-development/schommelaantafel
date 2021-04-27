@@ -1,0 +1,336 @@
+.slider-selector {
+	padding-top: 3rem;
+	padding-bottom: 4rem;
+	z-index: 0;
+	background-color: $white;
+
+	@include breakpoint(medium) {
+		padding-top: 6.5rem;
+		padding-bottom: 5.5rem;
+		background-color: transparent;
+	}
+
+	@include breakpoint(large) {
+		@include grid();
+		@include grid-container();
+		padding-top: 4.5rem;
+		padding-bottom: 8rem;
+	}
+
+	&__main {
+		@include breakpoint(medium) {
+			@include grid(8);
+			padding: 0 #{map-get($grid-container-padding, medium)};
+			grid-column: span 8 / -1;
+		}
+		@include breakpoint(large) {
+			padding: 0;
+		}
+	}
+
+	&__wrapper {
+		grid-column: span 8;
+		width: 100%;
+		position: relative;
+
+		@include breakpoint(medium) {
+			margin: calc(-1.8rem * 1) 1.2rem 0;
+		}
+
+		&.content-wrap {
+			width: calc(100% - 2.2rem);
+			margin-left: 1.1rem;
+			margin-right: 1.1rem;
+
+			
+			@include breakpoint(large) {
+				margin-top: calc(-1.8rem * 3);
+			}
+		}
+	}
+
+	&__content-slider {
+		.flickity-slider > * {
+			width: 100%;
+			opacity: 0 !important;
+			position: absolute;
+			transition: opacity 1.5s ease-out .5s;
+			left: 0 im !important;
+		}
+
+		.is-selected {
+			opacity: 1 !important;
+		}
+	}
+
+	&__content {
+		position: relative;
+		padding: 1.5rem #{map-get($grid-container-padding, small)} 2rem;
+
+		@include breakpoint(medium) {
+			grid-column: span 8;
+			padding: 1.5rem 2rem 2rem;
+			// margin: calc(-1.8rem * 1) 1.2rem 0;
+			background-color: $white;
+
+			transform: rotate(.75deg);
+
+			& > * {
+				transform: rotate(-.75deg);
+			}
+		}
+
+		@include breakpoint(large) {
+			grid-column: span 7;
+			width: calc(100% + #{map-get($grid-container-padding, large)});
+			width: calc(100% - 6.6rem);
+    		margin-left: 2.2rem;
+		}
+	}
+
+	&__controls {
+		position: absolute;
+		top: calc(((1.1rem + .5rem * 2) / 2) * -1);
+		right: calc(100% / 12 * 1.15);
+		margin: 0 -.3rem;
+
+		@include breakpoint(medium) {
+			right: 4rem;
+		}
+	}
+
+	.flickity-button { // .icon
+		font-size: 1.1rem !important;
+		padding: .6rem !important;
+		color: $white !important;
+		background-color: $orange !important;
+		cursor: pointer  !important;
+		border-radius: 0rem !important;
+		height: 2.2rem;
+		width: 2.2rem;
+		top: -1.5rem !important;
+		right: 0rem !important;
+		display: block !important;
+
+		@include breakpoint (large) {
+			right: .5rem !important;
+		}
+
+		svg {
+			opacity: 0;
+		}
+
+		&::after {
+			content: "";
+			background-image: url("@/assets/icons/arrow-white.svg");
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			height: 1.2rem;
+			width: 1.2rem;
+			z-index: 1;
+			position: absolute;
+			top: .5rem !important;
+			right: .5rem !important;
+		}
+
+		&.previous {
+			left: initial;
+			margin-right: calc(2.2rem + .5rem);
+
+			&::after {
+				background-image: url("@/assets/icons/arrow-white-prev.svg");
+			}
+		}
+	}
+
+	&__label {
+		display: inline-block;
+		font-size: 1.1rem;
+		color: $orange;
+		margin-bottom: .5rem;
+	}
+
+	&__text {
+		@include letter-spacing(8.82);
+		font-size: 1.8rem;
+		line-height: 1.17;
+		margin-top: 0;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__image-slider {
+		@include breakpoint(large) {
+			width: calc(100% + 2.2rem);
+		}
+	}
+
+	&__image {
+		position: relative;
+		height: 0;
+		min-height: 48vw;
+		max-height: calc(100vh - 4.5rem - 6.5rem);
+		z-index: 0;
+		@include breakpoint(medium) {
+			grid-column: 1 / -1;
+		}
+		@include breakpoint(large) {
+			width: calc(100% + #{map-get($grid-container-padding, large)});
+		}
+		
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			z-index: -1;
+		}
+	}
+
+	&__navigation {
+		padding: 0 map-get($grid-container-padding, small);
+
+		@include breakpoint(medium) {
+			padding: 0 map-get($grid-container-padding, medium);
+		}
+		
+		@include breakpoint(large) {
+			grid-column: 2 / span 3;
+			display: inline-block;
+			margin-top: 9.45vw;
+			margin-left: -#{map-get($grid-column-gap, medium)};
+			padding: 0;
+		}
+
+		.label {
+			display: inline-block;
+			@include h3();
+			text-align: center;
+			width: 100%;
+			margin-bottom: 2.2rem;
+			
+			@include breakpoint(medium) {
+				@include letter-spacing(4.17);
+				font-family: $body-font-family;
+				font-size: 1rem;
+				font-weight: $global-weight-normal;
+				color: $body-font-color;
+				line-height: $global-line-height;
+				text-align: left;
+				width: initial;
+				margin-bottom: 1rem;
+			}
+			
+			@include breakpoint(large) {
+				margin-bottom: 3rem;
+			}
+		}
+		
+		ul {
+			display: flex;
+			justify-content: space-between;
+			list-style: none;
+			margin: 0 0 1.7rem;
+			padding: 0;
+
+			@include breakpoint(medium) {
+				justify-content: flex-start;
+				// margin: 0 -1.5rem 2.6rem;
+				margin: 0 0 2.6rem;
+			}
+
+			@include breakpoint(large) {
+				flex-direction: column;
+				margin: -1rem 0
+			}
+
+			li {
+				@include heading();
+				font-size: 1rem;
+				transition: transform .2s ease-out;
+
+				@include breakpoint(medium) {
+					@include h4();
+					margin: 0 1.5rem
+				}
+
+				@include breakpoint(large) {
+					@include h3();
+					margin: 1rem 0;
+				}
+
+				&:first-child {
+					@include breakpoint(medium) {
+						margin-left: 0;
+					}
+				}
+
+				&:last-child {
+					@include breakpoint(medium) {
+						margin-right: 0;
+					}
+				}
+
+				&:hover {
+					span {
+						color: $orange;
+						cursor: pointer;
+
+						@include breakpoint(large) {
+							margin-left: 3.2rem;
+						}
+					}
+
+					&:not(&.active) {
+						span:before {
+							opacity: 1;
+						}
+					}
+				}
+
+
+				span {
+					position: relative;
+					transition: margin-left .1s ease-in-out;
+
+					@include breakpoint (large) {
+						&:before {
+							position: absolute;
+							content: "";
+							display: inline-block;
+							height: 1.9rem;
+							width: 1.9rem;
+							top: 50%;
+							transform: translateY(-52.5%);
+							left: -3.075rem;
+							background-image: url("@/assets/icons/arrow.svg");
+							background-size: cover;
+							background-repeat: no-repeat;
+							opacity: 0;
+							transform: left .2s ease-in-out;
+							pointer-events: none;
+						}
+					}
+				}
+
+				&.active span {
+					color: $orange;
+					
+					@include breakpoint(large) {
+						margin-left: 3.2rem;
+					}
+
+					&:before {
+						opacity: 1;
+					}
+				}
+			
+			}
+		}
+	}
+
+}

@@ -4,7 +4,7 @@ export default {
 
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	head: {
-		title: 'Koningsdag Eindhoven',
+		title: 'Schommel aan Tafel',
 		htmlAttrs: {
 			lang: 'en',
 		},
@@ -33,39 +33,36 @@ export default {
 				content: '#ffffff'
 			},
 		],
-		link: [{
-				rel: 'icon',
-				type: 'image/x-icon',
-				href: '/favicon.ico'
-			},
-			{
-				rel: 'apple-touch-icon',
-				size: '180x180',
-				href: '/favicons/apple-touch-icon.png',
-			},
-			{
-				rel: 'icon',
-				type: 'image/png',
-				size: '32x32',
-				href: '/favicons/favicon-32x32.png',
-			},
-			{
-				rel: 'icon',
-				type: 'image/png',
-				size: '16x16',
-				href: '/favicons/favicon-16x16.png',
-			},
-			{
-				rel: 'mask-icon',
-				type: 'image/png',
-				color: '#ff6e00',
-				href: '/favicons/safari-pinned-tab.svg',
-			},
+		link: [
+			// {
+			// 	rel: 'icon',
+			// 	type: 'image/x-icon',
+			// 	href: '/favicon.ico'
+			// },
+			// {
+			// 	rel: 'apple-touch-icon',
+			// 	size: '180x180',
+			// 	href: '/favicons/apple-touch-icon.png',
+			// },
+			// {
+			// 	rel: 'icon',
+			// 	type: 'image/png',
+			// 	size: '32x32',
+			// 	href: '/favicons/favicon-32x32.png',
+			// },
+			// {
+			// 	rel: 'icon',
+			// 	type: 'image/png',
+			// 	size: '16x16',
+			// 	href: '/favicons/favicon-16x16.png',
+			// },
+			// {
+			// 	rel: 'mask-icon',
+			// 	type: 'image/png',
+			// 	color: '#ff6e00',
+			// 	href: '/favicons/safari-pinned-tab.svg',
+			// },
 		],
-		script: [{
-			src: process.env.JWPLAYER_PLAYER_LIBRARY_URL ||
-				'https://cdn.jwplayer.com/libraries/0XbBf8Uu.js',
-		}, ],
 	},
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
@@ -81,10 +78,14 @@ export default {
 		// 	src: '~/plugins/ServiceContainer.js',
 		// 	ssr: true
 		// },
-		// {
-		// 	src: '~/plugins/VueFlickity.js',
-		// 	ssr: false
-		// },
+		{
+			src: '~/plugins/VueFlickity.js',
+			ssr: false
+		},
+		{
+			src: '~/plugins/VueCookie.js',
+			ssr: false
+		}
 		// {
 		// 	src: '~/plugins/VuePlyr.js',
 		// 	ssr: false
@@ -113,7 +114,12 @@ export default {
 	],
 
 	// Modules: https://go.nuxtjs.dev/config-modules
-	modules: [],
+    modules: [
+        ['vue-scrollto/nuxt', { 
+			duration: 1000,
+			easing: "ease-in-out",
+		}],
+    ],
 
 	iconFont: {
 		files: ['assets/icons/*.svg'],
@@ -132,16 +138,16 @@ export default {
 
 	pwa: {
 		meta: {
-			name: 'Koningsdag Eindhoven',
-			author: 'Gemeente Eindhoven',
-			description: 'De Koning komt KennisMaken met Eindhoven. Doe dat ook! Eindhoven, stad van Kennis, stad van het Maken.',
+			name: 'Schommel aan Tafel',
+			author: 'Schommel aan Tafel',
+			description: 'Met Schommel aan Tafel trek je de aandacht en creéer je een Plek waar mensen samen komen.',
 			theme_color: '#FF6E00',
 			lang: 'nl',
-			ogHost: 'https://koningsdageindhoven.nl',
+			// ogHost: 'https://koningsdageindhoven.nl',
 		},
 		manifest: {
-			name: 'Koningsdag Eindhoven',
-			short_name: 'Koningsdag Eindhoven',
+			name: 'Schommel aan Tafel',
+			short_name: 'Schommel aan Tafel',
 			icons: [{
 					src: '/favicons/android-chrome-192x192.png',
 					sizes: '192x192',
@@ -169,16 +175,10 @@ export default {
 	},
 
 	gtm: {
-		id: 'GTM-M78QBR3', // Live id
+		id: 'GTM-KCBFCXX', // Live id
 	},
 
-	publicRuntimeConfig: {
-		media: {
-			apiUri: process.env.MEDIA_API_URI || '/api/media',
-			refreshRate: process.env.MEDIA_REFRESH_RATE || 60000,
-		},
-		hash: 'ddfruvagyhjiux33oxmu',
-	},
+	publicRuntimeConfig: {},
 
 	axios: {
 		baseURL: '/',

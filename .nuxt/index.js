@@ -12,13 +12,16 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_78f99300 from 'nuxt_plugin_plugin_78f99300' // Source: .\\components\\plugin.js (mode: 'all')
-import nuxt_plugin_nuxtsvgsprite_20f31281 from 'nuxt_plugin_nuxtsvgsprite_20f31281' // Source: .\\nuxt-svg-sprite.js (mode: 'all')
-import nuxt_plugin_workbox_797e8102 from 'nuxt_plugin_workbox_797e8102' // Source: .\\workbox.js (mode: 'client')
-import nuxt_plugin_metaplugin_a6207602 from 'nuxt_plugin_metaplugin_a6207602' // Source: .\\pwa\\meta.plugin.js (mode: 'all')
-import nuxt_plugin_moment_e6b22256 from 'nuxt_plugin_moment_e6b22256' // Source: .\\moment.js (mode: 'all')
-import nuxt_plugin_gtm_11a3bab9 from 'nuxt_plugin_gtm_11a3bab9' // Source: .\\gtm.js (mode: 'all')
-import nuxt_plugin_axios_ce94f1ba from 'nuxt_plugin_axios_ce94f1ba' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_plugin_821faaf0 from 'nuxt_plugin_plugin_821faaf0' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_vuescrollto_74d492aa from 'nuxt_plugin_vuescrollto_74d492aa' // Source: ./vue-scrollto.js (mode: 'client')
+import nuxt_plugin_nuxtsvgsprite_c0626188 from 'nuxt_plugin_nuxtsvgsprite_c0626188' // Source: ./nuxt-svg-sprite.js (mode: 'all')
+import nuxt_plugin_workbox_d693318c from 'nuxt_plugin_workbox_d693318c' // Source: ./workbox.js (mode: 'client')
+import nuxt_plugin_metaplugin_6039d44d from 'nuxt_plugin_metaplugin_6039d44d' // Source: ./pwa/meta.plugin.js (mode: 'all')
+import nuxt_plugin_moment_304fe3ba from 'nuxt_plugin_moment_304fe3ba' // Source: ./moment.js (mode: 'all')
+import nuxt_plugin_gtm_468077f4 from 'nuxt_plugin_gtm_468077f4' // Source: ./gtm.js (mode: 'all')
+import nuxt_plugin_axios_0957e19e from 'nuxt_plugin_axios_0957e19e' // Source: ./axios.js (mode: 'all')
+import nuxt_plugin_VueFlickity_0dd57bf8 from 'nuxt_plugin_VueFlickity_0dd57bf8' // Source: ../plugins/VueFlickity.js (mode: 'client')
+import nuxt_plugin_VueCookie_2af6fe7a from 'nuxt_plugin_VueCookie_2af6fe7a' // Source: ../plugins/VueCookie.js (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -47,7 +50,11 @@ Vue.component(Nuxt.name, Nuxt)
 
 Object.defineProperty(Vue.prototype, '$nuxt', {
   get() {
-    return this.$root.$options.$nuxt
+    const globalNuxt = this.$root.$options.$nuxt
+    if (process.client && !globalNuxt && typeof window !== 'undefined') {
+      return window.$nuxt
+    }
+    return globalNuxt
   },
   configurable: true
 })
@@ -64,7 +71,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"Koningsdag Eindhoven","htmlAttrs":{"lang":"en"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"msapplication-TileColor","content":"#ffa803"},{"name":"msapplication-config","content":"\u002Ffavicons\u002Fbrowserconfig.xml"},{"name":"theme-color","content":"#ffffff"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"apple-touch-icon","size":"180x180","href":"\u002Ffavicons\u002Fapple-touch-icon.png"},{"rel":"icon","type":"image\u002Fpng","size":"32x32","href":"\u002Ffavicons\u002Ffavicon-32x32.png"},{"rel":"icon","type":"image\u002Fpng","size":"16x16","href":"\u002Ffavicons\u002Ffavicon-16x16.png"},{"rel":"mask-icon","type":"image\u002Fpng","color":"#ff6e00","href":"\u002Ffavicons\u002Fsafari-pinned-tab.svg"}],"script":[{"src":"https:\u002F\u002Fcdn.jwplayer.com\u002Flibraries\u002F0XbBf8Uu.js"}],"style":[]},
+    head: {"title":"Schommel aan Tafel","htmlAttrs":{"lang":"en"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"msapplication-TileColor","content":"#ffa803"},{"name":"msapplication-config","content":"\u002Ffavicons\u002Fbrowserconfig.xml"},{"name":"theme-color","content":"#ffffff"}],"link":[],"style":[],"script":[]},
 
     router,
     nuxt: {
@@ -178,32 +185,44 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_78f99300 === 'function') {
-    await nuxt_plugin_plugin_78f99300(app.context, inject)
+  if (typeof nuxt_plugin_plugin_821faaf0 === 'function') {
+    await nuxt_plugin_plugin_821faaf0(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_nuxtsvgsprite_20f31281 === 'function') {
-    await nuxt_plugin_nuxtsvgsprite_20f31281(app.context, inject)
+  if (process.client && typeof nuxt_plugin_vuescrollto_74d492aa === 'function') {
+    await nuxt_plugin_vuescrollto_74d492aa(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_workbox_797e8102 === 'function') {
-    await nuxt_plugin_workbox_797e8102(app.context, inject)
+  if (typeof nuxt_plugin_nuxtsvgsprite_c0626188 === 'function') {
+    await nuxt_plugin_nuxtsvgsprite_c0626188(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_metaplugin_a6207602 === 'function') {
-    await nuxt_plugin_metaplugin_a6207602(app.context, inject)
+  if (process.client && typeof nuxt_plugin_workbox_d693318c === 'function') {
+    await nuxt_plugin_workbox_d693318c(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_moment_e6b22256 === 'function') {
-    await nuxt_plugin_moment_e6b22256(app.context, inject)
+  if (typeof nuxt_plugin_metaplugin_6039d44d === 'function') {
+    await nuxt_plugin_metaplugin_6039d44d(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_gtm_11a3bab9 === 'function') {
-    await nuxt_plugin_gtm_11a3bab9(app.context, inject)
+  if (typeof nuxt_plugin_moment_304fe3ba === 'function') {
+    await nuxt_plugin_moment_304fe3ba(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_ce94f1ba === 'function') {
-    await nuxt_plugin_axios_ce94f1ba(app.context, inject)
+  if (typeof nuxt_plugin_gtm_468077f4 === 'function') {
+    await nuxt_plugin_gtm_468077f4(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_axios_0957e19e === 'function') {
+    await nuxt_plugin_axios_0957e19e(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_VueFlickity_0dd57bf8 === 'function') {
+    await nuxt_plugin_VueFlickity_0dd57bf8(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_VueCookie_2af6fe7a === 'function') {
+    await nuxt_plugin_VueCookie_2af6fe7a(app.context, inject)
   }
 
   // Lock enablePreview in context
@@ -213,26 +232,26 @@ async function createApp(ssrContext, config = {}) {
     }
   }
 
-  // If server-side, wait for async component to be resolved first
-  if (process.server && ssrContext && ssrContext.url) {
-    await new Promise((resolve, reject) => {
-      router.push(ssrContext.url, resolve, (err) => {
-        // https://github.com/vuejs/vue-router/blob/v3.4.3/src/util/errors.js
-        if (!err._isRouter) return reject(err)
-        if (err.type !== 2 /* NavigationFailureType.redirected */) return resolve()
+  // Wait for async component to be resolved first
+  await new Promise((resolve, reject) => {
+    router.push(app.context.route.fullPath, resolve, (err) => {
+      // https://github.com/vuejs/vue-router/blob/v3.4.3/src/util/errors.js
+      if (!err._isRouter) return reject(err)
+      if (err.type !== 2 /* NavigationFailureType.redirected */) return resolve()
 
-        // navigated to a different route in router guard
-        const unregister = router.afterEach(async (to, from) => {
+      // navigated to a different route in router guard
+      const unregister = router.afterEach(async (to, from) => {
+        if (process.server && ssrContext && ssrContext.url) {
           ssrContext.url = to.fullPath
-          app.context.route = await getRouteData(to)
-          app.context.params = to.params || {}
-          app.context.query = to.query || {}
-          unregister()
-          resolve()
-        })
+        }
+        app.context.route = await getRouteData(to)
+        app.context.params = to.params || {}
+        app.context.query = to.query || {}
+        unregister()
+        resolve()
       })
     })
-  }
+  })
 
   return {
     app,

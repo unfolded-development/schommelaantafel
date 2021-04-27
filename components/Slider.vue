@@ -1,11 +1,11 @@
 <template>
   <div class='slider' :class="{'is-moving': isMoving}">
-    <flickity
-      :options='fullOptions'
-      ref='flickity'
-      class='slider'>
-      <slot></slot>
-    </flickity>
+      <flickity
+        :options='fullOptions'
+        ref='flickity'
+        class='slider'>
+        <slot></slot>
+      </flickity>
   </div>
 </template>
 
@@ -43,9 +43,12 @@ export default {
       type: Object,
       default: () => {
         return {
-          prevNextButtons: true,
-          pageDots: true,
-          wrapAround: true
+          prevNextButtons: false,
+          pageDots: false,
+          wrapAround: true,
+          asNavFor: null,
+          wrapAround: false,
+          pageDots: false
         }
       }
     }
@@ -54,8 +57,7 @@ export default {
     return {
       transferOptions: { ...this.options },
       isMoving: false,
-      isDragable: false,
-      windowWidth: window.innerWidth
+      isDragable: false
     }
   },
   methods: {
@@ -82,7 +84,9 @@ export default {
   },
   mounted() {
     this.flickity = this.$refs.flickity
-    this.refresh()
+    setTimeout(() => {
+      this.refresh()
+    }, 200);
   }
 }
 </script>

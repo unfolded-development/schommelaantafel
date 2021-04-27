@@ -1,0 +1,67 @@
+.cta {
+	padding: 2rem 0;
+	color: $white;
+	background-color: $black;
+
+	&--show {
+		.cta__content {
+			transform: translateX(0%);
+			opacity: 1;
+		}
+	}
+
+	@include breakpoint(medium) {
+		padding: 1.2rem 0;
+	}
+
+	&__content {
+		grid-column: 1 / -1;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		transform: translateX(-100%);
+		opacity: 0;
+		transition: transform .2s ease-out, opacity .2s ease-out;
+
+		@include breakpoint(large) {
+			text-align: initial;
+		}
+
+		.btn {
+			display: none;
+
+			@include breakpoint(medium) {
+				display: initial;
+				margin-left: 1.3rem;
+			}
+			@include breakpoint(large) {
+				margin-left: 2.4rem;
+			}
+		}
+
+	}
+
+	&__title {
+		display: inline-block;
+
+		@include h2();
+
+		font-size: 1.34rem;
+		
+		@include breakpoint(medium) {
+			@include h4();
+			margin-bottom: 3.333rem;
+		}
+
+		@include breakpoint (683px) {
+			margin-bottom: 0
+		}
+
+		@include breakpoint(large) {
+			@include h3();
+		}
+	}
+
+}

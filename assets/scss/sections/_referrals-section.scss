@@ -1,0 +1,103 @@
+.referrals {
+	text-align: center;
+	padding: 4rem 0;
+
+	.content-section {
+		display: initial;
+		word-spacing: normal;
+	}
+
+	&__wrapper.no-slider {
+		.content-section {
+			display: grid;
+
+			.referrals__logos {
+				grid-column: 1/-1;
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				transform: translateX(3rem);
+				margin-bottom: -4rem;
+
+				.referrals__logo-wrapper {
+					min-width: 0;
+					margin-right: 6rem;
+					margin-bottom: 4rem;
+					cursor: pointer;
+				}
+
+				@include breakpoint (1580) {
+					flex-wrap: nowrap;
+				}
+			}
+		}
+	}
+
+	@include breakpoint(medium) {
+		padding: 5.6rem 0;
+	}
+
+	@include breakpoint(large) {
+		padding: 6rem 0;
+	}
+
+	.icon--star {
+		font-size: 0.9rem;
+
+		&:not(:last-child) {
+			margin-right: .2rem
+		}
+	}
+
+	&__title {
+		@include h4();
+		display: block;
+		margin: -.5rem 2.5rem 2rem;
+
+		@include breakpoint(medium) {
+			grid-column: 3 / -3;
+			padding: 0;
+			margin-bottom: 3rem;
+		}
+
+		@include breakpoint(large) {
+			margin-top: 1rem;
+			margin-bottom: 0;
+		}
+	}
+
+	.flickity-page-dots {
+		bottom: -2.5rem;
+	}
+
+	&__logos {
+		width: 100%;
+		margin-top: 2.3rem;
+		grid-column: span 12;
+		margin-bottom: -1rem;
+
+		@include breakpoint(large) {
+			margin-top: 4.6rem;
+		}
+	}
+
+	&__logo-wrapper {
+		display: flex;
+		height: 3rem;
+		min-width: 14rem;
+		display: flex;
+		justify-content: center;
+
+		&.is-selected {
+			.referrals__logo {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__logo {
+		height: 3rem;
+		object-fit: cover;
+		opacity: .25;
+	}
+}

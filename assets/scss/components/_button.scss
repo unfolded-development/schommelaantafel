@@ -1,24 +1,40 @@
-.button {
+.btn {
   display: inline-block;
-  background-color: $white;
-  color: $black;
-  font-size: 1.2rem;
-  font-weight: 500;
+	font-size: 100%;
+	font-size: 1rem;
+	font-family: inherit;
+	border: 0;
   text-decoration: none;
-  padding: .33em .8em;
-  margin: .5rem 0;
+  color: $white;
+	height: 3rem;
+	line-height: 3rem;
+	padding-left: 1.2rem;
+	padding-right: 1.2rem;
+  background-color: $black;
+  outline: none;
 
-  .arrow {
-    display: inline-block;
-    margin-left: .5rem;
-    transition: transform .3s;
+  &:visited {
+	  color: $white;
   }
 
   &:hover {
-    color: $black;
-
-    .arrow {
-      transform: translateX(.2em);
-    }
+    background-color: $black;
+  	color: $white;
   }
+}
+
+.btn-orange {
+	background-color: $orange;
+}
+
+.btn-white {
+	color: $body-font-color;
+	background-color: $white;
+}
+
+.btn-orange-odd-hover {
+	&:hover {
+		background-color: $white;
+		color: $black;
+	}
 }

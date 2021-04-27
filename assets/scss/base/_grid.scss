@@ -5,18 +5,19 @@ $grid-columns: (
 
 $grid-column-gap: (
   small: 0.5rem,
-  medium: 1rem,
+  medium: 1.2rem,
+	large: 2.4rem,
 );
 
 $grid-container-padding: (
-  small: 1rem,
-  medium: 3rem,
-  large: 6.5rem,
+  small: 0.5rem,
+  medium: 1.1rem,
+  large: 2.2rem,
 );
 
 @mixin grid-container($grid-container-padding: $grid-container-padding) {
   width: 100%;
-  max-width: 1440 / 20 * 1rem;
+  // max-width: 1440 / 20 * 1rem;
   margin: 0 auto;
   @include -zf-breakpoint-value(auto, $grid-container-padding) {
     padding-right: $-zf-bp-value;

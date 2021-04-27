@@ -1,1 +1,38 @@
-{}
+{
+  "CtaSection": {
+    "description": "Auto imported from components/CtaSection.vue"
+  },
+  "FullImageSize": {
+    "description": "Auto imported from components/FullImageSize.vue"
+  },
+  "Header": {
+    "description": "Auto imported from components/Header.vue"
+  },
+  "IntroLoader": {
+    "description": "Auto imported from components/IntroLoader.vue"
+  },
+  "Introduction": {
+    "description": "Auto imported from components/Introduction.vue"
+  },
+  "Logo": {
+    "description": "Auto imported from components/Logo.vue"
+  },
+  "Newsletter": {
+    "description": "Auto imported from components/Newsletter.vue"
+  },
+  "Referrals": {
+    "description": "Auto imported from components/Referrals.vue"
+  },
+  "Slider": {
+    "description": "Auto imported from components/Slider.vue"
+  },
+  "Sliderselector": {
+    "description": "Auto imported from components/Sliderselector.vue"
+  },
+  "SocialLinks": {
+    "description": "Auto imported from components/SocialLinks.vue"
+  },
+  "Subjectsliders": {
+    "description": "Auto imported from components/Subjectsliders.vue"
+  }
+}

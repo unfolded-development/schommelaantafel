@@ -1,0 +1,41 @@
+.card {
+	display: flex;
+	flex-direction: column;
+
+	&__content {
+		text-align: center;
+		padding: 1.3rem 1.7rem 1.7rem;
+		background-color: $white;
+		height: 100%;
+
+		& > * {
+			margin-top: 0;
+		}
+		
+		& > *:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__title {
+		font-size: 1.3rem;
+	}
+
+	&__image {
+		position: relative;
+		width: 100%;
+		height: 0;
+		padding-bottom: 80%;
+		z-index: 0;
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			z-index: -1;
+		}
+	}
+}

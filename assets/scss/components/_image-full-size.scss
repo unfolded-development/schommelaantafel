@@ -1,0 +1,24 @@
+.image-full-size {
+	position: relative;
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	&::after {
+		content: "";
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		z-index: 2;
+		background-color: #000000;
+		opacity: .1;
+	}
+
+	@include breakpoint (large) {
+		height: 115vh;
+	}
+}

@@ -1,38 +1,51 @@
-// @import './settings';
+// SETTINGS
+@import './settings';
 
-// @import 'normalize.css';
-// @import '~foundation-sites/scss/util/util';
+// RESET
+@import 'normalize.css';
+@import '~foundation-sites/scss/util/util';
 
-// @import '~assets/icons/generated/Icons.scss';
+// HELPERS
+@import './helpers/background-color';
+@import './helpers/letter-spacing';
+@import './helpers/animation';
 
-// @import './functions/rem-calc';
+// ICONS
+@import '~assets/icons/generated/Icons.scss';
 
-// @import './base/fonts';
-// @import './base/global';
-// @import './base/grid';
-// @import './base/icons';
-// @import './base/typography';
+// FUNCTIONS
+@import './functions/rem-calc';
 
-// @import './components/arrows';
-// @import './components/background';
-// @import './components/button';
-// @import './components/credits';
-// @import './components/cookiebar';
-// @import './components/dropdown';
-// @import './components/dropdown-group';
-// @import './components/slider';
-// @import './components/social-links';
-// @import './components/timeline';
-// @import './components/timetable';
-// @import './components/video';
-// @import './components/zig-zag';
+// BASE
+@import './base/fonts';
+@import './base/global';
+@import './base/grid';
+@import './base/icons';
+@import './base/typography';
 
-// @import './sections/content-section';
-// @import './sections/intro-section';
-// @import './sections/open-section';
-// @import './sections/pattern-rwb';
-// @import './sections/site-footer';
-// @import './sections/site-header';
-// @import './sections/video-section';
+// COMPONENTS
+@import './components/button';
+@import './components/cookie';
+@import './components/quote';
+@import './components/image-full-size';
+@import './components/socials';
+@import './components/contact-form';
+@import './components/input-fields';
+@import './components/card';
 
-// @import './pages/default';
+// SECTIONS
+@import './sections/content-section';
+@import './sections/site-footer';
+@import './sections/site-header';
+@import './sections/intro-section';
+@import './sections/socials-section';
+@import './sections/contact-section';
+@import './sections/referrals-section';
+@import './sections/newsletter-section';
+@import './sections/cta-section';
+@import './sections/cards-section';
+@import './sections/slider-selector-section';
+
+// PAGE
+@import './pages/default';
+@import './pages/temp';

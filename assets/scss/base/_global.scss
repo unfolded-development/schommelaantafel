@@ -1,17 +1,19 @@
 $global-button-cursor: pointer;
 $global-font-size: (
   small: 18px,
-  medium: 19px,
-  large: 20px,
+  // medium: 19px,
+  // large: 20px,
 );
-$global-line-height: 1.25em;
+$global-line-height: 1.5em;
 $global-radius: 0;
-$global-weight-normal: 300;
-$global-weight-bold: 500;
+$global-weight-normal: 400;
+$global-weight-medium: 500;
+$global-weight-bold: 700;
 
-$body-background: $white;
-$body-font-family: 'Nitti Eindhoven', sans-serif;
-$body-font-color: $blue;
+$body-background: $grey;
+$body-font-family: 'TT Firs Neue', sans-serif;
+$body-font-color: $black;
+// $body-letter-spacing: .08px;
 
 :root {
   --vh: 100vh;
@@ -26,7 +28,7 @@ html {
   }
 
   @include breakpoint(hd) {
-    font-size: 1vw;
+    font-size: 1.2vw;
   }
 }
 
@@ -39,10 +41,13 @@ html {
 
 // Default body styles
 body {
+	@include letter-spacing(4.17);
   margin: 0;
   padding: 0;
   color: $body-font-color;
   font-weight: $global-weight-normal;
+  overflow-x: hidden;
+  overflow: hidden;
 
   font-family: $body-font-family;
   line-height: $global-line-height;
@@ -73,8 +78,7 @@ select {
 }
 
 // Reset <button> styles created by most browsers
-button {
-  @include disable-mouse-outline;
+button , .cookie__bar__buttons__button {
   padding: 0;
   line-height: 1;
   background: transparent;
@@ -82,6 +86,9 @@ button {
   border-radius: $global-radius;
   cursor: $global-button-cursor;
   appearance: none;
+  -webkit-appearance: none !important;
+  -webkit-border-radius: 0 !important;
+  border-radius: 0 !important;
 }
 
 // Prevent text overflow on pre

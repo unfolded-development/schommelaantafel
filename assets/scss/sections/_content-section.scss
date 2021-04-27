@@ -2,14 +2,6 @@
   @include grid-container();
   @include grid();
   position: relative;
-  margin-top: -2rem;
-  transform: translateY(2rem);
-  transition: transform .5s 2.5s;
-
-  @include breakpoint(medium) {
-    margin-top: -3rem;
-    transform: translateY(3rem);
-  }
 
   .container--intro-finished &,
   .document--scrolled & {
@@ -23,8 +15,7 @@
   &__container {
     @include grid(12);
     position: relative;
-    grid-column: 1 / span 12;
-    background-color: $white;
+    grid-column: 1 / -1;
 
     @include breakpoint(xlarge) {
       @include grid(10);
@@ -59,13 +50,18 @@
 
   &__content {
     grid-column: 2 / span 10;
-    background-color: $white;
-    padding-top: 10%;
-    padding-bottom: calc(10% + 1.5rem);
+    padding-top: 4rem;
+		padding-bottom: 4rem;
 
-    @include breakpoint(xlarge) {
+    @include breakpoint(medium) {
+			padding-top: 6.4rem;
+			padding-bottom: 6.777rem;
+		}
+    
+		@include breakpoint(xxlarge) {
       grid-column: 2 / span 8;
-      padding-bottom: calc(10% + 3rem);
+			padding-top: 7.777rem;
+			padding-bottom: 7.777rem;
     }
 
     .background--orange & {
