@@ -70,16 +70,16 @@ export default {
         document.getElementsByClassName("intro__heading")[0].classList.remove("hide");
         document.getElementById("cookieBar").classList.add("active");
 
-        setTimeout(() => {
+        // setTimeout(() => {
           
           // Add remove class to all animation block items that will slide out of screen
-          const introAnimationBlokItems = document.getElementsByClassName("intro__animation-block-item");
-          for (let index = 0; index < introAnimationBlokItems.length; index++) {
-            introAnimationBlokItems[index].classList.remove("intro__animation-block-item--load");
-            introAnimationBlokItems[index].classList.add("intro__animation-block-item--remove");
-          }
+          // const introAnimationBlokItems = document.getElementsByClassName("intro__animation-block-item");
+          // for (let index = 0; index < introAnimationBlokItems.length; index++) {
+            // introAnimationBlokItems[index].classList.remove("intro__animation-block-item--load");
+            // introAnimationBlokItems[index].classList.add("intro__animation-block-item--remove");
+          // }
 
-        }, 1000);
+        // }, 1000);
         
       }, 2500); 
     }, 1250);
