@@ -155,7 +155,9 @@
 		@include letter-spacing(8.82);
 		font-size: 1.8rem;
 		line-height: 1.17;
+		font-weight: 500;
 		margin-top: 0;
+		
 		&:last-child {
 			margin-bottom: 0;
 		}

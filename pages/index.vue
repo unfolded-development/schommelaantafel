@@ -20,7 +20,7 @@
 
                     <div class="temporary-footer__item">
                         <ul class="socials-list --white">
-                            <li class="socials-list__item">
+                            <!-- <li class="socials-list__item">
                                 <a target="_blank" href="https://www.instagram.com/schommelaantafel/">
                                     <i class="icon icon--instagram"></i>
                                 </a>
@@ -34,7 +34,25 @@
                                 <a target="_blank" href="https://nl.pinterest.com/timchristophe/">
                                     <i class="icon icon--pinterest"></i>
                                 </a>
-                            </li>
+                            </li> -->
+
+                            <ul class="socials-list --white">
+                                <a target="_blank" href="https://www.instagram.com/schommelaantafel/">
+                                    <li class="socials-list__item">
+                                        <i class="icon icon--instagram"></i>    
+                                    </li>
+                                </a>
+                                <a target="_blank" href="https://www.linkedin.com/company/schommel-aan-tafel/">
+                                    <li class="socials-list__item">
+                                    <i class="icon icon--linkedin"></i>
+                                    </li>
+                                </a>
+                                <a target="_blank" href="https://nl.pinterest.com/timchristophe/">
+                                    <li class="socials-list__item">
+                                    <i class="icon icon--pinterest"></i>
+                                    </li>
+                                </a>
+                            </ul>
                         </ul>
                     </div>
                 </div>

@@ -162,6 +162,8 @@
         </svg>
       </g>
 
+      <rect mask="url(#InvertMaskForIntro)" width="100%" height="100%" x="0" y="0" fill="#000000" style="opacity: .2;" />
+
       <mask id="acutalMaskForIntro" preserveAspectRatio="slice">
         <rect width="100%" height="100%" x="0" y="0" fill="white" />
         <rect
@@ -179,6 +181,26 @@
           x="0%"
           y="45%"
           fill="black"
+        />
+      </mask>
+
+      <mask id="InvertMaskForIntro" preserveAspectRatio="slice">
+        <rect width="100%" height="100%" x="0" y="0" fill="black" />
+        <rect
+          class="intro__animation-block-item --1"
+          width="97.5%"
+          height="55%"
+          x="-3.25%"
+          y="1%"
+          fill="white"
+        />
+        <rect
+          class="intro__animation-block-item --2"
+          width="115%"
+          height="45%"
+          x="0%"
+          y="45%"
+          fill="white"
         />
       </mask>
     </svg>
@@ -231,12 +253,10 @@ export default {
     }, 1750);
 
     setTimeout(() => {
-      document
-        .getElementsByClassName("intro__animation-block-item")[0]
-        .classList.add("intro__animation-block-item--load");
-      document
-        .getElementsByClassName("intro__animation-block-item")[1]
-        .classList.add("intro__animation-block-item--load");
+      document.getElementsByClassName("intro__animation-block-item")[0].classList.add("intro__animation-block-item--load");
+      document.getElementsByClassName("intro__animation-block-item")[1].classList.add("intro__animation-block-item--load");
+      document.getElementsByClassName("intro__animation-block-item")[2].classList.add("intro__animation-block-item--load");
+      document.getElementsByClassName("intro__animation-block-item")[3].classList.add("intro__animation-block-item--load");
 
       setTimeout(() => {
         document.getElementsByClassName("site-header")[0].classList.add("apple-sticky-active");

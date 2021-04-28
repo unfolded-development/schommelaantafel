@@ -7,6 +7,14 @@
 		margin: -1rem;
 	}
 
+	a {
+		margin: .5rem;
+		
+		@include breakpoint(medium) {
+			margin: 1rem;
+		}
+	}
+
 	$block: &;
 
 	&.--white {
@@ -22,10 +30,6 @@
 		line-height: 1;
 		width: 2.5rem;
 		height: 2.5rem;
-		margin: .5rem;
-		@include breakpoint(medium) {
-			margin: 1rem;
-		}
 	}
 
 	.icon {

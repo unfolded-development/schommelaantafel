@@ -32,6 +32,11 @@
 		.btn {
 			display: none;
 
+
+			&:hover {
+				background-color: $orange;
+			}
+
 			@include breakpoint(medium) {
 				display: initial;
 				margin-left: 1.3rem;

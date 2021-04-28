@@ -109,6 +109,13 @@
 			-webkit-border-radius: 0;
 			border-radius: 0;
 			cursor: pointer;
+			padding-left: 3em;
+			padding-right: 3em;
+
+			@include breakpoint (490) {
+				padding-left: 1.2rem;
+				padding-right: 1.2rem;
+			}
 		}
 	}
 

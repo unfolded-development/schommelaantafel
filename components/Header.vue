@@ -6,7 +6,7 @@
           <img src="~/static/images/logo.svg" alt="" />
         </div>
         <div class="site-header__cta">
-          <a v-if="this.$attrs.showBrochureBtn" id="brochure-btn-header" href="#">download brochure</a>
+          <a v-if="this.$attrs.showBrochureBtn" id="brochure-btn-header" v-scroll-to="'#site-download-newsletter'">download brochure</a>
           <a v-scroll-to="'#section-contact'" v-if="this.$attrs.showContactBtn" class="btn btn-orange">Contact</a>
         </div>
       </nav>

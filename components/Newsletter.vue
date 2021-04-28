@@ -1,5 +1,5 @@
 <template>
-  <section class="newsletter">
+  <section class="newsletter" id="site-download-newsletter">
     <div class="content-section">
       <div class="content-section__content">
         <div class="newsletter__image">
