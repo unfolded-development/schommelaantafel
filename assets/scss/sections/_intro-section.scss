@@ -73,6 +73,18 @@
 				transform: rotate(1deg);
 			}
 		}
+
+		&--remove {
+			&.--1 {
+				animation: schommelOutLeft 4s forwards !important;
+				transform: none;
+			}
+		
+			&.--2 {
+				animation: schommmelOutRight 4s forwards !important;
+				transform: none;
+			}
+		}
 	}
 
 	// Intro section content

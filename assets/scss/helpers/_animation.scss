@@ -45,3 +45,21 @@
         transform: rotate(1deg);
     }
 }
+
+@keyframes schommelOutLeft {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-90deg);
+    }
+}
+
+@keyframes schommmelOutRight {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
