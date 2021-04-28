@@ -15,7 +15,7 @@
       >
         <div slot="message">
           Deze website maakt gebruik van cookies om je ervaring te verbeteren.
-          Bekijk onze <a class="cookie__bar__underlined">Privacy voorwaarden.</a>
+          Bekijk onze <a href="./privacy-statement.pdf" class="cookie__bar__underlined" target="_blank">Privacy voorwaarden.</a>
         </div>
         <div slot="acceptContent" class="btn">Akkoord</div>
       </vue-cookie-accept-decline>
