@@ -1,26 +1,33 @@
 .btn {
-  display: inline-block;
+  	display: inline-block;
 	font-size: 100%;
 	font-size: 1rem;
 	font-family: inherit;
 	border: 0;
-  text-decoration: none;
-  color: $white;
+  	text-decoration: none;
+  	color: $white;
 	height: 3rem;
 	line-height: 3rem;
 	padding-left: 1.2rem;
 	padding-right: 1.2rem;
-  background-color: $black;
-  outline: none;
+  	background-color: $black;
+  	outline: none;
+	transition: background-color .2s ease-out;
 
-  &:visited {
-	  color: $white;
-  }
+	&:visited {
+		color: $white;
+	}
 
-  &:hover {
-    background-color: $black;
-  	color: $white;
-  }
+	&:hover {
+		background-color: $black;
+		color: $white;
+	}
+
+	&.orange-hover {
+		&:hover {
+			background-color: $orange;
+		}
+	}
 }
 
 .btn-orange {

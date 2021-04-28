@@ -1,3 +1,21 @@
+@keyframes animateLetter {
+	0% {
+		transform: translate(51px, 8px);
+	}
+	100% {
+		transform: translate(51px, 0px);
+	}
+}
+
+@keyframes schommelLogoFadeOut {
+	0% {
+		visibility: visible;
+	}
+	100% {
+		visibility: hidden;
+	}
+}
+
 @keyframes schommelFromLeft  {
     0% {
         transform: rotate(90deg);

@@ -38,7 +38,7 @@
                 let speed  = 0;
 
                 if (window.innerWidth > 1024) {
-                    speed = this.speed * 2
+                    speed = this.speed * -4
 
                     if (window.innerWidth > 1600) {
                         speed = this.speed * 25
@@ -53,7 +53,7 @@
                     this.position = relativePosition * -(screenHeight * speed)
                 }
 
-                if (window.scrollY + window.innerHeight > document.body.getElementsByClassName("cta")[0].offsetTop) {
+                if (window.scrollY + (window.innerHeight / 3 * 2) > document.body.getElementsByClassName("cta")[0].offsetTop) {
                     document.getElementsByClassName("cta")[0].classList.add("cta--show");
                 }
             }

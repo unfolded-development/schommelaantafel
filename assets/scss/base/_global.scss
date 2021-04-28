@@ -22,6 +22,8 @@ $body-font-color: $black;
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 
   @include -zf-breakpoint-value('auto', $global-font-size) {
     font-size: $-zf-bp-value;
@@ -46,8 +48,8 @@ body {
   padding: 0;
   color: $body-font-color;
   font-weight: $global-weight-normal;
-  overflow-x: hidden;
   overflow: hidden;
+  overflow-x: hidden !important;
 
   font-family: $body-font-family;
   line-height: $global-line-height;

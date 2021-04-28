@@ -10,7 +10,7 @@
 
           <!-- When slider is active -->
           <div v-if="slider" class="referrals__logos">
-            <Slider :options="{ autoPlay: 2500, pageDots: false, prevNextButtons: false, freeScroll: true, wrapAround: true }">
+            <Slider :options="{ autoPlay: 4000, pageDots: false, prevNextButtons: false, wrapAround: true }">
               <div class="referrals__logo-wrapper" v-for="referral in referrals" :key="referral.id" :id="referral.id">
                 <img class="referrals__logo" :src="referral.logoUrl">
               </div>

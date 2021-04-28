@@ -19,7 +19,7 @@
         </div>
         <div slot="acceptContent" class="btn">Akkoord</div>
       </vue-cookie-accept-decline>
-      <section class="content-section bg-white" id="site-about" style="transition: margin-top .5s ease-out;">
+      <section class="content-section bg-white" id="site-about">
         <div class="content-section__container">
           <div class="content-section__content">
             <div class="quote text-center">
@@ -28,7 +28,7 @@
                 Met Schommel aan Tafel trek je de aandacht en creéer je een Plek
                 waar mensen samen komen.
               </h2>
-              <a class="btn" v-scroll-to="'#section-contact'"
+              <a class="btn orange-hover" v-scroll-to="'#section-contact'"
                 >Vraag informatie aan</a
               >
             </div>
@@ -65,7 +65,7 @@
                 <h5 class="card__title h4">Eenvoudig te monteren</h5>
                 <p>
                   De tafels bestaan uit verschillende delen waardoor deze
-                  eentvoudig te demonteren is.
+                  eentvoudig te <span style="white-space: nowrap;">demonteren is.</span>
                 </p>
               </div>
             </div>
@@ -83,7 +83,7 @@
             </div>
           </div>
           <div class="cards__cta">
-            <a v-scroll-to="'#section-contact'" class="btn"
+            <a v-scroll-to="'#section-contact'" class="btn orange-hover"
               >Vraag naar de opties</a
             >
           </div>
@@ -178,7 +178,6 @@
         ></iframe
       ></noscript>
       <!-- End Google Tag Manager (noscript) -->
-
     </client-only>
   </main>
 </template>
@@ -200,7 +199,7 @@ export default {
   },
   data() {
     return {
-      cookiePos: ""
+      
     };
   },
   methods: {

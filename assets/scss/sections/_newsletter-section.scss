@@ -87,7 +87,33 @@
 		flex-wrap: wrap;
 		align-items: baseline;
 		justify-content: center;
-		margin: -.5rem;
+		width: 100%;
+
+		.for-email {
+			flex: 1;
+			flex-direction: column;
+		}
+
+		.clear	{
+			display: inline-block;
+			width: auto !important;
+		}
+
+		#mc_embed_signup_scroll {
+			margin: 0;
+			flex-wrap: wrap !important;
+		}
+
+		div:not(#mce-responses) {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			@include breakpoint (490) {
+				flex-wrap: nowrap;
+			}
+		}
 		
 		@include breakpoint(large) {
 			justify-content: flex-start;
@@ -102,6 +128,38 @@
 			-webkit-appearance: none;
 			-webkit-border-radius: 0;
 			border-radius: 0;
+			margin: .5rem !important;
+			min-height: 3rem;
+		}
+
+		.mce_inline_error:not(.input-field), #mce-error-response, #mce-success-response {
+			margin: .5rem !important;
+			padding: .5rem !important;
+			background-color: $orange !important;
+			color: $white;
+			font-family: "TT Firs Neue", sans-serif !important;
+			font-weight: 500 !important;
+			width: calc(100% - 1rem) !important;
+
+			&#mce-success-response {
+				width: 100% !important;
+			}
+
+			a {
+				margin-left: 2rem;
+			}
+			
+			div {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+
+		#mce-responses {
+			display: flex;
+			align-items: center;
+			min-height: 3rem;
+			padding: .5rem;
 		}
 
 		input[type=submit], .btn {
@@ -111,10 +169,15 @@
 			cursor: pointer;
 			padding-left: 3em;
 			padding-right: 3em;
+			margin: .5rem !important;
+			display: inline-block;
+			width: auto !important;
 
 			@include breakpoint (490) {
 				padding-left: 1.2rem;
 				padding-right: 1.2rem;
+				display: block;
+				width: auto !important;
 			}
 		}
 	}

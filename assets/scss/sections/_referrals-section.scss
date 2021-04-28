@@ -1,6 +1,7 @@
 .referrals {
 	text-align: center;
 	padding: 4rem 0;
+	scroll-snap-type: y mandatory;
 
 	.content-section {
 		display: initial;

@@ -54,7 +54,7 @@
 			width: 100%;
 			opacity: 0 !important;
 			position: absolute;
-			transition: opacity 1.5s ease-out .5s;
+			transition: opacity 1s ease-out .5s;
 			left: 0 im !important;
 		}
 
@@ -254,6 +254,7 @@
 				@include heading();
 				font-size: 1rem;
 				transition: transform .2s ease-out;
+				margin-right: .5rem;
 
 				@include breakpoint(medium) {
 					@include h4();

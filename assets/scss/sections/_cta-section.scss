@@ -23,7 +23,7 @@
 		text-align: center;
 		transform: translateX(-100%);
 		opacity: 0;
-		transition: transform .2s ease-out, opacity .2s ease-out;
+		transition: transform 1s ease-out, opacity .5s ease-out;
 
 		@include breakpoint(large) {
 			text-align: initial;
