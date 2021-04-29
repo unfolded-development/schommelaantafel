@@ -57,35 +57,11 @@ export default {
       const swingRadius = window.innerWidth * 2.5; //gsap.getProperty("body", "--radius");
       const transformOrigin = '50% -' + swingRadius;
 
-      this.$gsap.fromTo(introAnimationBlockItems[0], {rotation: '30deg', transformOrigin}, {duration: 5, rotation: '-1deg', visibility: 'visible', transformOrigin, ease: 'elastic.out( 1, 0.3)', repeat: 0, delay: 0})
-      this.$gsap.fromTo(introAnimationBlockItems[1], {rotation: '-30deg', transformOrigin}, {duration: 5, rotation: '1deg', visibility: 'visible', transformOrigin, ease: 'elastic.out( 1, 0.3)', repeat: 0, delay: 0})
+      const swingAnimation1 = this.$gsap.fromTo(introAnimationBlockItems[0], {rotation: '30deg', transformOrigin}, {duration: 4, rotation: '-1deg', visibility: 'visible', transformOrigin, ease: 'elastic.out( .5, 0.25)', repeat: 0, delay: 0})
+      const swingAnimation2 = this.$gsap.fromTo(introAnimationBlockItems[1], {rotation: '-30deg', transformOrigin}, {duration: 4, rotation: '1deg', visibility: 'visible', transformOrigin, ease: 'elastic.out( .5, 0.25)', repeat: 0, delay: 0})
 
       setTimeout(() => {
         document.getElementsByClassName("intro__heading")[0].classList.add("active");
-
-        this.$gsap.fromTo(introAnimationBlockItems[0], { rotation: '-1deg'}, {
-          rotation: '-30deg',
-          ease: 'power1.in()',
-          scrollTrigger: {
-            trigger: introAnimationBlockItems[0],
-            start: 100,
-            end: window.innerHeight,
-            scrub: true,
-          }
-        })
-
-        this.$gsap.fromTo(introAnimationBlockItems[1], { rotation: '1deg'},
-        {
-          rotation: '30deg',
-          ease: 'power1.in()',
-          scrollTrigger: {
-            trigger: introAnimationBlockItems[1],
-            start: 100,
-            end: window.innerHeight,
-            scrub: true,
-          }
-        })
-
       }, 2000)
 
       setTimeout(() => {
@@ -94,16 +70,31 @@ export default {
         document.getElementsByClassName("site-header")[0].classList.add("active");
         document.getElementById("cookieBar").classList.add("active");
 
-        // setTimeout(() => {
-          
-          // Add remove class to all animation block items that will slide out of screen
-          // const introAnimationBlokItems = document.getElementsByClassName("intro__animation-block-item");
-          // for (let index = 0; index < introAnimationBlokItems.length; index++) {
-            // introAnimationBlokItems[index].classList.remove("intro__animation-block-item--load");
-            // introAnimationBlokItems[index].classList.add("intro__animation-block-item--remove");
-          // }
+        // swingAnimation1.pause()
+        // swingAnimation2.pause()
 
-        // }, 1000);
+        this.$gsap.fromTo(introAnimationBlockItems[0], { rotation: '-1deg'}, {
+          rotation: '-30deg',
+          ease: 'power1.in()',
+          scrollTrigger: {
+            trigger: introAnimationBlockItems[0],
+            start: 10,
+            end: window.innerHeight,
+            scrub: true,
+          }
+        })
+
+        this.$gsap.fromTo(introAnimationBlockItems[1], { rotation: '1deg'},
+            {
+              rotation: '30deg',
+              ease: 'power1.in()',
+              scrollTrigger: {
+                trigger: introAnimationBlockItems[1],
+                start: 10,
+                end: window.innerHeight,
+                scrub: true,
+              }
+            })
         
       }, 3000);
     }, 2000);
