@@ -7,12 +7,12 @@
 	}
 }
 
-@keyframes schommelLogoFadeOut {
+@keyframes schommelLogoFadeIn {
 	0% {
-		visibility: visible;
+		opacity: 0;
 	}
 	100% {
-		visibility: hidden;
+    opacity: 1;
 	}
 }
 

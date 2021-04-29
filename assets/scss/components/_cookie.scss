@@ -1,84 +1,74 @@
 @import 'vue-cookie-accept-decline/dist/vue-cookie-accept-decline.css';
 
 #cookieBar {
-    @include breakpoint (large) {
-        opacity: 0;
-        transform: translateX(calc(2.2rem + 100%));
-        transition: opacity .2s ease-out, transform .2s ease-out;
+  @include breakpoint(large) {
+    opacity: 0;
+    transform: translateY(-150%) translateX(calc(2.2rem + 100%));
+    transition: opacity .3s ease-out, transform .3s ease-out;
 
-        &.active {
-            opacity: 1;
-            transform: translateX(0%);
-        }
+    &.active {
+      opacity: 1;
+      transform: translateY(-150%) translateX(0%);
     }
+  }
 }
 
 .cookie {
-    font-family: "TT Firs Neue", sans-serif;
+  font-family: 'TT Firs Neue', sans-serif;
 
-    &__bar {
-        background-color: $orange;
-        border: none;
-        font-size: 1rem !important;
-        padding: 1rem;
-        bottom: 0;
-        z-index: 998;
-        
-        @include breakpoint (large) {
-            position: absolute;
-            top: 92vh;
-            width: 40%;
-            right: 2.2rem;
-            bottom: initial;
-        }
+  &__bar {
+    background-color: $orange;
+    border: none;
+    font-size: 1rem !important;
+    padding: 1rem;
+    bottom: 0;
+    z-index: 998;
 
-        @include breakpoint (xlarge) {
-            top: 93vh;
-        }
-
-        @include breakpoint (1568) {
-            top: 94vh;
-        }
-
-        @include breakpoint(hd) {
-            font-size: 1.2vw;
-            top: 93vh;
-        }
-
-        &__content {
-            color: $white;
-            max-height: none;
-            overflow: visible;
-
-            @include breakpoint (large) {
-                margin-right: 2rem;
-            }
-        }
-
-        &__underlined {
-            position: relative;
-            
-            &::after {
-                content: "";
-                position: absolute;
-                bottom: -15%;
-                left: 0;
-                height: .1rem;
-                width: 100%;
-                background-color: $white;
-                pointer-events: none;
-            }
-        }
-
-        &__buttons__button {
-            width: 100%;
-
-            .btn {
-                width: 100%;
-                background-color: $white;
-                color: $black;
-                font-weight: 500;
-            }
-        }
+    @include breakpoint(large) {
+      position: absolute;
+      width: 40%;
+      right: 2.2rem;
+      bottom: initial;
     }
+
+    @include breakpoint(hd) {
+      font-size: 1.2vw;
+    }
+
+    &__content {
+      color: $white;
+      max-height: none;
+      overflow: visible;
+
+      @include breakpoint(large) {
+        margin-right: 2rem;
+      }
+    }
+
+    &__underlined {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -15%;
+        left: 0;
+        height: .1rem;
+        width: 100%;
+        background-color: $white;
+        pointer-events: none;
+      }
+    }
+
+    &__buttons__button {
+      width: 100%;
+
+      .btn {
+        width: 100%;
+        background-color: $white;
+        color: $black;
+        font-weight: 500;
+      }
+    }
+  }
 }

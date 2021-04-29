@@ -3,6 +3,16 @@
 	padding: 4rem 0;
 	scroll-snap-type: y mandatory;
 
+	@include breakpoint(medium) {
+		padding-top: 8rem;
+		padding-bottom: 8rem;
+	}
+
+	@include breakpoint(xxlarge) {
+		padding-top: 10rem;
+		padding-bottom: 10rem;
+	}
+
 	.content-section {
 		display: initial;
 		word-spacing: normal;
@@ -13,33 +23,19 @@
 			display: grid;
 
 			.referrals__logos {
-				grid-column: 1/-1;
+				grid-column: 2/-2;
 				display: flex;
-				justify-content: center;
+				justify-content: space-between;
 				flex-wrap: wrap;
-				transform: translateX(3rem);
 				margin-bottom: -4rem;
 
 				.referrals__logo-wrapper {
 					min-width: 0;
-					margin-right: 6rem;
 					margin-bottom: 4rem;
 					cursor: pointer;
 				}
-
-				@include breakpoint (1580) {
-					flex-wrap: nowrap;
-				}
 			}
 		}
-	}
-
-	@include breakpoint(medium) {
-		padding: 5.6rem 0;
-	}
-
-	@include breakpoint(large) {
-		padding: 6rem 0;
 	}
 
 	.icon--star {

@@ -2,24 +2,28 @@
   {
     "name": "icons-list",
     "path": "/_icons",
-    "component": "/Users/Shared/Projects/SchommelAanTafel/schommelaantafel/node_modules/@nuxtjs/svg-sprite/lib/pages/icons-list.vue"
+    "component": "/Users/Shared/Projects/SchommelAanTafel/schommelaantafel/node_modules/@nuxtjs/svg-sprite/lib/pages/icons-list.vue",
+    "_name": "_32f880bc"
   },
   {
     "name": "home",
     "path": "/home",
     "component": "/Users/Shared/Projects/SchommelAanTafel/schommelaantafel/pages/home.vue",
-    "chunkName": "pages/home"
+    "chunkName": "pages/home",
+    "_name": "_99cd19a6"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/Shared/Projects/SchommelAanTafel/schommelaantafel/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_045235f4"
   },
   {
     "name": "all",
     "path": "/*",
     "component": "/Users/Shared/Projects/SchommelAanTafel/schommelaantafel/pages/_.vue",
-    "chunkName": "pages/_"
+    "chunkName": "pages/_",
+    "_name": "_28b1d401"
   }
 ]

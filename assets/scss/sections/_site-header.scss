@@ -4,13 +4,11 @@
 	padding: 1rem 0 .8rem;
 	left: 0;
 	z-index: 9999;
-	height: 5.1rem;
 	transition: top .3s ease-out;
 	
 	&::after {
 		content: "";
 		background-color: $white;
-		height: 5.1rem;
 		width: 100%;
 		top: 0;
 		z-index: -1;
@@ -63,6 +61,21 @@
 
 		& > *:not(:last-child) {
 			margin-right: 1rem;
+		}
+
+		.btn {
+			height: 2.5rem;
+			line-height: 2.5rem;
+			transform: translateY(-4.5rem);
+			transition: transform .3s ease-out;
+			@include breakpoint(medium) {
+				height: 3rem;
+				line-height: 3rem;
+			}
+
+			.site-header.active & {
+				transform: translateY(0);
+			}
 		}
 	}
 

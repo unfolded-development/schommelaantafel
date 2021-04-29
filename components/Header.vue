@@ -6,14 +6,15 @@
           <img src="~/static/images/logo.svg" alt="" />
         </div>
         <div class="site-header__cta">
-          <a v-if="this.$attrs.showBrochureBtn" id="brochure-btn-header" v-scroll-to="'#site-download-newsletter'">download brochure</a>
-          <a v-scroll-to="'#section-contact'" v-if="this.$attrs.showContactBtn" class="btn btn-orange">Contact</a>
+          <a v-if="this.$attrs.showBrochureBtn" id="brochure-btn-header" href="#site-download-newsletter" v-scroll-to>download brochure</a>
+          <a href="#section-contact" v-scroll-to v-if="this.$attrs.showContactBtn" class="btn btn-orange">Contact</a>
         </div>
       </nav>
     </div>
 
     <a
-      v-scroll-to="'#site-intro'"
+      href="#site-intro"
+      v-scroll-to
       class="site-header__btn-up"
       :class="{ 'site-header__btn-up-active': headerUpButton == true }"
     >

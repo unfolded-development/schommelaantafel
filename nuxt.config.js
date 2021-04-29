@@ -70,14 +70,10 @@ export default {
 
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
 	plugins: [
-		// {
-		// 	src: '~/plugins/CleanHtmlDirective.js',
-		// 	ssr: true
-		// },
-		// {
-		// 	src: '~/plugins/ServiceContainer.js',
-		// 	ssr: true
-		// },
+		{
+			src: '~/plugins/Gsap.js',
+			ssr: true
+		},
 		{
 			src: '~/plugins/VueFlickity.js',
 			ssr: false
@@ -86,18 +82,6 @@ export default {
 			src: '~/plugins/VueCookie.js',
 			ssr: false
 		}
-		// {
-		// 	src: '~/plugins/VuePlyr.js',
-		// 	ssr: false
-		// },
-		// {
-		// 	src: '~/plugins/VueLottiePlayer.js',
-		// 	ssr: false
-		// },
-		// {
-		// 	src: '~/plugins/VueCookie.js',
-		// 	ssr: true
-		// },
 	],
 
 	// Auto import components: https://go.nuxtjs.dev/config-components

@@ -1,5 +1,5 @@
 <template>
-  <section class="slider-selector">
+  <section class="slider-selector" v-on-screen>
     <client-only>
       <nav class="slider-selector__navigation">
         <span class="label">Schommel aan Tafel voor:</span>

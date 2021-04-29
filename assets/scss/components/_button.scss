@@ -34,9 +34,14 @@
 	background-color: $orange;
 }
 
-.btn-white {
+.btn.btn-white {
 	color: $body-font-color;
 	background-color: $white;
+
+	&:hover {
+		background-color: $orange;
+		color: $white;
+	}
 }
 
 .btn-orange-odd-hover {

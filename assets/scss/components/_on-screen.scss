@@ -1,0 +1,13 @@
+.v-on-screen {
+  opacity: 0;
+  //filter: blur(1rem);
+
+  transition: opacity .75s ease, transform .75s ease;
+  transform: translateY(3rem);
+}
+
+.v-on-screen__active {
+  opacity: 1;
+  //filter: blur(0);
+  transform: translateY(0);
+}

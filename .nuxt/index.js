@@ -20,6 +20,7 @@ import nuxt_plugin_metaplugin_4e37b2d9 from 'nuxt_plugin_metaplugin_4e37b2d9' //
 import nuxt_plugin_moment_18df37ae from 'nuxt_plugin_moment_18df37ae' // Source: ./moment.js (mode: 'all')
 import nuxt_plugin_gtm_57cec880 from 'nuxt_plugin_gtm_57cec880' // Source: ./gtm.js (mode: 'all')
 import nuxt_plugin_axios_00543f2a from 'nuxt_plugin_axios_00543f2a' // Source: ./axios.js (mode: 'all')
+import nuxt_plugin_Gsap_5c717da6 from 'nuxt_plugin_Gsap_5c717da6' // Source: ../plugins/Gsap.js (mode: 'all')
 import nuxt_plugin_VueFlickity_0dd57bf8 from 'nuxt_plugin_VueFlickity_0dd57bf8' // Source: ../plugins/VueFlickity.js (mode: 'client')
 import nuxt_plugin_VueCookie_2af6fe7a from 'nuxt_plugin_VueCookie_2af6fe7a' // Source: ../plugins/VueCookie.js (mode: 'client')
 
@@ -215,6 +216,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_axios_00543f2a === 'function') {
     await nuxt_plugin_axios_00543f2a(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_Gsap_5c717da6 === 'function') {
+    await nuxt_plugin_Gsap_5c717da6(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_VueFlickity_0dd57bf8 === 'function') {
