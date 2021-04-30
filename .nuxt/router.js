@@ -5,7 +5,7 @@ import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
 const _32f880bc = () => interopDefault(import('../node_modules/@nuxtjs/svg-sprite/lib/pages/icons-list.vue' /* webpackChunkName: "" */))
-const _99cd19a6 = () => interopDefault(import('../pages/home.vue' /* webpackChunkName: "pages/home" */))
+const _1e8ac550 = () => interopDefault(import('../pages/mhybh1dqdl.vue' /* webpackChunkName: "pages/mhybh1dqdl" */))
 const _045235f4 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 const _28b1d401 = () => interopDefault(import('../pages/_.vue' /* webpackChunkName: "pages/_" */))
 
@@ -25,9 +25,9 @@ export const routerOptions = {
     component: _32f880bc,
     name: "icons-list"
   }, {
-    path: "/home",
-    component: _99cd19a6,
-    name: "home"
+    path: "/mhybh1dqdl",
+    component: _1e8ac550,
+    name: "mhybh1dqdl"
   }, {
     path: "/",
     component: _045235f4,
