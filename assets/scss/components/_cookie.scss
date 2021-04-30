@@ -47,12 +47,11 @@
 
     &__underlined {
       position: relative;
-      text-decoration: underline;
 
       &::after {
         content: '';
         position: absolute;
-        bottom: -15%;
+        bottom: -5%;
         left: 0;
         height: .1rem;
         width: 100%;

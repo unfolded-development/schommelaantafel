@@ -1,7 +1,7 @@
 <template>
-  <section class="slider-selector" v-on-screen>
+  <section class="slider-selector">
     <client-only>
-      <nav class="slider-selector__navigation">
+      <nav class="slider-selector__navigation" v-on-screen>
         <span class="label">Schommel aan Tafel voor:</span>
         <ul>
           <li class="slider-selector__nav-item" :class="{ active: activeItem == 0 }"
@@ -15,7 +15,7 @@
         </ul>
       </nav>
 
-      <Subjectsliders :sliderSubject="subjectSlug"/>
+      <Subjectsliders :sliderSubject="subjectSlug" v-on-screen/>
     </client-only>
   </section>
 </template>

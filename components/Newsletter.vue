@@ -1,7 +1,7 @@
 <template>
   <section class="newsletter" id="nieuwsbrief">
     <div class="content-section">
-      <div class="content-section__content">
+      <div class="content-section__content" v-on-screen>
         <div class="newsletter__image">
           <img src="~/static/images/brochure_mockup.png" alt="" />
         </div>

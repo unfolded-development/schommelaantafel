@@ -69,6 +69,7 @@ export default {
         document.getElementsByClassName("site-header")[0].classList.add("apple-sticky-active");
         document.getElementsByClassName("site-header")[0].classList.add("active");
         document.getElementById("cookieBar").classList.add("active");
+        this.$el.classList.add("intro--finished");
 
         // swingAnimation1.pause()
         // swingAnimation2.pause()

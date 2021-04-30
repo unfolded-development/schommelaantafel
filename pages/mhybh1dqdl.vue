@@ -22,7 +22,7 @@
         </div>
         <div slot="acceptContent" class="btn">Akkoord</div>
       </vue-cookie-accept-decline>
-      <section class="content-section bg-white content-section--full-height" id="info">
+      <section class="content-section bg-white" id="info">
         <div class="content-section__container">
           <div class="content-section__content" v-on-screen>
             <div class="quote text-center">
@@ -39,8 +39,8 @@
         </div>
       </section>
       <Sliderselector/>
-      <CtaSection v-on-screen/>
-      <Newsletter v-on-screen/>
+      <CtaSection />
+      <Newsletter />
       <FullImageSize/>
       <section class="cards">
         <div class="content-section">

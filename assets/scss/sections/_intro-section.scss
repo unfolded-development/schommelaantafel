@@ -58,10 +58,31 @@
       animation: animateLetter .5s .75s cubic-bezier(0.32, 0, 0.67, 0) forwards;
       transform: translate(51px, 8px);
     }
+
+    .intro--finished {
+      opacity: 0;
+    }
   }
 
   &__animation-block-item {
     visibility: hidden;
+
+    &.--1 {
+      x: -5px;
+      @include breakpoint(medium) {
+        x: -30px;
+      }
+      @include breakpoint(large) {
+        x: -45px;
+      }
+    }
+
+    &.--2 {
+      x: 6px;
+      @include breakpoint(medium) {
+        x: -50px;
+      }
+    }
 
     &--remove {
       &.--1 {
