@@ -15,6 +15,7 @@ $footer-items-margin-bottom: 1rem;
 
 		a {
 			display: block;
+			transition: color .3s;
 
 			&:last-child {
 				margin-bottom: 1rem;
@@ -45,6 +46,7 @@ $footer-items-margin-bottom: 1rem;
 		padding: 0;
 		margin: 0 0 calc(#{$footer-items-margin-bottom} * 3);
 		list-style: none;
+
 		@include breakpoint(large) {
 			flex-direction: row;
 			margin: 0 -2.666rem;
@@ -60,6 +62,14 @@ $footer-items-margin-bottom: 1rem;
 				@include breakpoint(large) {
 					margin-bottom: 0;
 				}
+			}
+
+			a {
+				transition: .3s color;
+			}
+
+			a:hover {
+				color: $orange
 			}
 		}
 	}

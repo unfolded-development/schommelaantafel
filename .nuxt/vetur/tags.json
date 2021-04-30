@@ -8,11 +8,11 @@
   "Header": {
     "description": "Auto imported from components/Header.vue"
   },
-  "Introduction": {
-    "description": "Auto imported from components/Introduction.vue"
-  },
   "IntroLoader": {
     "description": "Auto imported from components/IntroLoader.vue"
+  },
+  "Introduction": {
+    "description": "Auto imported from components/Introduction.vue"
   },
   "Logo": {
     "description": "Auto imported from components/Logo.vue"

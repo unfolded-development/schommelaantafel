@@ -12,6 +12,11 @@
     transition: none;
   }
 
+  &--full-height {
+    min-height: 90vh;
+    align-items: center;
+  }
+
   &__container {
     @include grid(12);
     position: relative;

@@ -67,7 +67,7 @@
 			height: 2.5rem;
 			line-height: 2.5rem;
 			transform: translateY(-4.5rem);
-			transition: transform .3s ease-out;
+			transition: background-color .3s ease-out, color .3s ease-out, transform .3s ease-out;
 			@include breakpoint(medium) {
 				height: 3rem;
 				line-height: 3rem;

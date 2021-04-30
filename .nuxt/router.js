@@ -4,10 +4,10 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _79bc1b38 = () => interopDefault(import('..\\node_modules\\@nuxtjs\\svg-sprite\\lib\\pages\\icons-list.vue' /* webpackChunkName: "" */))
-const _eb3548ea = () => interopDefault(import('..\\pages\\home.vue' /* webpackChunkName: "pages/home" */))
-const _16835956 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
-const _ada00f3a = () => interopDefault(import('..\\pages\\_.vue' /* webpackChunkName: "pages/_" */))
+const _32f880bc = () => interopDefault(import('../node_modules/@nuxtjs/svg-sprite/lib/pages/icons-list.vue' /* webpackChunkName: "" */))
+const _99cd19a6 = () => interopDefault(import('../pages/home.vue' /* webpackChunkName: "pages/home" */))
+const _045235f4 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _28b1d401 = () => interopDefault(import('../pages/_.vue' /* webpackChunkName: "pages/_" */))
 
 const emptyFn = () => {}
 
@@ -22,19 +22,19 @@ export const routerOptions = {
 
   routes: [{
     path: "/_icons",
-    component: _79bc1b38,
+    component: _32f880bc,
     name: "icons-list"
   }, {
     path: "/home",
-    component: _eb3548ea,
+    component: _99cd19a6,
     name: "home"
   }, {
     path: "/",
-    component: _16835956,
+    component: _045235f4,
     name: "index"
   }, {
     path: "/*",
-    component: _ada00f3a,
+    component: _28b1d401,
     name: "all"
   }],
 

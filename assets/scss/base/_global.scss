@@ -22,7 +22,7 @@ $body-font-color: $black;
 
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
+  //scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 
   @include -zf-breakpoint-value('auto', $global-font-size) {

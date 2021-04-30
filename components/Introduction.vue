@@ -1,6 +1,6 @@
 <template>
-  <section class="intro" id="site-intro">
-    <a href="#site-about" v-scroll-to class="intro__btn-down">
+  <section class="intro" id="welkom">
+    <a v-scroll-to="'#info'" class="intro__btn-down">
       <i class="icon icon--arrow-down"></i>
     </a>
 

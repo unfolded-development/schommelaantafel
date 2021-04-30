@@ -18,20 +18,20 @@
         <div slot="message">
           Deze website maakt gebruik van cookies om je ervaring te verbeteren.
           Bekijk onze <a href="./privacy-statement.pdf" class="cookie__bar__underlined" target="_blank">Privacy
-          voorwaarden.</a>
+          voorwaarden</a>.
         </div>
         <div slot="acceptContent" class="btn">Akkoord</div>
       </vue-cookie-accept-decline>
-      <section class="content-section bg-white" id="site-about" v-on-screen>
+      <section class="content-section bg-white content-section--full-height" id="info">
         <div class="content-section__container">
-          <div class="content-section__content">
+          <div class="content-section__content" v-on-screen>
             <div class="quote text-center">
               <span class="label text-dimmed">Schommel aan Tafel</span>
               <h2 class="quote__title">
                 Met Schommel aan Tafel trek je de aandacht en creéer je een Plek
                 waar mensen samen komen.
               </h2>
-              <a href="#section-contact" v-scroll-to class="btn orange-hover">
+              <a v-scroll-to="'#contact'" class="btn orange-hover">
                 Vraag informatie aan
               </a>
             </div>
@@ -86,7 +86,7 @@
             </div>
           </div>
           <div class="cards__cta" v-on-screen>
-            <a v-scroll-to class="btn orange-hover" href="#section-contact"
+            <a v-scroll-to="'#contact'" class="btn orange-hover"
             >Vraag naar de opties</a
             >
           </div>
@@ -95,7 +95,7 @@
 
       <Referrals/>
 
-      <section class="contact" id="section-contact">
+      <section class="contact" id="contact">
         <div class="content-section">
           <div class="content-section__content">
             <h3 v-on-screen>Interesse of een bezichtiging inplannen?</h3>
