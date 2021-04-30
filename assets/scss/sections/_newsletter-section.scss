@@ -5,7 +5,7 @@
 		grid-column: 1 / -1;
 		padding-top: 1rem;
 		padding-bottom: 4.5rem;
-		align-items: center;
+		align-items: flex-start;
 		
 		@include breakpoint(medium) {
 			grid-column: 2 / -2;
@@ -108,7 +108,7 @@
 			width: 100%;
 			display: flex;
 			flex-wrap: wrap;
-			justify-content: center;
+			justify-content: flex-start;
 
 			@include breakpoint (490) {
 				flex-wrap: nowrap;
@@ -133,22 +133,24 @@
 		}
 
 		.mce_inline_error:not(.input-field), #mce-error-response, #mce-success-response {
-			margin: .5rem !important;
+			margin: 0 !important;
 			padding: .5rem !important;
-			background-color: $orange !important;
-			color: $white;
+			background-color: transparent !important;
+			color: $orange !important;
 			font-family: "TT Firs Neue", sans-serif !important;
-			font-weight: 500 !important;
+			font-weight: 400 !important;
 			width: calc(100% - 1rem) !important;
+			align-items: flex-start;
+			flex-direction: column;
 
 			&#mce-success-response {
 				width: 100% !important;
 			}
 
 			a {
-				margin-left: 2rem;
+				margin-top: .5rem;
 			}
-			
+
 			div {
 				display: flex;
 				flex-direction: column;
@@ -159,7 +161,6 @@
 			display: flex;
 			align-items: center;
 			min-height: 3rem;
-			padding: .5rem;
 		}
 
 		input[type=submit], .btn {

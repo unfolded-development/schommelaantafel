@@ -148,7 +148,7 @@
                 <div class="clear" style="order: 2;">
                   <input
                     type="submit"
-                    value="Subscribe"
+                    value="Download"
                     name="subscribe"
                     id="mc-embedded-subscribe"
                     class="button btn btn-orange"
@@ -182,7 +182,10 @@
 export default {
   mounted() {
     var CorrectInterval = CorrectInterval = setInterval(() => {
-      if (document.getElementById("mce-success-response").innerHTML == "Thank you for subscribing!") {
+      if (
+          document.getElementById("mce-success-response").innerHTML.includes("Dank voor uw aanmelding!") ||
+          document.getElementById("mce-error-response").innerHTML.includes("is reeds geabonneerd op lijst schommel aan tafel.")
+      ) {
         downloadBrochure();
         clearInterval(CorrectInterval);
       }
@@ -197,7 +200,7 @@ export default {
       document.body.appendChild(link);
       link.click();
       link.remove();
-      }
+    }
   },
 };
 </script>
