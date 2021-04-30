@@ -139,7 +139,11 @@ export default {
     }
   },
   updated() {
-    if(this.$refs.contentSlider) this.$refs.contentSlider.flickity.select(0);
+    if(this.$refs.contentSlider) {
+      // this.$refs.contentSlider.flickity.select(0);
+      // this.loaded = false;
+      // this.$nextTick(() => this.$refs.contentSlider.flickity.select(0))
+    }
   },
   mounted() {
     setTimeout(() => {

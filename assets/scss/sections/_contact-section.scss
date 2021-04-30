@@ -7,7 +7,7 @@
 		text-align: center;
 		padding: 4.5rem 0 4rem;
 		@include breakpoint(medium) {
-			padding-top: 8rem;
+			padding-top: 6rem;
 			grid-column: 2 / -2;
 		}
 		@include breakpoint(large) {
@@ -15,7 +15,7 @@
 		}
 
 		@include breakpoint(xxlarge) {
-			padding-top: 10rem;
+			padding-top: 8rem;
 		}
 
 		
