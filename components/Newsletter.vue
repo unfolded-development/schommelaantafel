@@ -3,7 +3,7 @@
     <div class="content-section">
       <div class="content-section__content" v-on-screen>
         <div class="newsletter__image">
-          <img src="~/static/images/brochure_mockup.png" alt="" />
+          <img src="~/static/images/brochure.png" alt="Interesse om te schommelen? Download de brochure" />
         </div>
         <div class="newsletter__content">
           <h3 class="newsletter__title">
