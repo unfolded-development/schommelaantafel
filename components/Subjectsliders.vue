@@ -44,7 +44,7 @@ export default {
           {
             image: "./images/slider-selector-images/horeca_1@2x.jpg",
             title: "Instagrammable",
-            desc: "De selfietafel op ieders instagram story #jouwhorecazaak."
+            desc: "De selfietafel in ieders instagram story."
           },
           {
             image: "./images/slider-selector-images/horeca_2@2x.jpg",
@@ -54,14 +54,14 @@ export default {
           {
             image: "./images/slider-selector-images/horeca_3@2x.jpg",
             title: "Unieke beleving",
-            desc: "Sfeer verhogend/maker; brengt bij iedereen het kind in je naar boven."
+            desc: "Sfeer maker; brengt bij iedereen het kind in je naar boven."
           }
         ],
         events: [
           {
             image: "./images/slider-selector-images/events_1@2x.jpg",
-            title: "sfeerverhogend",
-            desc: "Speels karakter op jouw event; geen handjes maar.....voetjes in de lucht."
+            title: "Sfeerverhogend",
+            desc: "Speels karakter op jouw event; geen handjes maar... voetjes in de lucht."
           },
           {
             image: "./images/slider-selector-images/events_2@2x.jpg",
@@ -71,7 +71,7 @@ export default {
           {
             image: "./images/slider-selector-images/events_3@2x.jpg",
             title: "Verbinder",
-            desc: "Schommel samen en ontmoet nieuwe mensen aan tafel."
+            desc: "Schommel samen en ontmoet nieuwe mensen."
           }
         ],
         kantoren: [
@@ -99,13 +99,13 @@ export default {
           },
           {
             image: "./images/slider-selector-images/educatie_2@2x.jpg",
-            title: "Eye-catcher",
+            title: "Eyecatcher",
             desc: "Voor jong en oud."
           },
           {
             image: "./images/slider-selector-images/educatie_3@2x.jpg",
             title: "Enthousiasmeren van kinderen",
-            desc: "Pap, mam, opa, oma; “ik heb vandaag tijdens hetschommelen mogen lezen, rekenen en ...”"
+            desc: "Pap, mam, ik heb vandaag tijdens het schommelen mogen lezen, rekenen en ..."
           }
         ],
       },

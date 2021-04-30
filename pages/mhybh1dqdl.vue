@@ -68,7 +68,7 @@
                 <h5 class="card__title h4">Eenvoudig te monteren</h5>
                 <p>
                   De tafels bestaan uit verschillende delen waardoor deze
-                  eentvoudig te <span style="white-space: nowrap;">demonteren is.</span>
+                  eenvoudig te <span style="white-space: nowrap;">demonteren is.</span>
                 </p>
               </div>
             </div>
