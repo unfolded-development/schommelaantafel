@@ -71,7 +71,7 @@ export default {
         {
           id: 4,
           rating: 5,
-          quote: "De speelse schommeltafels passen perfect bij ons evenement! ",
+          quote: "De speelse schommeltafels passen perfect bij ons evenement!",
           logoUrl: "./images/referrals/logo_5.png",
           active: false
         },
