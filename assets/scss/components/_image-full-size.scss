@@ -39,8 +39,9 @@
 			opacity: .1;
 		}
 
-		@include breakpoint (large) {
-			height: 110vh;
+		@media (min-aspect-ratio: 110/100) {
+			top: -30vh;
+			height: 130vh;
 		}
 	}
 }
