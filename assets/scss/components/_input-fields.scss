@@ -5,10 +5,6 @@
 	background-color: $grey;
 	transition: all ease-in-out .1s;
 
-	// &:hover::placeholder {
-	// 	transform: translateX(.5rem);
-	// }
-
 	&::placeholder {
 		color: rgba($body-font-color, 1);
 		transition: inherit;

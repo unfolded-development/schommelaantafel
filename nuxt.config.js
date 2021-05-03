@@ -106,7 +106,22 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    '@nuxtjs/axios',
+    ['nuxt-mail', {
+      message: {
+        to: 'info@schommelaantafel.nl',
+      },
+      smtp: {
+        host: "smtp.mailtrap.io",
+        port: 2525,
+        auth: {
+          user: "537b5bfcdc7362",
+          pass: "0d0dc79b12255e"
+        }
+      },
+    }],
+  ],
 
   iconFont: {
     files: ['assets/icons/*.svg'],

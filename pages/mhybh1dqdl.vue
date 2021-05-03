@@ -94,35 +94,7 @@
       </section>
 
       <Referrals/>
-
-      <section class="contact" id="contact">
-        <div class="content-section">
-          <div class="content-section__content">
-            <h3 v-on-screen>Interesse of een bezichtiging inplannen?</h3>
-            <p v-on-screen>
-              Laat uw gegevens achter en wij nemen zo spoedig mogelijk contact met
-              u op.
-            </p>
-            <div v-on-screen>
-              <form class="contact-form" action="post">
-                <input class="input-field" type="text" placeholder="Naam*"/>
-                <input class="input-field" type="email" placeholder="Emailadres*"/>
-                <input
-                    class="input-field"
-                    type="tel"
-                    placeholder="Telefoonnummer*"
-                />
-                <input class="input-field" type="text" placeholder="Opmerking"/>
-                <div class="contact-form__action">
-                  <button type="submit" class="btn btn-orange btn-orange-odd-hover">
-                    Versturen
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ContactForm />
       <section class="section-socials">
         <ul class="socials-list --white">
           <a target="_blank" href="https://www.instagram.com/schommelaantafel/">

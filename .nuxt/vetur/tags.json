@@ -1,4 +1,7 @@
 {
+  "ContactForm": {
+    "description": "Auto imported from components/ContactForm.vue"
+  },
   "CtaSection": {
     "description": "Auto imported from components/CtaSection.vue"
   },
@@ -8,11 +11,11 @@
   "Header": {
     "description": "Auto imported from components/Header.vue"
   },
-  "IntroLoader": {
-    "description": "Auto imported from components/IntroLoader.vue"
-  },
   "Introduction": {
     "description": "Auto imported from components/Introduction.vue"
+  },
+  "IntroLoader": {
+    "description": "Auto imported from components/IntroLoader.vue"
   },
   "Logo": {
     "description": "Auto imported from components/Logo.vue"
