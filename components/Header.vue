@@ -45,7 +45,6 @@ export default {
   },
   methods: {
     handleScroll: throttle(function() { // Cannot use arrow function here
-      console.log('handle')
       if (document.documentElement.scrollTop > 0) {
         this.headerUpButton = true;
       } else {

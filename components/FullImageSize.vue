@@ -1,6 +1,10 @@
 <template>
-  <section class="image-full-size" style="background-image: url('/images/full-size-image.jpeg');"
+  <section class="image-full-size" >
+    <div class="image-full-size__clip">
+      <div class="image-full-size__image" style="background-image: url('/images/full-size-image.jpeg');"
            :style="style">
+      </div>
+    </div>
   </section>
 </template>
 
@@ -47,7 +51,7 @@ export default {
 
       const relativePosition = ((window.scrollY - start) / height)
 
-      let speed = this.speed
+      let speed = CSS?.supports('background-attachment', 'none') ? .1 : .1
 
       this.position = relativePosition * -(screenHeight * speed)
 

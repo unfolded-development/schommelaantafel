@@ -1,6 +1,6 @@
 <template>
   <section class="intro" id="welkom">
-    <a v-scroll-to="'#info'" class="intro__btn-down">
+    <a @click="scrollTo('#info')" class="intro__btn-down">
       <i class="icon icon--arrow-down"></i>
     </a>
 
@@ -30,6 +30,8 @@
 </template>
 
 <script>
+import VueScrollTo from "vue-scrollto";
+
 export default {
   data() {
     return {
@@ -38,6 +40,16 @@ export default {
         x: "20%",
       },
     };
+  },
+  methods: {
+    scrollTo(selector) {
+      const el = document.querySelector(selector)
+      const offset = (window.innerHeight - el.clientHeight) / 2
+
+      VueScrollTo.scrollTo(el, 1000, {
+        offset: offset > 0 ? -offset : 0
+      })
+    }
   },
   mounted() {
     // Scroll to top of page too see the animation at any time

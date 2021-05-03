@@ -148,7 +148,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.$nextTick(() => this.loaded = true)
-    },100)
+    }, 500)
   }
 }
 </script>
