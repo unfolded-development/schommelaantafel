@@ -44,7 +44,7 @@ export default {
           {
             image: "./images/slider-selector-images/horeca_1@2x.jpg",
             title: "Instagrammable",
-            desc: "De selfietafel in ieders instagram story."
+            desc: "De selfietafel in ieders Instagram story. #jouwhorecazaak"
           },
           {
             image: "./images/slider-selector-images/horeca_2@2x.jpg",
@@ -54,7 +54,7 @@ export default {
           {
             image: "./images/slider-selector-images/horeca_3@2x.jpg",
             title: "Unieke beleving",
-            desc: "Sfeer maker; brengt bij iedereen het kind in je naar boven."
+            desc: "Sfeer maker; brengt bij iedereen het kind naar boven."
           }
         ],
         events: [
@@ -66,7 +66,7 @@ export default {
           {
             image: "./images/slider-selector-images/events_2@2x.jpg",
             title: "Instagrammable",
-            desc: "De ‘selfie-tafel’ in ieders instagram story #jouweven."
+            desc: "De selfietafel in ieders Instagram story, #jouwevent"
           },
           {
             image: "./images/slider-selector-images/events_3@2x.jpg",
@@ -95,7 +95,7 @@ export default {
           {
             image: "./images/slider-selector-images/educatie_1@2x.jpg",
             title: "Cognitieve prestatie",
-            desc: "Beter leren door bewegen."
+            desc: "Beter leren door te bewegen."
           },
           {
             image: "./images/slider-selector-images/educatie_2@2x.jpg",
