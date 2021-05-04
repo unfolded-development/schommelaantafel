@@ -127,6 +127,7 @@
     left: 50%;
     font-size: 1.25rem;
     z-index: 20;
+    transform: translateX(-50%);
 
     .icon {
       color: $white;
