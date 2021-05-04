@@ -113,11 +113,11 @@ export default {
         to: 'ruben@unfolded.nl',
       },
       smtp: {
-        host: "smtp.mailtrap.io",
-        port: 2525,
+        host: "gnld1027.siteground.eu",
+        port: 587,
         auth: {
-          user: "537b5bfcdc7362",
-          pass: "0d0dc79b12255e"
+          user: "info@schommelaantafel.nl",
+          pass: "Schommel123!"
         }
       },
     }],
