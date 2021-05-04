@@ -21,11 +21,18 @@
 
 <script>
 export default {
-  // mounted() {
-  //   this.$services.interval.start('program/fetch', this.$config.media.refreshRate)
-  // },
-  // beforeDestroy() {
-  //   this.$services.interval.stop('program/fetch')
-  // },
+  methods: {
+    measure() {
+      document.documentElement.style.setProperty('--vw', window.innerWidth + "px");
+      document.documentElement.style.setProperty('--vh', window.innerHeight + "px");
+    }
+  },
+  mounted() {
+    this.measure()
+    window.addEventListener('resize', this.measure)
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.measure)
+  },
 }
 </script>

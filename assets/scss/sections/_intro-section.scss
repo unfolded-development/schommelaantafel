@@ -1,6 +1,7 @@
 .intro {
   width: 100%;
   height: calc(100vh + 8.4rem);
+  height: calc(var(--vh) + 8.4rem);
   overflow: hidden;
   z-index: 2;
   display: flex;
@@ -11,6 +12,7 @@
 
   @include breakpoint(xlarge) {
     height: calc(100vh + 10.4rem);
+    height: calc(var(--vh) + 10.4rem);
     margin-bottom: -5.2rem;
     padding-bottom: 5.2rem;
   }
@@ -27,6 +29,7 @@
 
     @include breakpoint(xlarge) {
       height: calc(100vh + 13.5rem);
+      height: calc(var(--vh) + 13.5rem);
     }
   }
 
@@ -35,6 +38,7 @@
     position: absolute;
     width: 100%;
     height: calc(100vh + 8.4rem);
+    height: calc(var(--vh) + 8.4rem);
     top: 0;
     //top: 4.2rem;
     left: 0;
@@ -48,6 +52,7 @@
 
     @include breakpoint(xlarge) {
       height: calc(100vh + 10.4rem);
+      height: calc(var(--vh) + 10.4rem);
     }
   }
 
