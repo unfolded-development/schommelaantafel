@@ -95,7 +95,7 @@ export default {
             trigger: introAnimationBlockItems[0],
             start: 10,
             end: window.innerHeight,
-            scrub: true,
+            scrub: .25
           }
         })
 
@@ -107,7 +107,7 @@ export default {
                 trigger: introAnimationBlockItems[1],
                 start: 10,
                 end: window.innerHeight,
-                scrub: true,
+                scrub: .25,
               }
             })
         
