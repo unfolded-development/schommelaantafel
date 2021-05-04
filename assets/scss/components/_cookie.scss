@@ -3,12 +3,19 @@
 #cookieBar {
   @include breakpoint(large) {
     opacity: 0;
-    transform: translateY(-150%) translateX(calc(2.2rem + 100%));
+    transform: translateY(-100%) translateY(-1rem) translateX(calc(2.2rem + 100%));
     transition: opacity .3s ease-out, transform .3s ease-out;
 
     &.active {
       opacity: 1;
-      transform: translateY(-150%) translateX(0%);
+      transform: translateY(-100%) translateY(-1rem) translateX(0%);
+    }
+  }
+
+  @include breakpoint(xlarge) {
+    transform: translateY(-100%) translateY(-6.5rem) translateX(0%);
+    &.active {
+      transform: translateY(-100%) translateY(-6.5rem) translateX(0%);
     }
   }
 }

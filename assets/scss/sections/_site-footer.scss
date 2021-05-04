@@ -49,11 +49,20 @@ $footer-items-margin-bottom: 1rem;
 
 		@include breakpoint(large) {
 			flex-direction: row;
+			margin: 0 -1rem;
+		}
+
+		@include breakpoint(xlarge) {
+			flex-direction: row;
 			margin: 0 -2.666rem;
 		}
 		
 		&__item {
 			@include breakpoint(large) {
+				margin: 0 1rem;
+			}
+
+			@include breakpoint(xlarge) {
 				margin: 0 2.666rem;
 			}
 
