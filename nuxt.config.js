@@ -114,7 +114,7 @@ export default {
       },
       smtp: {
         host: "gnld1027.siteground.eu",
-        port: 587,
+        port: 25,
         auth: {
           user: "info@schommelaantafel.nl",
           pass: "Schommel123!"
