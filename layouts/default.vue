@@ -29,10 +29,10 @@ export default {
   },
   mounted() {
     this.measure()
-    window.addEventListener('resize', this.measure)
+    // window.addEventListener('resize', this.measure)
   },
   beforeDestroy() {
-    window.removeEventListener('resize', this.measure)
+    // window.removeEventListener('resize', this.measure)
   },
 }
 </script>
