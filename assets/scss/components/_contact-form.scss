@@ -20,8 +20,8 @@
 		width: 100%;
 	}
 
-	.input-error {
-		background-color: $orange;
+	.contact-form__error {
+		color: $orange;
 
 		p {
 			margin: .5rem 0 !important;

@@ -108,19 +108,20 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
-    ['nuxt-mail', {
-      message: {
-        to: 'ruben@unfolded.nl',
-      },
-      smtp: {
-        host: "gnld1027.siteground.eu",
-        port: 587,
-        auth: {
-          user: "info@schommelaantafel.nl",
-          pass: "Schommel123!"
-        }
-      },
-    }],
+    // ['nuxt-mail', {
+    //   message: {
+    //     from: 'info@schommelaantafel.nl',
+    //     to: 'jaap@unfolded.nl',
+    //   },
+    //   smtp: {
+    //     host: "gnld1027.siteground.eu",
+    //     port: 465,
+    //     auth: {
+    //       user: "info@schommelaantafel.nl",
+    //       pass: "Schommel123!"
+    //     }
+    //   },
+    // }],
   ],
 
   iconFont: {
@@ -187,5 +188,9 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    transpile: [
+      "vee-validate/dist/rules"
+    ],
+  },
 }

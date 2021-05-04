@@ -21,4 +21,13 @@
 			transition: inherit;
 		}
 	}
+
+	&--error {
+		border-color: $orange;
+		color: $orange;
+
+		&::placeholder {
+			color: rgba($orange, 1);
+		}
+	}
 }
