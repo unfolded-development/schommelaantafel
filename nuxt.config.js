@@ -12,9 +12,10 @@ export default {
     htmlAttrs: {
       lang: 'en',
     },
-    meta: [{
-      charset: 'utf-8'
-    },
+    meta: [
+      {
+        charset: 'utf-8'
+      },
       {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1'
@@ -38,6 +39,11 @@ export default {
       },
     ],
     link: [
+      {
+        'rel': 'preload',
+        'as': 'image',
+        'href': '/images/intro-3.jpg'
+      }
       // {
       // 	rel: 'icon',
       // 	type: 'image/x-icon',
@@ -86,10 +92,10 @@ export default {
       src: '~/plugins/VueCookie.js',
       ssr: false
     },
-		{
-			src: '~/plugins/VueScrollTo.js',
-			ssr: false
-		}
+    {
+      src: '~/plugins/VueScrollTo.js',
+      ssr: false
+    }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

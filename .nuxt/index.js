@@ -72,7 +72,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"Schommel aan Tafel","htmlAttrs":{"lang":"en"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"msapplication-TileColor","content":"#ffa803"},{"name":"msapplication-config","content":"\u002Ffavicons\u002Fbrowserconfig.xml"},{"name":"theme-color","content":"#ffffff"}],"link":[],"style":[],"script":[]},
+    head: {"title":"Schommel aan Tafel","htmlAttrs":{"lang":"en"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"msapplication-TileColor","content":"#ffa803"},{"name":"msapplication-config","content":"\u002Ffavicons\u002Fbrowserconfig.xml"},{"name":"theme-color","content":"#ffffff"}],"link":[{"rel":"preload","as":"image","href":"\u002Fimages\u002Fintro-3.jpg"}],"style":[],"script":[]},
 
     router,
     nuxt: {
