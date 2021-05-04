@@ -110,7 +110,7 @@ export default {
     '@nuxtjs/axios',
     ['nuxt-mail', {
       message: {
-        to: 'info@unfolded.nl',
+        to: 'ruben@unfolded.nl',
       },
       smtp: {
         host: "smtp.mailtrap.io",

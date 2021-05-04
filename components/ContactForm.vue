@@ -26,6 +26,8 @@
                     </form>
                 </div>
             </div>
+
+            <Popup :popupActive="popupActive" heading="Formulier is verstuurd" description="Bedankt voor het invullen van het contactformulier. We zullen spoedig contact met u opnemen." />
         </div>
     </section>
 </template>
@@ -36,7 +38,8 @@
             name: "",
             email: "",
             phonenumber: "",
-            message: ""
+            message: "",
+            popupActive: false
         }),
         methods: {
             send () {
@@ -47,7 +50,7 @@
                         text: "Afzender:" + this.name + "\r\n" + "Telefoonnummer:" + this.phonenumber + "\r\n" + this.message,
                     });
 
-                    alert("Bericht is verzonden!");
+                    this.popupActive = true;
                 }
             },
             validate () {
@@ -57,6 +60,7 @@
                 for (let index = 0; index < errors.length; index++) {
                     const input = document.getElementById(errors[index].dataset.input);
 
+                    // Required forms and handle validation for forms
                     switch (input.id) {
                         case "contact-form-name":
                             if (input.value == "") {
