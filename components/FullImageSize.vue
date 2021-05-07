@@ -12,7 +12,7 @@ export default {
   props: {
     speed: {
       type: Number,
-      default: .25
+      default: .1
     }
   },
   data() {
@@ -30,12 +30,13 @@ export default {
         const containerRatio = this.$el.clientHeight / this.$el.clientWidth
 
         size = imageRatio < containerRatio
-            ? 'auto ' + (this.$el.clientHeight * 1.25) + 'px'
+            ? 'auto ' + (this.$el.clientHeight * 1.5) + 'px'
             : (this.$el.clientWidth) + 'px auto'
       }
 
       return {
         'background-size': size,
+        'background-position-x': 'center',
         'background-position-y': this.position + 'px'
       }
     }
@@ -50,13 +51,9 @@ export default {
 
       const relativePosition = ((window.scrollY - start) / height)
 
-      let speed = CSS?.supports('background-attachment', 'none') ? .1 : .1
+      let speed = this.speed;
 
       this.position = relativePosition * -(screenHeight * speed)
-
-      // if (window.scrollY + (window.innerHeight / 3 * 2) > document.body.getElementsByClassName("cta")[0].offsetTop) {
-      //   document.getElementsByClassName("cta")[0].classList.add("cta--show");
-      // }
     }
   },
   mounted() {

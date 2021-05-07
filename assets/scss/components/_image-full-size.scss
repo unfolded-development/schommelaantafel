@@ -2,7 +2,7 @@
 	position: relative;
 	overflow: hidden;
 	width: 100%;
-	height: 100vh;
+	height: 75vh;
 
 	&__clip {
 		clip: rect(0, auto, auto, 0);
@@ -11,7 +11,7 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 100vh;
+		height: 75vh;
 	}
 
 	&__image {
@@ -42,6 +42,11 @@
 		@media (min-aspect-ratio: 110/100) {
 			top: -30vh;
 			height: 130vh;
+		}
+
+		@media (min-aspect-ratio: 150/100) {
+			top: -50vh;
+			height: 150vh;
 		}
 	}
 }
