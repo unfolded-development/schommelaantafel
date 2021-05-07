@@ -1,7 +1,7 @@
 <template>
   <section class="image-full-size" >
     <div class="image-full-size__clip">
-      <div class="image-full-size__image" style="background-image: url('/images/full-size-image.jpeg');" :style="style">
+      <div class="image-full-size__image" style="background-image: url('/images/full-size-image.jpg');" :style="style">
       </div>
     </div>
   </section>
