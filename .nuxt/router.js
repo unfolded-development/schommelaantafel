@@ -4,10 +4,10 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _32f880bc = () => interopDefault(import('../node_modules/@nuxtjs/svg-sprite/lib/pages/icons-list.vue' /* webpackChunkName: "" */))
-const _1e8ac550 = () => interopDefault(import('../pages/mhybh1dqdl.vue' /* webpackChunkName: "pages/mhybh1dqdl" */))
-const _045235f4 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
-const _28b1d401 = () => interopDefault(import('../pages/_.vue' /* webpackChunkName: "pages/_" */))
+const _abaadbca = () => interopDefault(import('..\\node_modules\\@nuxtjs\\svg-sprite\\lib\\pages\\icons-list.vue' /* webpackChunkName: "" */))
+const _2391ab77 = () => interopDefault(import('..\\pages\\mhybh1dqdl.vue' /* webpackChunkName: "pages/mhybh1dqdl" */))
+const _9a805926 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _8419d40c = () => interopDefault(import('..\\pages\\_.vue' /* webpackChunkName: "pages/_" */))
 
 const emptyFn = () => {}
 
@@ -22,19 +22,19 @@ export const routerOptions = {
 
   routes: [{
     path: "/_icons",
-    component: _32f880bc,
+    component: _abaadbca,
     name: "icons-list"
   }, {
     path: "/mhybh1dqdl",
-    component: _1e8ac550,
+    component: _2391ab77,
     name: "mhybh1dqdl"
   }, {
     path: "/",
-    component: _045235f4,
+    component: _9a805926,
     name: "index"
   }, {
     path: "/*",
-    component: _28b1d401,
+    component: _8419d40c,
     name: "all"
   }],
 
@@ -42,7 +42,7 @@ export const routerOptions = {
 }
 
 export function createRouter (ssrContext, config) {
-  const base = (config._app && config._app.basePath) || routerOptions.base
+  const base = (config.app && config.app.basePath) || routerOptions.base
   const router = new Router({ ...routerOptions, base  })
 
   // TODO: remove in Nuxt 3

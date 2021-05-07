@@ -28,7 +28,7 @@
     {
       "hid": "description",
       "name": "description",
-      "content": "Met Schommel aan Tafel trek je de aandacht en creéer je een Plek waar mensen samen komen."
+      "content": "Met Schommel aan Tafel trek je de aandacht en creëer je een plek waar mensen graag samen komen."
     },
     {
       "hid": "theme-color",
@@ -57,7 +57,7 @@
       "hid": "og:description",
       "name": "og:description",
       "property": "og:description",
-      "content": "Met Schommel aan Tafel trek je de aandacht en creéer je een Plek waar mensen samen komen."
+      "content": "Met Schommel aan Tafel trek je de aandacht en creëer je een plek waar mensen graag samen komen."
     }
   ],
   "link": [
@@ -74,7 +74,7 @@
     },
     {
       "rel": "manifest",
-      "href": "/_nuxt/manifest.5a97a32e.json",
+      "href": "/_nuxt/manifest.3496c8c5.json",
       "hid": "manifest"
     }
   ],

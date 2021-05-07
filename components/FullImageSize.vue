@@ -1,8 +1,7 @@
 <template>
   <section class="image-full-size" >
     <div class="image-full-size__clip">
-      <div class="image-full-size__image" style="background-image: url('/images/full-size-image.jpeg');"
-           :style="style">
+      <div class="image-full-size__image" style="background-image: url('/images/full-size-image.jpeg');" :style="style">
       </div>
     </div>
   </section>
@@ -55,9 +54,9 @@ export default {
 
       this.position = relativePosition * -(screenHeight * speed)
 
-      if (window.scrollY + (window.innerHeight / 3 * 2) > document.body.getElementsByClassName("cta")[0].offsetTop) {
-        document.getElementsByClassName("cta")[0].classList.add("cta--show");
-      }
+      // if (window.scrollY + (window.innerHeight / 3 * 2) > document.body.getElementsByClassName("cta")[0].offsetTop) {
+      //   document.getElementsByClassName("cta")[0].classList.add("cta--show");
+      // }
     }
   },
   mounted() {

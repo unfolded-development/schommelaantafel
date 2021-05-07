@@ -149,7 +149,7 @@ export default {
     meta: {
       name: 'Schommel aan Tafel',
       author: 'Schommel aan Tafel',
-      description: 'Met Schommel aan Tafel trek je de aandacht en creéer je een Plek waar mensen samen komen.',
+      description: 'Met Schommel aan Tafel trek je de aandacht en creëer je een plek waar mensen graag samen komen.',
       theme_color: '#FF6E00',
       lang: 'nl',
       // ogHost: 'https://koningsdageindhoven.nl',

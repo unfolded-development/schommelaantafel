@@ -42,14 +42,14 @@ export default {
       varients: {
         horeca: [
           {
-            image: "./images/slider-selector-images/horeca_1@2x.jpg",
-            title: "Instagrammable",
-            desc: "De selfietafel in ieders Instagram story. #jouwhorecazaak"
-          },
-          {
             image: "./images/slider-selector-images/horeca_2@2x.jpg",
             title: "Eyecatcher",
             desc: "Aandacht trekken op een speelse manier."
+          },
+					{
+            image: "./images/slider-selector-images/horeca_1@2x.jpg",
+            title: "Instagrammable",
+            desc: "De selfietafel in ieders Instagram story. #jouwhorecazaak"
           },
           {
             image: "./images/slider-selector-images/horeca_3@2x.jpg",
@@ -58,15 +58,15 @@ export default {
           }
         ],
         events: [
+					{
+            image: "./images/slider-selector-images/events_2@2x.jpg",
+            title: "Instagrammable",
+            desc: "De selfietafel in ieders Instagram story, #jouwevent"
+          },
           {
             image: "./images/slider-selector-images/events_1@2x.jpg",
             title: "Sfeerverhogend",
             desc: "Speels karakter op jouw event; geen handjes maar... voetjes in de lucht."
-          },
-          {
-            image: "./images/slider-selector-images/events_2@2x.jpg",
-            title: "Instagrammable",
-            desc: "De selfietafel in ieders Instagram story, #jouwevent"
           },
           {
             image: "./images/slider-selector-images/events_3@2x.jpg",

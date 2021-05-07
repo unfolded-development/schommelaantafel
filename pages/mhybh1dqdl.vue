@@ -27,19 +27,14 @@
           <div class="content-section__content" v-on-screen>
             <div class="quote text-center">
               <span class="label text-dimmed">Schommel aan Tafel</span>
-              <h2 class="quote__title">
-                Met Schommel aan Tafel trek je de aandacht en creéer je een Plek
-                waar mensen samen komen.
-              </h2>
-              <a v-scroll-to="'#contact'" class="btn orange-hover">
-                Vraag informatie aan
-              </a>
+              <h2 class="quote__title">Met Schommel aan Tafel trek je de aandacht en creëer je een plek waar mensen graag samen komen.</h2>
+              <a v-scroll-to="'#contact'" class="btn orange-hover">Vraag informatie aan</a>
             </div>
           </div>
         </div>
       </section>
       <Sliderselector/>
-      <CtaSection />
+      <!-- <CtaSection /> -->
       <Newsletter />
       <FullImageSize/>
       <section class="cards">
@@ -54,10 +49,7 @@
               </div>
               <div class="card__content">
                 <h5 class="card__title h4">Customisable</h5>
-                <p>
-                  Bepaal zelf de afwerking van het frame, de schommels en het
-                  tafelblad.
-                </p>
+                <p>Bepaal zelf de kleur van het frame, de afwerking van de schommels en tafelblad.</p>
               </div>
             </div>
             <div class="card">
@@ -65,11 +57,12 @@
                 <img src="~/static/images/card-2.png" alt=""/>
               </div>
               <div class="card__content">
-                <h5 class="card__title h4">Eenvoudig te monteren</h5>
-                <p>
+                <h5 class="card__title h4">Eenvoudig te monteren en demonteren</h5>
+								<p>De tafel staat in 10 minuten.</p>
+                <!-- <p>
                   De tafels bestaan uit verschillende delen waardoor deze
                   eenvoudig te <span style="white-space: nowrap;">demonteren is.</span>
-                </p>
+                </p> -->
               </div>
             </div>
             <div class="card">
@@ -77,18 +70,13 @@
                 <img src="~/static/images/card-3.png" alt=""/>
               </div>
               <div class="card__content">
-                <h5 class="card__title h4">Zowel binnen als buiten</h5>
-                <p>
-                  Schommel aan Tafel kan geleverd worden met speciale
-                  weerbestendige afwerking.
-                </p>
+                <h5 class="card__title h4">Ook mogelijk voor buiten</h5>
+                <p>Bestand tegen ieder weertype, 365 dagen per jaar.</p>
               </div>
             </div>
           </div>
           <div class="cards__cta" v-on-screen>
-            <a v-scroll-to="'#contact'" class="btn orange-hover"
-            >Vraag naar de opties</a
-            >
+            <a v-scroll-to="'#contact'" class="btn orange-hover">Vraag naar de mogelijkheden</a>
           </div>
         </div>
       </section>
@@ -145,8 +133,7 @@ export default {
         {
           hid: "description",
           name: "description",
-          content:
-              "Met Schommel aan Tafel trek je de aandacht en creéer je een Plek waar mensen samen komen.",
+          content: "Met Schommel aan Tafel trek je de aandacht en creëer je een plek waar mensen graag samen komen.",
         },
       ],
     };

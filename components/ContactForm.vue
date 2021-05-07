@@ -2,11 +2,7 @@
   <section class="contact" id="contact">
     <div class="content-section">
       <div class="content-section__content">
-        <h3 v-on-screen>Interesse of een bezichtiging inplannen?</h3>
-        <p v-on-screen>
-          Laat uw gegevens achter en wij nemen zo spoedig mogelijk contact met
-          u op.
-        </p>
+        <h3 v-on-screen>Interesse om te schommelen?</h3>
         <div v-on-screen>
           <ValidationObserver ref="form" v-slot="{invalid}">
             <form class="contact-form" @submit.prevent="send">
