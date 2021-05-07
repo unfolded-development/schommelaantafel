@@ -26,7 +26,6 @@
         <div class="content-section__container">
           <div class="content-section__content" v-on-screen>
             <div class="quote text-center">
-              <span class="label text-dimmed">Schommel aan Tafel</span>
               <h2 class="quote__title">Met Schommel aan Tafel trek je de aandacht en creëer je een plek waar mensen graag samen komen.</h2>
               <a v-scroll-to="'#contact'" class="btn orange-hover">Vraag informatie aan</a>
             </div>
