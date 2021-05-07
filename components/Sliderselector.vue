@@ -2,7 +2,7 @@
   <section class="slider-selector">
     <client-only>
       <nav class="slider-selector__navigation" v-on-screen>
-				<span class="label">Schommel aan Tafel voor:</span>
+				<!-- <span class="label">Schommel aan Tafel voor:</span> -->
         <ul>
           <li class="slider-selector__nav-item" :class="{ active: activeItem == 0 }"
               v-on:click="updateSubject($event, 0)"><span>Horeca</span></li>
