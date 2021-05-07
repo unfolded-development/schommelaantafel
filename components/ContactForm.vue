@@ -82,7 +82,7 @@ export default {
       this.submitted = true;
       if(valid) {
 
-        const connection = await fetch('https://formcarry.com/s/V7qJDIcrrWP', {
+        const connection = await fetch('https://q.com/s/V7qJDIcrrWP', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
