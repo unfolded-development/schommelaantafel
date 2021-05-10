@@ -70,8 +70,8 @@ export default {
       const swingRadius = window.innerWidth * 3; //gsap.getProperty("body", "--radius");
       const transformOrigin = '50% -' + swingRadius + 'px';
 
-      const swingAnimation1 = this.$gsap.fromTo(introAnimationBlockItems[0], {rotation: '30deg', transformOrigin}, {duration: 4, rotation: '-1deg', visibility: 'visible', transformOrigin, ease: 'elastic.out( .5, 0.25)', repeat: 0, delay: 0})
-      const swingAnimation2 = this.$gsap.fromTo(introAnimationBlockItems[1], {rotation: '-30deg', transformOrigin}, {duration: 4, rotation: '1deg', visibility: 'visible', transformOrigin, ease: 'elastic.out( .5, 0.25)', repeat: 0, delay: 0})
+      const swingAnimation1 = this.$gsap.fromTo(introAnimationBlockItems[0], {rotation: '30deg', transformOrigin}, {duration: 6, rotation: '-1deg', visibility: 'visible', transformOrigin, ease: 'elastic.out( .5, 0.25)', repeat: 0, delay: 0})
+      const swingAnimation2 = this.$gsap.fromTo(introAnimationBlockItems[1], {rotation: '-30deg', transformOrigin}, {duration: 6, rotation: '1deg', visibility: 'visible', transformOrigin, ease: 'elastic.out( .5, 0.25)', repeat: 0, delay: 0})
 
       setTimeout(() => {
         this.headingActive = true;
@@ -82,6 +82,7 @@ export default {
         // Show header after animation is finished
         document.getElementsByClassName("site-header")[0].classList.add("apple-sticky-active");
         document.getElementsByClassName("site-header")[0].classList.add("active");
+
         if(document.getElementById("cookieBar")) document.getElementById("cookieBar").classList.add("active");
         this.$el.classList.add("intro--finished");
 

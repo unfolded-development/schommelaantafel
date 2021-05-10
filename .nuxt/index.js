@@ -12,17 +12,17 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_78f99300 from 'nuxt_plugin_plugin_78f99300' // Source: .\\components\\plugin.js (mode: 'all')
-import nuxt_plugin_nuxtsvgsprite_20f31281 from 'nuxt_plugin_nuxtsvgsprite_20f31281' // Source: .\\nuxt-svg-sprite.js (mode: 'all')
-import nuxt_plugin_workbox_797e8102 from 'nuxt_plugin_workbox_797e8102' // Source: .\\workbox.js (mode: 'client')
-import nuxt_plugin_metaplugin_a6207602 from 'nuxt_plugin_metaplugin_a6207602' // Source: .\\pwa\\meta.plugin.js (mode: 'all')
-import nuxt_plugin_moment_e6b22256 from 'nuxt_plugin_moment_e6b22256' // Source: .\\moment.js (mode: 'all')
-import nuxt_plugin_gtm_11a3bab9 from 'nuxt_plugin_gtm_11a3bab9' // Source: .\\gtm.js (mode: 'all')
-import nuxt_plugin_axios_ce94f1ba from 'nuxt_plugin_axios_ce94f1ba' // Source: .\\axios.js (mode: 'all')
-import nuxt_plugin_Gsap_5c717da6 from 'nuxt_plugin_Gsap_5c717da6' // Source: ..\\plugins\\Gsap.js (mode: 'all')
-import nuxt_plugin_VueFlickity_0dd57bf8 from 'nuxt_plugin_VueFlickity_0dd57bf8' // Source: ..\\plugins\\VueFlickity.js (mode: 'client')
-import nuxt_plugin_VueCookie_2af6fe7a from 'nuxt_plugin_VueCookie_2af6fe7a' // Source: ..\\plugins\\VueCookie.js (mode: 'client')
-import nuxt_plugin_VueScrollTo_3f50a67f from 'nuxt_plugin_VueScrollTo_3f50a67f' // Source: ..\\plugins\\VueScrollTo.js (mode: 'client')
+import nuxt_plugin_plugin_24f09614 from 'nuxt_plugin_plugin_24f09614' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_nuxtsvgsprite_e466a470 from 'nuxt_plugin_nuxtsvgsprite_e466a470' // Source: ./nuxt-svg-sprite.js (mode: 'all')
+import nuxt_plugin_workbox_83dcdc74 from 'nuxt_plugin_workbox_83dcdc74' // Source: ./workbox.js (mode: 'client')
+import nuxt_plugin_metaplugin_4e37b2d9 from 'nuxt_plugin_metaplugin_4e37b2d9' // Source: ./pwa/meta.plugin.js (mode: 'all')
+import nuxt_plugin_moment_18df37ae from 'nuxt_plugin_moment_18df37ae' // Source: ./moment.js (mode: 'all')
+import nuxt_plugin_gtm_57cec880 from 'nuxt_plugin_gtm_57cec880' // Source: ./gtm.js (mode: 'all')
+import nuxt_plugin_axios_00543f2a from 'nuxt_plugin_axios_00543f2a' // Source: ./axios.js (mode: 'all')
+import nuxt_plugin_Gsap_5c717da6 from 'nuxt_plugin_Gsap_5c717da6' // Source: ../plugins/Gsap.js (mode: 'all')
+import nuxt_plugin_VueFlickity_0dd57bf8 from 'nuxt_plugin_VueFlickity_0dd57bf8' // Source: ../plugins/VueFlickity.js (mode: 'client')
+import nuxt_plugin_VueCookie_2af6fe7a from 'nuxt_plugin_VueCookie_2af6fe7a' // Source: ../plugins/VueCookie.js (mode: 'client')
+import nuxt_plugin_VueScrollTo_3f50a67f from 'nuxt_plugin_VueScrollTo_3f50a67f' // Source: ../plugins/VueScrollTo.js (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -51,7 +51,11 @@ Vue.component(Nuxt.name, Nuxt)
 
 Object.defineProperty(Vue.prototype, '$nuxt', {
   get() {
-    return this.$root.$options.$nuxt
+    const globalNuxt = this.$root.$options.$nuxt
+    if (process.client && !globalNuxt && typeof window !== 'undefined') {
+      return window.$nuxt
+    }
+    return globalNuxt
   },
   configurable: true
 })
@@ -182,32 +186,32 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_78f99300 === 'function') {
-    await nuxt_plugin_plugin_78f99300(app.context, inject)
+  if (typeof nuxt_plugin_plugin_24f09614 === 'function') {
+    await nuxt_plugin_plugin_24f09614(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_nuxtsvgsprite_20f31281 === 'function') {
-    await nuxt_plugin_nuxtsvgsprite_20f31281(app.context, inject)
+  if (typeof nuxt_plugin_nuxtsvgsprite_e466a470 === 'function') {
+    await nuxt_plugin_nuxtsvgsprite_e466a470(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_workbox_797e8102 === 'function') {
-    await nuxt_plugin_workbox_797e8102(app.context, inject)
+  if (process.client && typeof nuxt_plugin_workbox_83dcdc74 === 'function') {
+    await nuxt_plugin_workbox_83dcdc74(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_metaplugin_a6207602 === 'function') {
-    await nuxt_plugin_metaplugin_a6207602(app.context, inject)
+  if (typeof nuxt_plugin_metaplugin_4e37b2d9 === 'function') {
+    await nuxt_plugin_metaplugin_4e37b2d9(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_moment_e6b22256 === 'function') {
-    await nuxt_plugin_moment_e6b22256(app.context, inject)
+  if (typeof nuxt_plugin_moment_18df37ae === 'function') {
+    await nuxt_plugin_moment_18df37ae(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_gtm_11a3bab9 === 'function') {
-    await nuxt_plugin_gtm_11a3bab9(app.context, inject)
+  if (typeof nuxt_plugin_gtm_57cec880 === 'function') {
+    await nuxt_plugin_gtm_57cec880(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_ce94f1ba === 'function') {
-    await nuxt_plugin_axios_ce94f1ba(app.context, inject)
+  if (typeof nuxt_plugin_axios_00543f2a === 'function') {
+    await nuxt_plugin_axios_00543f2a(app.context, inject)
   }
 
   if (typeof nuxt_plugin_Gsap_5c717da6 === 'function') {
@@ -233,26 +237,26 @@ async function createApp(ssrContext, config = {}) {
     }
   }
 
-  // If server-side, wait for async component to be resolved first
-  if (process.server && ssrContext && ssrContext.url) {
-    await new Promise((resolve, reject) => {
-      router.push(ssrContext.url, resolve, (err) => {
-        // https://github.com/vuejs/vue-router/blob/v3.4.3/src/util/errors.js
-        if (!err._isRouter) return reject(err)
-        if (err.type !== 2 /* NavigationFailureType.redirected */) return resolve()
+  // Wait for async component to be resolved first
+  await new Promise((resolve, reject) => {
+    router.push(app.context.route.fullPath, resolve, (err) => {
+      // https://github.com/vuejs/vue-router/blob/v3.4.3/src/util/errors.js
+      if (!err._isRouter) return reject(err)
+      if (err.type !== 2 /* NavigationFailureType.redirected */) return resolve()
 
-        // navigated to a different route in router guard
-        const unregister = router.afterEach(async (to, from) => {
+      // navigated to a different route in router guard
+      const unregister = router.afterEach(async (to, from) => {
+        if (process.server && ssrContext && ssrContext.url) {
           ssrContext.url = to.fullPath
-          app.context.route = await getRouteData(to)
-          app.context.params = to.params || {}
-          app.context.query = to.query || {}
-          unregister()
-          resolve()
-        })
+        }
+        app.context.route = await getRouteData(to)
+        app.context.params = to.params || {}
+        app.context.query = to.query || {}
+        unregister()
+        resolve()
       })
     })
-  }
+  })
 
   return {
     app,
