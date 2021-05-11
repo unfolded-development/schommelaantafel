@@ -192,7 +192,7 @@ export default {
     }, 250);
     
     function downloadBrochure () {
-      var downloadFilePath = "./Schommelaantafel_brochure_2021_april.pdf";
+      var downloadFilePath = "./SAT_brochure_2021.pdf";
 
       var link = document.createElement("a");
       link.setAttribute('download', name);
