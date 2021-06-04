@@ -104,7 +104,7 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     '@nuxtjs/axios',
-    '@nuxtjs/gtm',
+    '@nuxtjs/google-analytics',
     '@nuxtjs/moment',
     '@nuxtjs/pwa',
     '@nuxtjs/svg-sprite',
@@ -114,7 +114,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/gtm',
+    '@nuxtjs/google-analytics',
     // ['nuxt-mail', {
     //   message: {
     //     from: 'info@schommelaantafel.nl',
@@ -184,8 +184,8 @@ export default {
     },
   },
 
-  gtm: {
-    id: 'GTM-KCBFCXX', // Live id
+  googleAnalytics: {
+    id: 'UA-197561382-1'
   },
 
   publicRuntimeConfig: {},
