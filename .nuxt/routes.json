@@ -1,14 +1,22 @@
 [
   {
+    "name": "icons-list",
+    "path": "/_icons",
+    "component": "C:\\xampp\\htdocs\\stage-projects\\schommelaantafel\\node_modules\\@nuxtjs\\svg-sprite\\lib\\pages\\icons-list.vue",
+    "_name": "_e775e46a"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "C:\\\\xampp\\\\htdocs\\\\stage-projects\\\\schommelaantafel\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_5f96271d"
   },
   {
     "name": "all",
     "path": "/*",
     "component": "C:\\\\xampp\\\\htdocs\\\\stage-projects\\\\schommelaantafel\\\\pages\\\\_.vue",
-    "chunkName": "pages/_"
+    "chunkName": "pages/_",
+    "_name": "_ae327cac"
   }
 ]

@@ -1,6 +1,23 @@
 .newsletter {
 	background-color: #F8F8F8;
 
+	&__approve {
+		display: flex;
+		margin-top: 1rem;
+
+		input {
+			width: .8rem;
+			height: .8rem;
+			margin-right: 1rem;
+		}
+
+		label {
+			flex: 1;
+			font-size: .8em;
+			margin-top: -.3rem;
+		}
+	}
+
 	.content-section__content {
 		grid-column: 1 / -1;
 		padding-top: 1rem;
