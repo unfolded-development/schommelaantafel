@@ -12,13 +12,13 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_75dc6909 from 'nuxt_plugin_plugin_75dc6909' // Source: .\\components\\plugin.js (mode: 'all')
-import nuxt_plugin_nuxtsvgsprite_9914526c from 'nuxt_plugin_nuxtsvgsprite_9914526c' // Source: .\\nuxt-svg-sprite.js (mode: 'all')
-import nuxt_plugin_workbox_79acdcc8 from 'nuxt_plugin_workbox_79acdcc8' // Source: .\\workbox.js (mode: 'client')
-import nuxt_plugin_metaplugin_3f728948 from 'nuxt_plugin_metaplugin_3f728948' // Source: .\\pwa\\meta.plugin.js (mode: 'all')
-import nuxt_plugin_moment_b9e4f728 from 'nuxt_plugin_moment_b9e4f728' // Source: .\\moment.js (mode: 'all')
-import nuxt_plugin_gtm_073be482 from 'nuxt_plugin_gtm_073be482' // Source: .\\gtm.js (mode: 'all')
-import nuxt_plugin_axios_ee2b3aa8 from 'nuxt_plugin_axios_ee2b3aa8' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_plugin_abe2baa0 from 'nuxt_plugin_plugin_abe2baa0' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_nuxtsvgsprite_4b2f639e from 'nuxt_plugin_nuxtsvgsprite_4b2f639e' // Source: .\\nuxt-svg-sprite.js (mode: 'all')
+import nuxt_plugin_workbox_2276a9a2 from 'nuxt_plugin_workbox_2276a9a2' // Source: .\\workbox.js (mode: 'client')
+import nuxt_plugin_metaplugin_666500af from 'nuxt_plugin_metaplugin_666500af' // Source: .\\pwa\\meta.plugin.js (mode: 'all')
+import nuxt_plugin_moment_5fc265b6 from 'nuxt_plugin_moment_5fc265b6' // Source: .\\moment.js (mode: 'all')
+import nuxt_plugin_googleanalytics_4eb9711a from 'nuxt_plugin_googleanalytics_4eb9711a' // Source: .\\google-analytics.js (mode: 'client')
+import nuxt_plugin_axios_dabec25a from 'nuxt_plugin_axios_dabec25a' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_Gsap_5c717da6 from 'nuxt_plugin_Gsap_5c717da6' // Source: ..\\plugins\\Gsap.js (mode: 'all')
 import nuxt_plugin_VueFlickity_0dd57bf8 from 'nuxt_plugin_VueFlickity_0dd57bf8' // Source: ..\\plugins\\VueFlickity.js (mode: 'client')
 import nuxt_plugin_VueCookie_2af6fe7a from 'nuxt_plugin_VueCookie_2af6fe7a' // Source: ..\\plugins\\VueCookie.js (mode: 'client')
@@ -72,7 +72,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"Schommel aan Tafel","htmlAttrs":{"lang":"nl"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"msapplication-TileColor","content":"#ffa803"},{"name":"msapplication-config","content":"\u002Ffavicons\u002Fbrowserconfig.xml"},{"name":"theme-color","content":"#ffffff"},{"hid":"charset","charset":"utf-8"},{"hid":"mobile-web-app-capable","name":"mobile-web-app-capable","content":"yes"},{"hid":"apple-mobile-web-app-title","name":"apple-mobile-web-app-title","content":"Schommel aan Tafel"},{"hid":"author","name":"author","content":"Schommel aan Tafel"},{"hid":"og:type","name":"og:type","property":"og:type","content":"website"},{"hid":"og:title","name":"og:title","property":"og:title","content":"Schommel aan Tafel"},{"hid":"og:site_name","name":"og:site_name","property":"og:site_name","content":"Schommel aan Tafel"},{"hid":"og:description","name":"og:description","property":"og:description","content":"Met Schommel aan Tafel trek je de aandacht en creëer je een plek waar mensen graag samen komen."}],"link":[{"rel":"preload","as":"image","href":"\u002Fimages\u002Fintro-3.jpg"},{"hid":"shortcut-icon","rel":"shortcut icon","href":"\u002Ffavicons\u002Fandroid-chrome-192x192.png"},{"hid":"apple-touch-icon","rel":"apple-touch-icon","href":"\u002Ffavicons\u002Fandroid-chrome-512x512.png","sizes":"512x512"},{"rel":"manifest","href":"\u002F_nuxt\u002Fmanifest.fe922689.json","hid":"manifest"}],"style":[],"script":[{"hid":"gtm-script","innerHTML":"if(!window._gtm_init){window._gtm_init=1;(function(w,n,d,m,e,p){w[d]=(w[d]==1||n[d]=='yes'||n[d]==1||n[m]==1||(w[e]&&w[e][p]&&w[e][p]()))?1:0})(window,navigator,'doNotTrack','msDoNotTrack','external','msTrackingProtectionEnabled');(function(w,d,s,l,x,y){w[x]={};w._gtm_inject=function(i){if(w.doNotTrack||w[x][i])return;w[x][i]=1;w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src='https:\u002F\u002Fwww.googletagmanager.com\u002Fgtm.js?id='+i;f.parentNode.insertBefore(j,f);};w[y]('GTM-KCBFCXX')})(window,document,'script','dataLayer','_gtm_ids','_gtm_inject')}"}],"noscript":[{"hid":"gtm-noscript","pbody":true,"innerHTML":"\u003Ciframe src=\"https:\u002F\u002Fwww.googletagmanager.com\u002Fns.html?id=GTM-KCBFCXX&\" height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\" title=\"gtm\"\u003E\u003C\u002Fiframe\u003E"}],"__dangerouslyDisableSanitizersByTagID":{"gtm-script":["innerHTML"],"gtm-noscript":["innerHTML"]}},
+    head: {"title":"Schommel aan Tafel","htmlAttrs":{"lang":"nl"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"msapplication-TileColor","content":"#ffa803"},{"name":"msapplication-config","content":"\u002Ffavicons\u002Fbrowserconfig.xml"},{"name":"theme-color","content":"#ffffff"},{"hid":"charset","charset":"utf-8"},{"hid":"mobile-web-app-capable","name":"mobile-web-app-capable","content":"yes"},{"hid":"apple-mobile-web-app-title","name":"apple-mobile-web-app-title","content":"Schommel aan Tafel"},{"hid":"author","name":"author","content":"Schommel aan Tafel"},{"hid":"og:type","name":"og:type","property":"og:type","content":"website"},{"hid":"og:title","name":"og:title","property":"og:title","content":"Schommel aan Tafel"},{"hid":"og:site_name","name":"og:site_name","property":"og:site_name","content":"Schommel aan Tafel"},{"hid":"og:description","name":"og:description","property":"og:description","content":"Met Schommel aan Tafel trek je de aandacht en creëer je een plek waar mensen graag samen komen."}],"link":[{"rel":"preload","as":"image","href":"\u002Fimages\u002Fintro-3.jpg"},{"hid":"shortcut-icon","rel":"shortcut icon","href":"\u002Ffavicons\u002Fandroid-chrome-192x192.png"},{"hid":"apple-touch-icon","rel":"apple-touch-icon","href":"\u002Ffavicons\u002Fandroid-chrome-512x512.png","sizes":"512x512"},{"rel":"manifest","href":"\u002F_nuxt\u002Fmanifest.5a97a32e.json","hid":"manifest"}],"style":[],"script":[]},
 
     router,
     nuxt: {
@@ -186,32 +186,32 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_75dc6909 === 'function') {
-    await nuxt_plugin_plugin_75dc6909(app.context, inject)
+  if (typeof nuxt_plugin_plugin_abe2baa0 === 'function') {
+    await nuxt_plugin_plugin_abe2baa0(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_nuxtsvgsprite_9914526c === 'function') {
-    await nuxt_plugin_nuxtsvgsprite_9914526c(app.context, inject)
+  if (typeof nuxt_plugin_nuxtsvgsprite_4b2f639e === 'function') {
+    await nuxt_plugin_nuxtsvgsprite_4b2f639e(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_workbox_79acdcc8 === 'function') {
-    await nuxt_plugin_workbox_79acdcc8(app.context, inject)
+  if (process.client && typeof nuxt_plugin_workbox_2276a9a2 === 'function') {
+    await nuxt_plugin_workbox_2276a9a2(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_metaplugin_3f728948 === 'function') {
-    await nuxt_plugin_metaplugin_3f728948(app.context, inject)
+  if (typeof nuxt_plugin_metaplugin_666500af === 'function') {
+    await nuxt_plugin_metaplugin_666500af(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_moment_b9e4f728 === 'function') {
-    await nuxt_plugin_moment_b9e4f728(app.context, inject)
+  if (typeof nuxt_plugin_moment_5fc265b6 === 'function') {
+    await nuxt_plugin_moment_5fc265b6(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_gtm_073be482 === 'function') {
-    await nuxt_plugin_gtm_073be482(app.context, inject)
+  if (process.client && typeof nuxt_plugin_googleanalytics_4eb9711a === 'function') {
+    await nuxt_plugin_googleanalytics_4eb9711a(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_ee2b3aa8 === 'function') {
-    await nuxt_plugin_axios_ee2b3aa8(app.context, inject)
+  if (typeof nuxt_plugin_axios_dabec25a === 'function') {
+    await nuxt_plugin_axios_dabec25a(app.context, inject)
   }
 
   if (typeof nuxt_plugin_Gsap_5c717da6 === 'function') {
